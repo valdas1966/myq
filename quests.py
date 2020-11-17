@@ -55,7 +55,7 @@ class Quests:
             if not is_valid:
                 continue
             topics = self.__get_topics(row)
-            question = self.excel.get_value(row, self.col_question)
+            question = self.__get_question(row)
             ans_true = str(self.excel.get_value(row, self.col_answer_true))
             ans_false = list()
             for col in range(self.col_answer_false_first,
@@ -74,3 +74,6 @@ class Quests:
         for col in range(self.col_topic_first, self.col_topic_last + 1):
             topics.append(str(self.excel.get_value(row, col)))
         return topics
+
+    def __get_question(self, row):
+        return self.excel.get_value(row, self.col_question)
