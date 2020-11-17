@@ -1,10 +1,8 @@
-import sys
-sys.path.append('D:\\mypy')
 from f_excel.c_excel import Excel
-from q import Q
+from quest import Quest
 
 
-class QS:
+class Quests:
     """
     ============================================================================
      Description: Represents Questions Data-Structure.
@@ -17,18 +15,29 @@ class QS:
     fc = 1
     # Last Col in xls_qs
     lc = 9
-    col_id = 1
+
+    # Excel Columns
+    # Question Id
+    col_qid = 1
+    # Is Valid Question (1/0)
     col_valid = 2
+    # First Topic-Column
     col_topic_first = 3
+    # Last Topic-Column
     col_topic_last = 4
+    # Text of the Question
     col_question = 5
+    # Text of the True-Answer
     col_answer_true = 6
+    # First False-Answer Column
     col_answer_false_first = 7
+    # Last False-Answer Column
     col_answer_false_last = 9
 
+    # Dict of Questions {int (Qid) -> Quest (Question)}
+    qs = dict()
+
     def __init__(self, xls_qs='questions.xlsx'):
-        # Dict {int (Id) -> Q (Question)}
-        self.qs = dict()
         self.excel = Excel(xls_qs)
         self.__load_qs()
         self.excel.close()
@@ -36,27 +45,32 @@ class QS:
     def __load_qs(self):
         row = self.fr
         while True:
-            id = self.excel.get_value(row, self.col_id)
-            if not id:
+            row += 1
+            qid = self.get_qid(row)
+            # Break on EOF
+            if not qid:
                 break
-            is_valid = self.excel.get_value(row, self.col_valid)
+            is_valid = self.__get_is_valid(row)
+            # Continue on invalid Question
             if not is_valid:
-                row += 1
                 continue
-            topics = list()
-            for col in range(self.col_topic_first, self.col_topic_last + 1):
-                topics.append(str(self.excel.get_value(row, col)))
+            topics = self.__get_topics(row)
             question = self.excel.get_value(row, self.col_question)
             ans_true = str(self.excel.get_value(row, self.col_answer_true))
             ans_false = list()
             for col in range(self.col_answer_false_first,
                              self.col_answer_false_last+1):
                 ans_false.append(str(self.excel.get_value(row, col)))
-            q = Q(id, topics, question, ans_true, ans_false)
-            self.qs[id] = q
-            row += 1
+            self.qs[qid] = Quest(qid, topics, question, ans_true, ans_false)
 
+    def __get_qid(self, row):
+        return self.excel.get_value(row, self.col_qid)
 
-x = QS()
-print(len(x.qs))
+    def __get_is_valid(self, row):
+        return self.excel.get_value(row, self.col_valid)
 
+    def __get_topics(self, row):
+        topics = list()
+        for col in range(self.col_topic_first, self.col_topic_last + 1):
+            topics.append(str(self.excel.get_value(row, col)))
+        return topics
