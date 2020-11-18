@@ -43,37 +43,134 @@ class Quests:
         self.excel.close()
 
     def __load_qs(self):
+        """
+        ========================================================================
+         Description: Load Questions from Excel into Dictionary of
+                        {int (Qid) -> Quest}
+        ========================================================================
+        """
         row = self.fr
         while True:
-            row += 1
-            qid = self.get_qid(row)
+            qid = self.__get_qid(row)
             # Break on EOF
             if not qid:
                 break
             is_valid = self.__get_is_valid(row)
             # Continue on invalid Question
             if not is_valid:
+                row += 1
                 continue
             topics = self.__get_topics(row)
             question = self.__get_question(row)
-            ans_true = str(self.excel.get_value(row, self.col_answer_true))
-            ans_false = list()
-            for col in range(self.col_answer_false_first,
-                             self.col_answer_false_last+1):
-                ans_false.append(str(self.excel.get_value(row, col)))
+            ans_true = self.__get_ans_true(row)
+            ans_false = self.__get_ans_false(row)
             self.qs[qid] = Quest(qid, topics, question, ans_true, ans_false)
+            row += 1
 
     def __get_qid(self, row):
-        return self.excel.get_value(row, self.col_qid)
+        """
+        ========================================================================
+         Description: Get Qid (Question-Id) from the Excel Row.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: int
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        qid = self.excel.get_value(row, self.col_qid)
+        if qid:
+            return int(qid)
+        return None
 
     def __get_is_valid(self, row):
-        return self.excel.get_value(row, self.col_valid)
+        """
+        ========================================================================
+         Description: Get if Is-Valid Question from the Excel Row.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: bool
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        return bool(self.excel.get_value(row, self.col_valid))
 
     def __get_topics(self, row):
+        """
+        ========================================================================
+         Description: Get List of Question-Topics from the Excel Row.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: list of str
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
         topics = list()
         for col in range(self.col_topic_first, self.col_topic_last + 1):
             topics.append(str(self.excel.get_value(row, col)))
         return topics
 
     def __get_question(self, row):
+        """
+        ========================================================================
+         Description: Get Question-Text from the Excel Row.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: str
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
         return self.excel.get_value(row, self.col_question)
+
+    def __get_ans_true(self, row):
+        """
+        ========================================================================
+         Description: Get True-Answer from the Excel Row.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: str
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        return str(self.excel.get_value(row, self.col_answer_true))
+
+    def __get_ans_false(self, row):
+        """
+        ========================================================================
+        Description: Get List of False-Answers from the Excel Row.
+        ========================================================================
+        Arguments:
+        ------------------------------------------------------------------------
+           1. row : int
+        ========================================================================
+        Return: list of str
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        ans_false = list()
+        for col in range(self.col_answer_false_first,
+                         self.col_answer_false_last + 1):
+            ans = self.excel.get_value(row, col)
+            if ans is not None:
+                ans_false.append(str(ans))
+        return ans_false

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/../mypy/.idea/mypy.iml" filepath="$PROJECT_DIR$/../mypy/.idea/mypy.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/myq.iml" filepath="$PROJECT_DIR$/.idea/myq.iml" />
     </modules>
   </component>
