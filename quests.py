@@ -16,28 +16,43 @@ class Quests:
     # Last Col in xls_qs
     lc = 9
 
+    # ===================
     # Excel Columns
+    # ===================
     # Question Id
     col_qid = 1
     # Is Valid Question (1/0)
     col_valid = 2
+    # Priority of the Question
+    col_priority = 3
     # First Topic-Column
-    col_topic_first = 3
+    col_topic_first = 4
     # Last Topic-Column
-    col_topic_last = 4
+    col_topic_last = 5
     # Text of the Question
-    col_question = 5
+    col_question = 6
     # Text of the True-Answer
-    col_answer_true = 6
+    col_answer_true = 7
     # First False-Answer Column
-    col_answer_false_first = 7
+    col_answer_false_first = 8
     # Last False-Answer Column
-    col_answer_false_last = 9
+    col_answer_false_last = 10
+    # Date Created
+    col_date_created = 11
 
     # Dict of Questions {int (Qid) -> Quest (Question)}
     qs = dict()
 
     def __init__(self, xls_qs='questions.xlsx'):
+        """
+        ========================================================================
+         Description: Constructor. Init the Dict of Questions.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. xls_qs : str (Path to Excel-Questions file).
+        ========================================================================
+        """
         self.excel = Excel(xls_qs)
         self.__load_qs()
         self.excel.close()
@@ -60,11 +75,13 @@ class Quests:
             if not is_valid:
                 row += 1
                 continue
+            priority = self.__get_priority(row)
             topics = self.__get_topics(row)
             question = self.__get_question(row)
             ans_true = self.__get_ans_true(row)
             ans_false = self.__get_ans_false(row)
-            self.qs[qid] = Quest(qid, topics, question, ans_true, ans_false)
+            self.qs[qid] = Quest(qid, priority, topics, question, ans_true,
+                                 ans_false)
             row += 1
 
     def __get_qid(self, row):
@@ -101,6 +118,22 @@ class Quests:
         assert type(row) == int
         assert row >= 1
         return bool(self.excel.get_value(row, self.col_valid))
+
+    def __get_priority(self, row):
+        """
+        ========================================================================
+         Description: Get Priority (A|B|C) of the Question.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: str (A|B|C)
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        return self.excel.get_value(row, self.col_priority)
 
     def __get_topics(self, row):
         """
