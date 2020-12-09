@@ -110,7 +110,7 @@ class Quest:
             f_priority = 20
         elif self.priority == 'B':
             f_priority = 10
-        return min(1, int(f_asked + f_answered + f_last_10 + f_last_time +
+        return max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
                           f_priority))
 
     def __set_answers(self, answer_false):

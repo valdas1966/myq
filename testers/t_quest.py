@@ -41,7 +41,16 @@ class TestQuest:
         quest.load_stat(asked=0, answered=0, last_10=str(),
                         last_time=1000)
         p0 = quest.grade = 100
-        u_tester.run(p0)
+        quest = Quest(qid=0, priority='B', topics=list(), question='test',
+                      answer_true='a', answers_false=['b'])
+        quest.load_stat(asked=0, answered=0, last_10=str(), last_time=1000)
+        p1 = quest.grade = 90
+        quest = Quest(qid=0, priority='C', topics=list(), question='test',
+                      answer_true='a', answers_false=['b'])
+        quest.load_stat(asked=1000, answered=1000, last_10='1111111111',
+                        last_time=0)
+        p2 = quest.grade = 1
+        u_tester.run(p0, p1, p2)
 
 
 if __name__ == '__main__':
