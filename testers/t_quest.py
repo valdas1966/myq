@@ -7,7 +7,7 @@ class TestQuest:
     def __init__(self):
         u_tester.print_start(__file__)
         TestQuest.__tester_answers()
-        TestQuest.__tester_is_one_answer()
+        TestQuest.__tester_has_one_answer()
         TestQuest.__tester_index_answer_true()
         TestQuest.__tester_load_stat()
         u_tester.print_finish(__file__)
@@ -21,10 +21,10 @@ class TestQuest:
         u_tester.run(p0)
 
     @staticmethod
-    def __tester_is_one_answer():
+    def __tester_has_one_answer():
         quest = Quest(qid=0, priority='B', topics=list(), question='quest test',
                       answer_true='a', answers_false=[None, None, None])
-        p0 = quest.is_one_answer
+        p0 = quest.has_one_answer
         u_tester.run(p0)
 
     @staticmethod

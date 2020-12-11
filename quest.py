@@ -24,7 +24,7 @@ class Quest:
     # Index of True-Answer in the List of Answers
     index_ans_true = 0
     # The Question has only One-Answer (User need to write the full Answer)
-    is_one_answer = False
+    has_one_answer = False
     # Number of Times the Question has asked
     asked = 0
     # Number of Times the Question has answered correctly
@@ -62,7 +62,7 @@ class Quest:
         self.question = question
         self.answer_true = answer_true
         self.__set_answers(answers_false)
-        self.__set_is_one_answer()
+        self.__set_has_one_answer()
         self.__set_index_ans_true()
 
     def load_stat(self, asked, answered, last_10, last_time):
@@ -143,11 +143,11 @@ class Quest:
                 self.index_ans_true = i
                 break
 
-    def __set_is_one_answer(self):
+    def __set_has_one_answer(self):
         """
         ========================================================================
          Description: Set Private-Attribute to hold if the Question has
                         only one True-Answer.
         ========================================================================
         """
-        self.is_one_answer = len(self.answers) == 1
+        self.has_one_answer = len(self.answers) == 1
