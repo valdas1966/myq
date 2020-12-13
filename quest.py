@@ -21,8 +21,6 @@ class Quest:
     answers_false = list()
     # Random List with True and False Answers
     answers = list()
-    # Index of True-Answer in the List of Answers
-    index_ans_true = 0
     # The Question has only One-Answer (User need to write the full Answer)
     has_one_answer = False
     # Number of Times the Question has asked
@@ -61,9 +59,10 @@ class Quest:
         self.priority = priority
         self.question = question
         self.answer_true = answer_true
-        self.__set_answers(answers_false)
-        self.__set_has_one_answer()
-        self.__set_index_ans_true()
+        # Drop Null False-Answers (Excel Questions may have Nulls False-Answers)
+        self.answers_false = list(filter(None, answers_false))
+        self.answers = self.answers_false + [self.answer_true]
+        self.shuffle_answers()
 
     def load_stat(self, asked, answered, last_10, last_time):
         """
@@ -87,6 +86,14 @@ class Quest:
         self.last_10 = last_10
         self.last_time = last_time
         self.grade = self.__set_grade()
+
+    def shuffle_answers(self):
+        """
+        ========================================================================
+         Description: Shuffle the Answers-List.
+        ========================================================================
+        """
+        random.shuffle(self.answers)
 
     def __set_grade(self):
         """
@@ -112,42 +119,3 @@ class Quest:
             f_priority = 10
         return max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
                           f_priority))
-
-    def __set_answers(self, answer_false):
-        """
-        ========================================================================
-         Description: Set Private-Attribute to hold Random-List of
-                        True and False Answers.
-        ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. ans_false : list of str (List of False-Answers).
-        ========================================================================
-        """
-        assert type(answer_false) == list
-        # Drop Null False-Answers (Excel Questions may have Nulls False-Answers)
-        ans_false = list(filter(None, answer_false))
-        self.answers = ans_false + [self.answer_true]
-        random.shuffle(self.answers)
-
-    def __set_index_ans_true(self):
-        """
-        ========================================================================
-         Description: Set Private-Attribute to hold the Index of True-Answer
-                        in the Answers-List.
-        ========================================================================
-        """
-        self.index_ans_true = 0
-        for i in range(1, len(self.answers)):
-            if self.answers[i] == self.answer_true:
-                self.index_ans_true = i
-                break
-
-    def __set_has_one_answer(self):
-        """
-        ========================================================================
-         Description: Set Private-Attribute to hold if the Question has
-                        only one True-Answer.
-        ========================================================================
-        """
-        self.has_one_answer = len(self.answers) == 1
