@@ -95,6 +95,9 @@ class Quest:
         """
         random.shuffle(self.answers)
 
+    def ask(self):
+
+
     def __set_grade(self):
         """
         ========================================================================
