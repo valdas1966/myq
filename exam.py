@@ -23,7 +23,7 @@ def ask_one_answer_question(q, text):
         return False
     # False-Answer
     log(q, False, ans)
-    print(f'{"="*50}\nThe right answer is: {ans}')
+    print(f'{"="*50}\nThe right answer is: {q.answer_true}')
     return ask_one_answer_question(q, text)
 
 
