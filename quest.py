@@ -9,6 +9,8 @@ class Quest:
     """
     # Question Id
     qid = 0
+    # Question Type (SIMPLE | ONE | YESNO)
+    qtype = None
     # Question Priority (A | B | C)
     priority = 'A'
     # Question Topics (Main | Sub)
@@ -21,8 +23,6 @@ class Quest:
     answers_false = list()
     # Random List with True and False Answers
     answers = list()
-    # The Question has only One-Answer (User need to write the full Answer)
-    has_one_answer = False
     # Number of Times the Question has asked
     asked = 0
     # Number of Times the Question has answered correctly
@@ -34,14 +34,15 @@ class Quest:
     # Grade of the Question based on its Statistics in range [1, 100]
     grade = 0
 
-    def __init__(self, qid, priority, topics, question,
+    def __init__(self, qid, qtype, priority, topics, question,
                  answer_true, answers_false):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
         ========================================================================
             1. qid : int
-            2. priority : str
+            2. qtype : str (SIMPLE | ONE | YESNO)
+            2. priority : str (A | B | C)
             3. topics : list of str
             4. question : str
             5. ans_true : str
@@ -49,12 +50,14 @@ class Quest:
         ========================================================================
         """
         assert type(qid) == int
+        assert type(qtype) == str
         assert type(priority) == str
         assert type(topics) == list
         assert type(question) == str
         assert type(answer_true) == str
         assert type(answers_false) == list
         self.qid = qid
+        self.qtype = qtype
         self.topics = topics
         self.priority = priority
         self.question = question
@@ -96,7 +99,7 @@ class Quest:
         random.shuffle(self.answers)
 
     def ask(self):
-
+        pass
 
     def __set_grade(self):
         """

@@ -4,9 +4,9 @@ from quests import Quests
 
 def ask_question(q):
     text = f'{"="*50}\n#{counter}. {q.question}:\n'
-    if len(q.answers) == 1:
+    if q.qtype == 'ONE':
         return ask_one_answer_question(q, text)
-    if set(q.answers) == {'Yes', 'No'}:
+    if q.qtype == 'YESNO':
         return ask_yes_no_answer_question(q, text)
     return ask_multi_answer_question(q, text)
 

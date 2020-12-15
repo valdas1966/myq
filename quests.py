@@ -14,7 +14,7 @@ class Quests:
     # First Col in xls_qs
     fc = 1
     # Last Col in xls_qs
-    lc = 9
+    lc = 12
 
     # ===================
     # Excel Columns
@@ -23,22 +23,24 @@ class Quests:
     col_qid = 1
     # Is Valid Question (1/0)
     col_valid = 2
+    # Question Type (SIMPLE | ONE | YESNO)
+    col_type = 3
     # Priority of the Question
-    col_priority = 3
+    col_priority = 4
     # First Topic-Column
-    col_topic_first = 4
+    col_topic_first = 5
     # Last Topic-Column
-    col_topic_last = 5
+    col_topic_last = 6
     # Text of the Question
-    col_question = 6
+    col_question = 7
     # Text of the True-Answer
-    col_answer_true = 7
+    col_answer_true = 8
     # First False-Answer Column
-    col_answer_false_first = 8
+    col_answer_false_first = 9
     # Last False-Answer Column
-    col_answer_false_last = 10
+    col_answer_false_last = 11
     # Date Created
-    col_date_created = 11
+    col_date_created = 12
 
     # Dict of Questions {int (Qid) -> Quest (Question)}
     qs = dict()
@@ -75,13 +77,14 @@ class Quests:
             if not is_valid:
                 row += 1
                 continue
+            qtype = self.__get_type(row)
             priority = self.__get_priority(row)
             topics = self.__get_topics(row)
             question = self.__get_question(row)
             ans_true = self.__get_ans_true(row)
             ans_false = self.__get_ans_false(row)
-            self.qs[qid] = Quest(qid, priority, topics, question, ans_true,
-                                 ans_false)
+            self.qs[qid] = Quest(qid, qtype, priority, topics, question,
+                                 ans_true, ans_false)
             row += 1
 
     def __get_qid(self, row):
@@ -118,6 +121,27 @@ class Quests:
         assert type(row) == int
         assert row >= 1
         return bool(self.excel.get_value(row, self.col_valid))
+
+    def __get_type(self, row):
+        """
+        ========================================================================
+         Description: Return Question-Type (SIMPLE | ONE | YESNO).
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. row : int
+        ========================================================================
+         Return: str (SIMPLE | ONE | YESNO).
+        ========================================================================
+        """
+        assert type(row) == int
+        assert row >= 1
+        value = self.excel.get_value(row, self.col_type)
+        if value == 'One':
+            return 'ONE'
+        if value == 'YesNo':
+            return 'YESNO'
+        return 'SIMPLE'
 
     def __get_priority(self, row):
         """
