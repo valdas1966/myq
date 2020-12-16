@@ -83,20 +83,18 @@ def log(q, res, ans=None):
     print('log()')
 
 
-print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
+def run():
+    print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
 
-qs = list(Quests().qs.values())
+    qs = list(Quests().qs.values())
 
-counter = 1
-while True:
-    random.shuffle(qs)
-    q = qs[0]
-    # Get Answer to Question
-    if ask_question(q):
-        counter += 1
-    # Break-Command
-    else:
-        break
-
-
-
+    counter = 1
+    while True:
+        random.shuffle(qs)
+        q = qs[0]
+        # Get Answer to Question
+        if ask_question(q):
+            counter += 1
+        # Break-Command
+        else:
+            break
