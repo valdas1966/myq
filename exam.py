@@ -80,13 +80,13 @@ def ask_multi_answer_question(q, text):
 
 
 def log(q, res, ans=None):
-    print('log()')
+    pass
 
 
-def run_local():
+def run(xls_qs='questions.xlsx'):
     print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
 
-    qs = list(Quests().qs.values())
+    qs = list(Quests(xls_qs=xls_qs).qs.values())
 
     counter = 1
     while True:
@@ -100,18 +100,5 @@ def run_local():
             break
 
 
-def run_colab():
-    print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
-
-    qs = list(Quests(xls_qs='/content/myq/questions.xlsx').qs.values())
-
-    counter = 1
-    while True:
-        random.shuffle(qs)
-        q = qs[0]
-        # Get Answer to Question
-        if ask_question(q, counter):
-            counter += 1
-        # Break-Command
-        else:
-            break
+if __name__ == '__main__':
+    run()
