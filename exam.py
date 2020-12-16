@@ -83,7 +83,7 @@ def log(q, res, ans=None):
     print('log()')
 
 
-def run():
+def run_local():
     print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
 
     qs = list(Quests().qs.values())
@@ -116,6 +116,3 @@ def run_colab():
         else:
             break
 
-
-if __name__ == '__main__':
-    run()
