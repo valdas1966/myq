@@ -2,7 +2,7 @@ import random
 from quests import Quests
 
 
-def ask_question(q):
+def ask_question(q, counter):
     text = f'{"="*50}\n#{counter}. {q.question}:\n'
     if q.qtype == 'ONE':
         return ask_one_answer_question(q, text)
@@ -60,6 +60,9 @@ def ask_multi_answer_question(q, text):
         ans = int(ans)
     else:
         ans = -1
+    # Break
+    if ans == 0:
+        return False
     # Illegal-Answer
     if ans not in [i for i in range(len(q.answers) + 1)]:
         return ask_multi_answer_question(q, text)
@@ -68,9 +71,6 @@ def ask_multi_answer_question(q, text):
         log(q, True)
         print('Right Answer!')
         return True
-    # Break
-    if ans == 0:
-        return False
     # False-Answer
     # ans-1 because zero-based
     log(q, False, q.answers[ans-1])
@@ -93,8 +93,10 @@ def run():
         random.shuffle(qs)
         q = qs[0]
         # Get Answer to Question
-        if ask_question(q):
+        if ask_question(q, counter):
             counter += 1
         # Break-Command
         else:
             break
+
+run()
