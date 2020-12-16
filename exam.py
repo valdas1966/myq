@@ -100,5 +100,22 @@ def run():
             break
 
 
+def run_colab():
+    print(f'\n\n\n{"="*50}\nStart Exam\n{"="*50}\n')
+
+    qs = list(Quests(xls_qs='/content/myq/questions.xlsx').qs.values())
+
+    counter = 1
+    while True:
+        random.shuffle(qs)
+        q = qs[0]
+        # Get Answer to Question
+        if ask_question(q, counter):
+            counter += 1
+        # Break-Command
+        else:
+            break
+
+
 if __name__ == '__main__':
     run()
