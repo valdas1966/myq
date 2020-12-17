@@ -67,7 +67,7 @@ class Quest:
         # Drop Null False-Answers (Excel Questions may have Nulls False-Answers)
         self.answers_false = list(filter(None, answers_false))
         self.answers = self.answers_false + [self.answer_true]
-        self.shuffle_answers()
+        random.shuffle(self.answers)
 
     def load_stat(self, asked, answered, last_10, last_time):
         """
