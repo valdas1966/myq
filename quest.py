@@ -9,8 +9,6 @@ class Quest:
     """
     # Question Id
     qid = 0
-    # Question Type (SIMPLE | ONE | YESNO)
-    qtype = None
     # Question Priority (A | B | C)
     priority = 'A'
     # Question Topics (Main | Sub)
@@ -35,15 +33,18 @@ class Quest:
     grade = 0
     # Length of Delimiter Line of Equal-Sign (=)
     len_delimiter_line = 75
+    # Full-Text of Questions and the Answers
+    text = str()
+    # Input from the User (Answer to the Question)
+    ans = str()
 
-    def __init__(self, qid, qtype, priority, topics, question,
+    def __init__(self, qid, priority, topics, question,
                  answer_true, answers_false):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
         ========================================================================
             1. qid : int
-            2. qtype : str (SIMPLE | ONE | YESNO)
             2. priority : str (A | B | C)
             3. topics : list of str
             4. question : str
@@ -52,14 +53,12 @@ class Quest:
         ========================================================================
         """
         assert type(qid) == int
-        assert type(qtype) == str
         assert type(priority) == str
         assert type(topics) == list
         assert type(question) == str
         assert type(answer_true) == str
         assert type(answers_false) == list
         self.qid = qid
-        self.qtype = qtype
         self.topics = topics
         self.priority = priority
         self.question = question
@@ -93,26 +92,33 @@ class Quest:
         self.grade = self.__set_grade()
 
     def ask(self, counter):
-        text = f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
-               f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
-        if self.qtype == 'ONE':
-            return self.__ask_one_answer_question(text)
-        if self.qtype == 'YESNO':
-            return self.__ask_yes_no_answer_question(text)
-        return self.__ask_multi_answer_question(text)
+        """
+        ========================================================================
+         Description: Ask the User a Question.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. counter : int (Number of Question in current Exam).
+        ========================================================================
+         Return: bool (True on Legal-Answer, False on Break - End of Exam).
+        ========================================================================
+        """
+        # Load Question
+        self.text = f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
+                    f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
+        # Load Answers
+        for i, answer in enumerate(self.answers):
+            # i+1 because zero-based
+            self.text += f'{i + 1}. {answer}\n'
 
-    def __ask_one_answer_question(self, text):
-        ans = input(text + '-> ')
-        # True-Answer
-        if ans == self.answer_true:
-            return True
-        # Break
-        if ans == '0':
-            return False
-        # False-Answer
+    def __print_right_answer(self):
+        """
+        ========================================================================
+         Description: Print the Right Answer (on False Answer from the User).
+        ========================================================================
+        """
         print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
               f'{self.answer_true}')
-        return self.__ask_one_answer_question(text)
 
     def __ask_yes_no_answer_question(self, text):
         ans = input(text + f'(Yes/No):\n-> ')
@@ -121,7 +127,7 @@ class Quest:
             return False
         if ans in {'1', 'y', 'Y', 'Yes', 'YES', 'yes'}:
             ans = 'Yes'
-        elif ans in {'2', 'n', 'N', 'No', 'NO', 'no'}:
+        elif ans in w{'2', 'n', 'N', 'No', 'NO', 'no'}:
             ans = 'No'
         # Illegal-Answer
         if ans not in {'Yes', 'No'}:
@@ -134,31 +140,6 @@ class Quest:
               f'{self.answer_true}')
         return self.__ask_yes_no_answer_question(text)
 
-    def __ask_multi_answer_question(self, text):
-        text_temp = text
-        for i, answer in enumerate(self.answers):
-            # i+1 because zero-based
-            text_temp += f'{i + 1}. {answer}\n'
-        ans = input(text_temp + '-> ')
-        if ans.isnumeric():
-            ans = int(ans)
-        else:
-            ans = -1
-        # Break
-        if ans == 0:
-            return False
-        # Illegal-Answer
-        if ans not in [i for i in range(len(self.answers) + 1)]:
-            return self.__ask_multi_answer_question(text)
-        # True-Answer (ans-1 because zero-based)
-        if self.answers[ans - 1] == self.answer_true:
-            return True
-        # False-Answer
-        # ans-1 because zero-based
-        print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
-              f'{self.answer_true}')
-        random.shuffle(self.answers)
-        return self.__ask_multi_answer_question(text)
 
     def __set_grade(self):
         """
