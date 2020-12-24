@@ -1,5 +1,9 @@
 import random
+from f_excel.c_excel import Excel
 from quests import Quests
+
+
+path_myq = 'd:\\myq\\'
 
 
 def run(xls_qs='questions.xlsx'):
@@ -19,5 +23,9 @@ def run(xls_qs='questions.xlsx'):
             break
 
 
-if __name__ == '__main__':
-    run()
+def load_topics():
+    xls_topics = path_myq + 'topics.xlsx'
+    excel = Excel(filename=xls_topics)
+
+    excel.close()
+
