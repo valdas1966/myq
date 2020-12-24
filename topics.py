@@ -32,3 +32,5 @@ class Topics(defaultdict):
 t = Topics(path_myq='d:\\myq\\')
 print(t)
 
+
+
