@@ -1,36 +1,42 @@
 from collections import defaultdict
+from topic import Topic
 from f_excel.c_excel import Excel
 
 
-class Topics(defaultdict):
+class Topics:
 
-    # Row of the First-Topic
+    # First Relevant Row in Excel
     fr = 1
-    # Column of the Top-Topic
-    fc = 1
+    # First Relevant Col in Excel
+    fc = 2
+    # Level of Topics
+    level = defaultdict(list)
+    # All Topics
+    topics = set()
 
     def __init__(self, path_myq):
-        super().__init__(defaultdict)
-        self.__load(path_myq)
+        li_rows = self.__get_li_rows(path_myq)
+        self.__load(li_rows)
 
-    def __load(self, path_myq):
+    def __get_li_rows(self, path_myq):
         xlsx = path_myq + 'topics.xlsx'
         excel = Excel(xlsx)
-        row = self.fr
-        while not excel.is_blank(row, self.fc):
-            col = self.fc
-            while not excel.is_blank(row, col):
-                name = excel.get_value(row, col)
-                priority = excel.get_value(row, col+1)
-                if priority in {'A', 'B', 'C'}:
-                    self[name] = priority
-                col += 1
-            row += 1
+        li_rows = excel.to_linked_list(self.fr, self.fc)
         excel.close()
+        return li_rows
+
+    def __load(self, li_rows):
+        for li_cols in li_rows:
+            name = ' -> '.join(li_cols[:-1])
+            priority = li_cols[-1]
+            topic = Topic(name, priority)
+            self.level[topic.level].append(topic)
+            self.topics.add(topic)
 
 
 t = Topics(path_myq='d:\\myq\\')
-print(t)
+print(t.topics)
+print(t.level[2])
 
 
 

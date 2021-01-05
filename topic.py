@@ -1,34 +1,38 @@
 class Topic:
 
-    def __init__(self, name, level, priority):
+    def __init__(self, name, priority):
         """
         ========================================================================
          Description: Constructor. Init the Arguments.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
-            1. name : str (Topic Name like Programming Language).
-            2. level : int (Topic Level - 1 is the top).
-            3. priority : str (A | B | C).
+            1. name : str (Topic Name like: Programming Language -> Html).
+            2. priority : str (A | B | C).
         ========================================================================
         """
         assert type(name) == str
-        assert type(level) == int
         assert type(priority) == str
         self.name = name
-        self.level = level
         self.priority = priority
-        self.subtopics = list()
+        self.level = self.name.count('->')
 
-    def nest(self, subtopic):
+    def __str__(self):
         """
         ========================================================================
-         Description: Nest SubTopic.
+         Description: Return Str-Representation of the Topic.
         ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. subtopic : Topic
+         Return: str ('Programming Language -> Html -> Basic: B')
         ========================================================================
         """
-        assert type(subtopic) == Topic
-        self.subtopics.append(subtopic)
+        return f'{self.name}: {self.priority}'
+
+    def __repr__(self):
+        """
+        ========================================================================
+         Description: Return Str-Representation of the Topic.
+        ========================================================================
+         Return: str ('Programming Language -> Html -> Basic: B')
+        ========================================================================
+        """
+        return self.__str__()
