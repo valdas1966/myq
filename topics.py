@@ -1,6 +1,7 @@
 from collections import defaultdict
 from topic import Topic
 from f_excel.c_excel import Excel
+from f_utils import u_file
 
 
 class Topics:
@@ -51,6 +52,7 @@ class Topics:
             self.topics.add(topic)
 
     def __check_valid(self):
+
 
 
 t = Topics(path_myq='d:\\myq\\')
