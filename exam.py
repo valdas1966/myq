@@ -1,14 +1,19 @@
 import random
 from f_excel.c_excel import Excel
-from quests import Quests
+from topics import Topics
 
 
-path_myq = 'd:\\myq\\'
+path_myq = 'g:\\myq\\'
 
 
 def run(xls_qs='questions.xlsx'):
+    topics = Topics(path_myq)
+    if not topics.is_valid:
+        return
+
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
 
+    """
     qs = list(Quests(xls_qs=xls_qs).qs.values())
 
     counter = 1
@@ -21,11 +26,8 @@ def run(xls_qs='questions.xlsx'):
         # Break-Command
         else:
             break
+    """
 
 
-def load_topics():
-    xls_topics = path_myq + 'topics.xlsx'
-    excel = Excel(filename=xls_topics)
-
-    excel.close()
-
+if __name__ == '__main__':
+    run()

@@ -14,7 +14,7 @@ class Quests:
     # First Col in xls_qs
     fc = 1
     # Last Col in xls_qs
-    lc = 12
+    lc = 8
 
     # ===================
     # Excel Columns
@@ -25,34 +25,30 @@ class Quests:
     col_valid = 2
     # Question Type (SIMPLE | ONE | YESNO)
     col_type = 3
-    # Priority of the Question
+    # Priority of the Question (A | B | C)
     col_priority = 4
-    # First Topic-Column
-    col_topic_first = 5
-    # Last Topic-Column
-    col_topic_last = 6
     # Text of the Question
-    col_question = 7
+    col_question = 5
     # Text of the True-Answer
-    col_answer_true = 8
-    # First False-Answer Column
-    col_answer_false_first = 9
-    # Last False-Answer Column
-    col_answer_false_last = 11
+    col_answer_true = 6
+    # Text of the False-Answer
+    col_answer_false = 7
     # Date Created
-    col_date_created = 12
+    col_date_created = 8
 
-    # Dict of Questions {int (Qid) -> Quest (Question)}
+    # Dict of Questions {str (Qid) -> Quest (Question)}
     qs = dict()
 
-    def __init__(self, xls_qs='questions.xlsx'):
+    def __init__(self, path_myq):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
+        ------------------------------------------------------------------------
+            1. qs : dict {str (Qid) -> Quest (Question}
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
-            1. xls_qs : str (Path to Excel-Questions file).
+            1. path_myq : str (Path to Myq-Directory).
         ========================================================================
         """
         self.excel = Excel(xls_qs)
@@ -63,7 +59,7 @@ class Quests:
         """
         ========================================================================
          Description: Load Questions from Excel into Dictionary of
-                        {int (Qid) -> Quest}
+                        {str (Qid) -> Quest (Question}
         ========================================================================
         """
         row = self.fr
