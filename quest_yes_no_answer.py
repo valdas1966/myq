@@ -22,14 +22,21 @@ class QuestYesNo(Quest):
         ========================================================================
         """
         super().ask(counter)
-        input(text + f'(Yes/No):\n-> ')
-        ans = input(self.text + '-> ')
+        text = f'{self.text}(Yes/No):\n-> '
+        ans = input(text)
+        if ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
+            ans = 'Yes'
+        elif ans in {'2', 'No', 'NO', 'no', 'N', 'n'}:
+            ans = 'No'
+        # Illegal Answer
+        else:
+            return self.ask(counter)
         # True-Answer
-        if ans == self.answer_true:
+        if ans == self.ans_true:
             return True
         # Break
         if ans == '0':
             return False
         # False-Answer
-        self.__print_right_answer()
+        self._print_right_answer()
         return self.ask(counter)

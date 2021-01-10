@@ -39,6 +39,22 @@ class Topics:
         self.__load(li_rows)
         self.__check_valid()
 
+    def get_topic(self, name):
+        """
+        ========================================================================
+         Description: Retrieve Topic from Topics-Set by its Name.
+        ========================================================================
+         Argument:
+        ------------------------------------------------------------------------
+            1. name : str (Name of the Topic, ex: 'PL -> HTML -> Basic').
+        ========================================================================
+         Return: Topic
+        ========================================================================
+        """
+        for t in self.topics:
+            if t.name == name:
+                return t
+
     def __get_li_rows(self):
         """
         ========================================================================
@@ -63,13 +79,13 @@ class Topics:
             1. li_rows : List (Rows) of List (Columns) of Str (Values).
         ========================================================================
         """
-        for li_cols in li_rows:
+        for i_row, li_cols in enumerate(li_rows):
             name = self.delimiter.join(li_cols[:-1])
             priority = li_cols[-1]
             father = self.__get_father(name)
             if father:
                 priority = father.priority + priority
-            topic = Topic(name, priority)
+            topic = Topic(name, priority, i_row)
             self.level[topic.level].append(topic)
             self.topics.add(topic)
 

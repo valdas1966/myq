@@ -1,4 +1,5 @@
 import random
+from topic import Topic
 
 
 class Quest:
@@ -11,14 +12,14 @@ class Quest:
     qid = 0
     # Question Priority (A | B | C)
     priority = 'A'
-    # Question Topics (Main | Sub)
-    topics = list()
+    # Question Topic
+    topic = None
     # Question String-Representation
     question = str()
     # Question True-Answer
-    answer_true = str()
-    # List of Question False-Answers
-    answers_false = list()
+    ans_true = str()
+    # Question False-Answer
+    ans_false = str()
     # Random List with True and False Answers
     answers = list()
     # Number of Times the Question has asked
@@ -36,37 +37,32 @@ class Quest:
     # Full-Text of Questions and the Answers
     text = str()
     # Input from the User (Answer to the Question)
-    ans = str()
+    ans_user = str()
 
-    def __init__(self, qid, priority, topics, question,
-                 answer_true, answers_false):
+    def __init__(self, qid, priority, topic, question, ans_true, ans_false):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
         ========================================================================
-            1. qid : int
-            2. priority : str (A | B | C)
-            3. topics : list of str
+            1. qid : str
+            2. priority : str (A | B | C | ABC | ABBA)
+            3. topic : Topic Class
             4. question : str
             5. ans_true : str
-            6. ans_false : list of str
+            6. ans_false : str
         ========================================================================
         """
-        assert type(qid) == int
+        assert type(qid) == str
         assert type(priority) == str
-        assert type(topics) == list
+        assert type(topic) == Topic
         assert type(question) == str
-        assert type(answer_true) == str
-        assert type(answers_false) == list
+        assert type(ans_true) == str
+        assert type(ans_false) == str
         self.qid = qid
-        self.topics = topics
+        self.topic = topic
         self.priority = priority
         self.question = question
-        self.answer_true = answer_true
-        # Drop Null False-Answers (Excel Questions may have Nulls False-Answers)
-        self.answers_false = list(filter(None, answers_false))
-        self.answers = self.answers_false + [self.answer_true]
-        random.shuffle(self.answers)
+        self.ans_true = ans_true
 
     def load_stat(self, asked, answered, last_10, last_time):
         """
@@ -106,40 +102,15 @@ class Quest:
         # Load Question
         self.text = f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
                     f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
-        # Load Answers
-        for i, answer in enumerate(self.answers):
-            # i+1 because zero-based
-            self.text += f'{i + 1}. {answer}\n'
 
-    def __print_right_answer(self):
+    def _print_right_answer(self):
         """
         ========================================================================
          Description: Print the Right Answer (on False Answer from the User).
         ========================================================================
         """
         print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
-              f'{self.answer_true}')
-
-    def __ask_yes_no_answer_question(self, text):
-        ans = input(text + f'(Yes/No):\n-> ')
-        # Break
-        if ans == '0':
-            return False
-        if ans in {'1', 'y', 'Y', 'Yes', 'YES', 'yes'}:
-            ans = 'Yes'
-        elif ans in w{'2', 'n', 'N', 'No', 'NO', 'no'}:
-            ans = 'No'
-        # Illegal-Answer
-        if ans not in {'Yes', 'No'}:
-            return self.ask_yes_no_answer_question(text)
-        # True-Answer
-        if ans == self.answer_true:
-            return True
-        # False-Answer
-        print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
-              f'{self.answer_true}')
-        return self.__ask_yes_no_answer_question(text)
-
+              f'{self.ans_true}')
 
     def __set_grade(self):
         """

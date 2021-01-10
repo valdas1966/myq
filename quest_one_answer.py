@@ -26,11 +26,11 @@ class QuestOneAnswer(Quest):
         super().ask(counter)
         ans = input(self.text + '-> ')
         # True-Answer
-        if ans == self.answer_true:
+        if ans == self.ans_true:
             return True
         # Break
         if ans == '0':
             return False
         # False-Answer
-        self.__print_right_answer()
+        self._print_right_answer()
         return self.ask(counter)

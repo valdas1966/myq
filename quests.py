@@ -1,5 +1,10 @@
 from f_excel.c_excel import Excel
-from quest import Quest
+from f_utils import u_file
+from topics import Topics
+from topic import Topic
+from quest_one_answer import QuestOneAnswer
+from quest_yes_no_answer import QuestYesNo
+from quest_multi_answer import QuestMultiAnswer
 
 
 class Quests:
@@ -23,207 +28,241 @@ class Quests:
     col_qid = 1
     # Is Valid Question (1/0)
     col_valid = 2
-    # Question Type (SIMPLE | ONE | YESNO)
+    # Question Type (ONE | YESNO | MULTI)
     col_type = 3
     # Priority of the Question (A | B | C)
     col_priority = 4
     # Text of the Question
     col_question = 5
     # Text of the True-Answer
-    col_answer_true = 6
+    col_ans_true = 6
     # Text of the False-Answer
-    col_answer_false = 7
+    col_ans_false = 7
     # Date Created
     col_date_created = 8
 
     # Dict of Questions {str (Qid) -> Quest (Question)}
     qs = dict()
 
-    def __init__(self, path_myq):
+    def __init__(self, path_myq, topics):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
         ------------------------------------------------------------------------
-            1. qs : dict {str (Qid) -> Quest (Question}
+            1. qs : dict {str (Qid) -> Quest (Question)}
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
             1. path_myq : str (Path to Myq-Directory).
+            2. topics : Topics Class
         ========================================================================
         """
-        self.excel = Excel(xls_qs)
-        self.__load_qs()
-        self.excel.close()
+        assert type(path_myq) == str
+        assert type(topics) == Topics
+        self.path_myq = path_myq
+        self.topics = topics
+        path_dir = self.path_myq + '\\Questions'
+        filepaths = u_file.filepaths(path_dir, extensions='xlsx')
+        for xlsx_qs in filepaths:
+            name_topic = self.__to_topic_name(xlsx_qs)
+            topic = self.topics.get_topic(name_topic)
+            if not topic:
+                print(name_topic)
+            self.__load_qs(xlsx_qs, topic)
 
-    def __load_qs(self):
+    def __to_topic_name(self, xlsx_qs):
+        """
+        ========================================================================
+         Description: Return Topic-Name by Excel-File-Name.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. xlsx_qs : str (Path to Excel-Questions File).
+        ========================================================================
+         Return: str (Topic Name).
+        ========================================================================
+        """
+        name = xlsx_qs[:-5]
+        name = name.replace(f'{self.path_myq}\\Questions\\', '')
+        return name.replace('\\', ' -> ')
+
+    def __load_qs(self, xlsx_qs, topic):
         """
         ========================================================================
          Description: Load Questions from Excel into Dictionary of
                         {str (Qid) -> Quest (Question}
         ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. xlsx_qs : str (Path to Excel-Question File)
+            2. topic : Topic Class (of the Excel-Question File).
+        ========================================================================
         """
+        assert type(xlsx_qs) == str
+        assert type(topic) == Topic
+        excel = Excel(xlsx_qs)
         row = self.fr
         while True:
-            qid = self.__get_qid(row)
+            qid = self.__get_qid(excel, row, topic)
             # Break on EOF
             if not qid:
                 break
-            is_valid = self.__get_is_valid(row)
+            is_valid = self.__get_is_valid(excel, row)
             # Continue on invalid Question
             if not is_valid:
                 row += 1
                 continue
-            qtype = self.__get_type(row)
-            priority = self.__get_priority(row)
-            topics = self.__get_topics(row)
-            question = self.__get_question(row)
-            ans_true = self.__get_ans_true(row)
-            ans_false = self.__get_ans_false(row)
-            self.qs[qid] = Quest(qid, qtype, priority, topics, question,
-                                 ans_true, ans_false)
+            qtype = self.__get_type(excel, row)
+            priority = topic.priority + self.__get_priority(excel, row)
+            question = self.__get_question(excel, row)
+            ans_true = self.__get_ans_true(excel, row)
+            ans_false = self.__get_ans_false(excel, row)
+            if qtype == 'ONE':
+                self.qs[qid] = QuestOneAnswer(qid, priority, topic, question,
+                                              ans_true, ans_false)
+            elif qtype == 'YESNO':
+                self.qs[qid] = QuestYesNo(qid, priority, topic, question,
+                                          ans_true, ans_false)
+            elif qtype == 'MULTI':
+                self.qs[qid] = QuestMultiAnswer(qid, priority, topic,
+                                                question, ans_true, ans_false)
             row += 1
+        excel.close()
 
-    def __get_qid(self, row):
+    def __get_qid(self, excel, row, topic):
         """
         ========================================================================
          Description: Get Qid (Question-Id) from the Excel Row.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
-            1. row : int
+            1. excel : Excel Class
+            2. row : int
         ========================================================================
-         Return: int
+         Return: str (Topic-Name: Qid).
         ========================================================================
         """
+        assert type(excel) == Excel
         assert type(row) == int
+        assert type(topic) == Topic
         assert row >= 1
-        qid = self.excel.get_value(row, self.col_qid)
+        qid = excel.get_value(row, self.col_qid)
         if qid:
-            return int(qid)
+            return f'{topic}: {qid}'
         return None
 
-    def __get_is_valid(self, row):
+    def __get_is_valid(self, excel, row):
         """
         ========================================================================
          Description: Get if Is-Valid Question from the Excel Row.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
-            1. row : int
+            1. excel : Excel Class
+            2. row : int
         ========================================================================
          Return: bool
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        return bool(self.excel.get_value(row, self.col_valid))
+        return bool(excel.get_value(row, self.col_valid))
 
-    def __get_type(self, row):
+    def __get_type(self, excel, row):
         """
         ========================================================================
-         Description: Return Question-Type (SIMPLE | ONE | YESNO).
+         Description: Return Question-Type (ONE | YESNO | MULTI).
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
+            1. excel : Excel Class
             1. row : int
         ========================================================================
-         Return: str (SIMPLE | ONE | YESNO).
+         Return: str (ONE | YESNO | MULTI).
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        value = self.excel.get_value(row, self.col_type)
+        value = excel.get_value(row, self.col_type)
         if value == 'One':
             return 'ONE'
         if value == 'YesNo':
             return 'YESNO'
-        return 'SIMPLE'
+        return 'MULTI'
 
-    def __get_priority(self, row):
+    def __get_priority(self, excel, row):
         """
         ========================================================================
          Description: Get Priority (A|B|C) of the Question.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
+            1. excel : Excel Class
             1. row : int
         ========================================================================
          Return: str (A|B|C)
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        return self.excel.get_value(row, self.col_priority)
+        return excel.get_value(row, self.col_priority)
 
-    def __get_topics(self, row):
-        """
-        ========================================================================
-         Description: Get List of Question-Topics from the Excel Row.
-        ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. row : int
-        ========================================================================
-         Return: list of str
-        ========================================================================
-        """
-        assert type(row) == int
-        assert row >= 1
-        topics = list()
-        for col in range(self.col_topic_first, self.col_topic_last + 1):
-            topics.append(str(self.excel.get_value(row, col)))
-        return topics
-
-    def __get_question(self, row):
+    def __get_question(self, excel, row):
         """
         ========================================================================
          Description: Get Question-Text from the Excel Row.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
+            1. excel : Excel
             1. row : int
         ========================================================================
          Return: str
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        return self.excel.get_value(row, self.col_question)
+        return excel.get_value(row, self.col_question)
 
-    def __get_ans_true(self, row):
+    def __get_ans_true(self, excel, row):
         """
         ========================================================================
          Description: Get True-Answer from the Excel Row.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
-            1. row : int
+            1. excel : Excel Class
+            2. row : int
         ========================================================================
          Return: str
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        return str(self.excel.get_value(row, self.col_answer_true))
+        return str(excel.get_value(row, self.col_ans_true))
 
-    def __get_ans_false(self, row):
+    def __get_ans_false(self, excel, row):
         """
         ========================================================================
         Description: Get List of False-Answers from the Excel Row.
         ========================================================================
         Arguments:
         ------------------------------------------------------------------------
-           1. row : int
+           1. excel : Excel Class
+           2. row : int
         ========================================================================
         Return: list of str
         ========================================================================
         """
         assert type(row) == int
+        assert type(excel) == Excel
         assert row >= 1
-        ans_false = list()
-        for col in range(self.col_answer_false_first,
-                         self.col_answer_false_last + 1):
-            ans = self.excel.get_value(row, col)
-            if ans is not None:
-                ans_false.append(str(ans))
-        return ans_false
+        if excel.is_blank(row, self.col_ans_false):
+            return str()
+        else:
+            return str(excel.get_value(row, self.col_ans_false))

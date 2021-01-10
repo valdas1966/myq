@@ -1,3 +1,4 @@
+import random
 from quest import Quest
 
 
@@ -8,6 +9,18 @@ class QuestMultiAnswer(Quest):
                     choose the right answer from multiple choices.
     ============================================================================
     """
+
+    def __init__(self, qid, priority, topic, question, ans_true, ans_false):
+        """
+        ========================================================================
+         Constructor: Init the Private Attributes.
+        ========================================================================
+        """
+        super().__init__(qid, priority, topic, question, ans_true, ans_false)
+        self.answers = [ans_true]
+        if ans_false:
+            self.answers.append(ans_false)
+        random.shuffle(self.answers)
 
     def ask(self, counter):
         """
@@ -22,8 +35,14 @@ class QuestMultiAnswer(Quest):
         ========================================================================
         """
         super().ask(counter)
+        # Load Answers
+        for i, answer in enumerate(self.answers):
+            # i+1 because zero-based
+            self.text += f'{i + 1}. {answer}\n'
         ans = input(self.text + '-> ')
-        if not self.__is_legal_answer(ans):
+        # Illegal Answer
+        if ans not in {1, 2}:
+            print('illegal')
             return self.ask(counter)
         ans = int(ans)
         # Break
@@ -33,26 +52,5 @@ class QuestMultiAnswer(Quest):
         if self.answers[ans - 1] == self.answer_true:
             return True
         # False-Answer
-        self.__print_right_answer()
+        self._print_right_answer()
         return self.ask(counter)
-
-    def __is_legal_answer(self, ans):
-        """
-        ========================================================================
-         Description: Return True if it is Legal-Answer
-                        (zero or int in size of the answers-list).
-        ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. ans : str (Answer from the User).
-        ========================================================================
-         Return: bool
-        ========================================================================
-        """
-        # not int
-        if not ans.isnumeric():
-            return False
-        # Illegal int
-        if ans not in [i for i in range(len(self.answers) + 1)]:
-            return False
-        return True
