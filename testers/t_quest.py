@@ -6,17 +6,8 @@ class TestQuest:
 
     def __init__(self):
         u_tester.print_start(__file__)
-        TestQuest.__tester_answers()
         TestQuest.__tester_load_stat()
         u_tester.print_finish(__file__)
-
-    @staticmethod
-    def __tester_answers():
-        quest = Quest(qid=0, qtype='SIMPLE', priority='A', topics=list(),
-                      question='quest test', answer_true='a',
-                      answers_false=['b', 'c', None])
-        p0 = set(quest.answers) == {'a', 'b', 'c'}
-        u_tester.run(p0)
 
     @staticmethod
     def __tester_load_stat():
