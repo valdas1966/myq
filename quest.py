@@ -100,7 +100,8 @@ class Quest:
         ========================================================================
         """
         # Load Question
-        self.text = f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
+        self.text = f'{"=" * self.len_delimiter_line}\n{self.topic}\n' \
+                    f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
                     f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
 
     def _print_right_answer(self):

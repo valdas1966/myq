@@ -28,7 +28,8 @@ class Topic:
          Return: str ('Programming Language -> Html -> Basic: B')
         ========================================================================
         """
-        return f'{self.name}: {self.priority}'
+        return f'{self.name}'
+        #: {self.priority}'
 
     def __repr__(self):
         """

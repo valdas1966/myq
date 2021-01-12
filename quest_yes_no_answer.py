@@ -24,6 +24,9 @@ class QuestYesNo(Quest):
         super().ask(counter)
         text = f'{self.text}(Yes/No):\n-> '
         ans = input(text)
+        # Break
+        if ans == '0':
+            return False
         if ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
             ans = 'Yes'
         elif ans in {'2', 'No', 'NO', 'no', 'N', 'n'}:
@@ -34,9 +37,6 @@ class QuestYesNo(Quest):
         # True-Answer
         if ans == self.ans_true:
             return True
-        # Break
-        if ans == '0':
-            return False
         # False-Answer
         self._print_right_answer()
         return self.ask(counter)

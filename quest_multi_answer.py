@@ -41,15 +41,15 @@ class QuestMultiAnswer(Quest):
             self.text += f'{i + 1}. {answer}\n'
         ans = input(self.text + '-> ')
         # Illegal Answer
-        if ans not in {1, 2}:
-            print('illegal')
+        if ans not in {'0', '1', '2'}:
+            print('Illegal Answer')
             return self.ask(counter)
         ans = int(ans)
         # Break
         if ans == 0:
             return False
         # True-Answer (ans-1 because zero-based)
-        if self.answers[ans - 1] == self.answer_true:
+        if self.answers[ans - 1] == self.ans_true:
             return True
         # False-Answer
         self._print_right_answer()

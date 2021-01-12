@@ -5,6 +5,7 @@ from topic import Topic
 from quest_one_answer import QuestOneAnswer
 from quest_yes_no_answer import QuestYesNo
 from quest_multi_answer import QuestMultiAnswer
+import factory_quest
 
 
 class Quests:
@@ -19,7 +20,7 @@ class Quests:
     # First Col in xls_qs
     fc = 1
     # Last Col in xls_qs
-    lc = 8
+    lc = 7
 
     # ===================
     # Excel Columns
@@ -28,18 +29,16 @@ class Quests:
     col_qid = 1
     # Is Valid Question (1/0)
     col_valid = 2
-    # Question Type (ONE | YESNO | MULTI)
-    col_type = 3
     # Priority of the Question (A | B | C)
-    col_priority = 4
+    col_priority = 3
     # Text of the Question
-    col_question = 5
+    col_question = 4
     # Text of the True-Answer
-    col_ans_true = 6
+    col_ans_true = 5
     # Text of the False-Answer
-    col_ans_false = 7
+    col_ans_false = 6
     # Date Created
-    col_date_created = 8
+    col_date_created = 7
 
     # Dict of Questions {str (Qid) -> Quest (Question)}
     qs = dict()
@@ -112,20 +111,13 @@ class Quests:
             if not is_valid:
                 row += 1
                 continue
-            qtype = self.__get_type(excel, row)
             priority = topic.priority + self.__get_priority(excel, row)
             question = self.__get_question(excel, row)
             ans_true = self.__get_ans_true(excel, row)
             ans_false = self.__get_ans_false(excel, row)
-            if qtype == 'ONE':
-                self.qs[qid] = QuestOneAnswer(qid, priority, topic, question,
-                                              ans_true, ans_false)
-            elif qtype == 'YESNO':
-                self.qs[qid] = QuestYesNo(qid, priority, topic, question,
-                                          ans_true, ans_false)
-            elif qtype == 'MULTI':
-                self.qs[qid] = QuestMultiAnswer(qid, priority, topic,
-                                                question, ans_true, ans_false)
+            qtype = self.__get_qtype(ans_true, ans_false)
+            self.qs[qid] = factory_quest.build(qtype, qid, priority, topic,
+                                               question, ans_true, ans_false)
             row += 1
         excel.close()
 
@@ -168,29 +160,6 @@ class Quests:
         assert type(excel) == Excel
         assert row >= 1
         return bool(excel.get_value(row, self.col_valid))
-
-    def __get_type(self, excel, row):
-        """
-        ========================================================================
-         Description: Return Question-Type (ONE | YESNO | MULTI).
-        ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. excel : Excel Class
-            1. row : int
-        ========================================================================
-         Return: str (ONE | YESNO | MULTI).
-        ========================================================================
-        """
-        assert type(row) == int
-        assert type(excel) == Excel
-        assert row >= 1
-        value = excel.get_value(row, self.col_type)
-        if value == 'One':
-            return 'ONE'
-        if value == 'YesNo':
-            return 'YESNO'
-        return 'MULTI'
 
     def __get_priority(self, excel, row):
         """
@@ -266,3 +235,26 @@ class Quests:
             return str()
         else:
             return str(excel.get_value(row, self.col_ans_false))
+
+    @staticmethod
+    def __get_qtype(ans_true, ans_false):
+        """
+        ========================================================================
+         Description: Return Question-Type (ONE | YESNO | MULTI).
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. ans_true : str (True Answer).
+            1. ans_false : str (False Answer).
+        ========================================================================
+         Return: str (ONE | YESNO | MULTI).
+        ========================================================================
+        """
+        assert type(ans_true) == str
+        assert type(ans_false) == str
+        if not ans_false:
+            return 'ONE'
+        if {ans_true, ans_false} == {'Yes', 'No'}:
+            return 'YESNO'
+        if ans_true:
+            return 'MULTI'
