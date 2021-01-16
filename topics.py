@@ -1,7 +1,6 @@
 import os
 from collections import defaultdict
 from f_excel.c_excel import Excel
-from f_utils import u_set
 from topic import Topic
 
 
@@ -55,6 +54,20 @@ class Topics:
             if t.name == name:
                 return t
 
+    def get_priorities(self):
+        """
+        ========================================================================
+         Description: Return Dict of Priority and its Relative Value.
+        ========================================================================
+         Return: dict {str (Priority) -> float [0, 1] (Relative Value)}.
+        ========================================================================
+        """
+        set_priorities = set()
+        for t in self.topics:
+            set_priorities.add(t.priority)
+        li = sorted(list(set_priorities), reverse=True)
+        return
+        
     def __get_li_rows(self):
         """
         ========================================================================

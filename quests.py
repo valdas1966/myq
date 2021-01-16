@@ -42,6 +42,8 @@ class Quests:
 
     # Dict of Questions {str (Qid) -> Quest (Question)}
     qs = dict()
+    # Set of All Priorities
+    priorities = set()
 
     def __init__(self, path_myq, topics):
         """
@@ -68,6 +70,7 @@ class Quests:
             if not topic:
                 print(name_topic)
             self.__load_qs(xlsx_qs, topic)
+        self.__load_stat()
 
     def __to_topic_name(self, xlsx_qs):
         """
@@ -118,9 +121,22 @@ class Quests:
             qtype = self.__get_qtype(ans_true, ans_false)
             self.qs[qid] = factory_quest.build(qtype, qid, priority, topic,
                                                question, ans_true, ans_false)
+            self.priorities.add(priority)
             row += 1
         excel.close()
 
+    def __load_stat(self):
+        """
+        ========================================================================
+         Description: Load Stat to Questions.
+        ========================================================================
+        """
+        li = sorted(list(self.priorities), reverse=True)
+        d = {p: round((i+1) / len(li), 2) for i, p in enumerate(li)}
+        for q in self.qs.values():
+            q.load_stat(asked=0, answered=0, last_10=str(), last_time=0,
+                        priority_val=d[q.priority])
+            
     def __get_qid(self, excel, row, topic):
         """
         ========================================================================

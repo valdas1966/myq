@@ -4,7 +4,7 @@ from topics import Topics
 from quests import Quests
 
 
-path_myq = 'd:\\myq\\'
+path_myq = 'g:\\myq\\'
 
 
 def run():

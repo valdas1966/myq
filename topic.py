@@ -28,8 +28,7 @@ class Topic:
          Return: str ('Programming Language -> Html -> Basic: B')
         ========================================================================
         """
-        return f'{self.name}'
-        #: {self.priority}'
+        return self.name
 
     def __repr__(self):
         """
@@ -53,7 +52,7 @@ class Topic:
          Return: bool
         ========================================================================
         """
-        assert type(other) == self
+        assert type(other) == Topic
         return self.name == other.name
 
     def __hash__(self):

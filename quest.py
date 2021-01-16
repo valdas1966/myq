@@ -10,8 +10,8 @@ class Quest:
     """
     # Question Id
     qid = 0
-    # Question Priority (A | B | C)
-    priority = 'A'
+    # Question Priority-Value [0,1]
+    priority_val = 0
     # Question Topic
     topic = None
     # Question String-Representation
@@ -45,7 +45,7 @@ class Quest:
          Description: Constructor - Init Attributes.
         ========================================================================
             1. qid : str
-            2. priority : str (A | B | C | ABC | ABBA)
+            2. priority : str [A | B | C | ABA]
             3. topic : Topic Class
             4. question : str
             5. ans_true : str
@@ -64,7 +64,7 @@ class Quest:
         self.question = question
         self.ans_true = ans_true
 
-    def load_stat(self, asked, answered, last_10, last_time):
+    def load_stat(self, asked, answered, last_10, last_time, priority_val):
         """
         ========================================================================
          Description: Load Statistics about the Past of the Question.
@@ -75,16 +75,19 @@ class Quest:
             2. answered : int (Question was answered correctly).
             3. last_10 : str (0 | 1) [Binary representation of last 10 answers).
             4. last_time : int (Number of Questions asked since the last time).
+            5. priority_val : float [0,1]
         ========================================================================
         """
         assert type(asked) == int
         assert type(answered) == int
         assert type(last_10) == str
         assert type(last_time) == int
+        assert type(priority_val) == float
         self.asked = asked
         self.answered = answered
         self.last_10 = last_10
         self.last_time = last_time
+        self.priority_val = priority_val
         self.grade = self.__set_grade()
 
     def ask(self, counter):
@@ -101,8 +104,43 @@ class Quest:
         """
         # Load Question
         self.text = f'{"=" * self.len_delimiter_line}\n{self.topic}\n' \
+                    f'{"=" * self.len_delimiter_line}\nAsked={self.asked}, ' \
+                    f'Answered={self.answered}, Last_10={self.last_10}, ' \
+                    f'Last_Time={self.last_time}, '\
+                    f'Priority={self.priority_val}, Grade={self.grade}\n' \
                     f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
                     f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
+
+    def __set_grade(self):
+        """
+        ========================================================================
+         Description: Return Grade of the Question bases on its Statistics.
+        ========================================================================
+         Return: int [1, 100]
+        ========================================================================
+        """
+        w_asked = 10
+        w_answered = 20
+        w_last_10 = 40
+        w_last_time = 10
+        w_priority = 30
+        # Asked - In Range [0, w_asked]
+        f_asked = w_asked * min(0, 1 - (self.asked / 1000))
+        # Answered - In Range [0, w_answered]
+        f_answered = w_answered
+        if self.asked:
+            f_answered = w_answered * (1 - (self.answered / self.asked))
+        # Last 10 - In Range [0, w_last_10]
+        f_last_10 = w_last_10
+        if self.last_10:
+            count_true = self.last_10.count('1')
+            f_last_10 = w_last_10 * (1 - (count_true / len(self.last_10)))
+        # Last Time - In Range [0, w_last_time]
+        f_last_time = w_last_time * min(1, self.last_time / 1000)
+        # Priority - In Range [0, w_priority]
+        f_priority = w_priority * self.priority_val
+        return max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
+                          f_priority))
 
     def _print_right_answer(self):
         """
@@ -113,27 +151,4 @@ class Quest:
         print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
               f'{self.ans_true}')
 
-    def __set_grade(self):
-        """
-        ========================================================================
-         Description: Return Grade of the Question bases on its Statistics.
-        ========================================================================
-         Return: int [1, 100]
-        ========================================================================
-        """
-        f_asked = 10 * min(1, 1 - (self.asked / 1000))
-        f_answered = 20
-        if self.asked:
-            f_answered = 20 * (1 - (self.answered / self.asked))
-        f_last_10 = 40
-        if self.last_10:
-            count_true = self.last_10.count('1')
-            f_last_10 = 40 * (1 - (count_true / len(self.last_10)))
-        f_last_time = 10 * min(1, self.last_time / 1000)
-        f_priority = 0
-        if self.priority == 'A':
-            f_priority = 20
-        elif self.priority == 'B':
-            f_priority = 10
-        return max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
-                          f_priority))
+
