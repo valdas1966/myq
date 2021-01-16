@@ -39,26 +39,30 @@ class Quest:
     # Input from the User (Answer to the Question)
     ans_user = str()
 
-    def __init__(self, qid, priority, topic, question, ans_true, ans_false):
+    def __init__(self, qid, row, priority, topic, question,
+                 ans_true, ans_false):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
         ========================================================================
             1. qid : str
-            2. priority : str [A | B | C | ABA]
-            3. topic : Topic Class
-            4. question : str
-            5. ans_true : str
-            6. ans_false : str
+            2. row : int (Row in Excel - for Ordering).
+            3. priority : str [A | B | C | ABA]
+            4. topic : Topic Class
+            5. question : str
+            6. ans_true : str
+            7. ans_false : str
         ========================================================================
         """
         assert type(qid) == str
+        assert type(row) == int
         assert type(priority) == str
         assert type(topic) == Topic
         assert type(question) == str
         assert type(ans_true) == str
         assert type(ans_false) == str
         self.qid = qid
+        self.row = row
         self.topic = topic
         self.priority = priority
         self.question = question
@@ -88,9 +92,9 @@ class Quest:
         self.last_10 = last_10
         self.last_time = last_time
         self.priority_val = priority_val
-        self.grade = self.__set_grade()
+        self.set_grade()
 
-    def ask(self, counter):
+    def ask(self, counter, repeated=False):
         """
         ========================================================================
          Description: Ask the User a Question.
@@ -98,6 +102,7 @@ class Quest:
          Arguments:
         ------------------------------------------------------------------------
             1. counter : int (Number of Question in current Exam).
+            2. repeated : bool (Repeated-Question after False-Answer).
         ========================================================================
          Return: bool (True on Legal-Answer, False on Break - End of Exam).
         ========================================================================
@@ -111,7 +116,7 @@ class Quest:
                     f'{"=" * self.len_delimiter_line}\n#{counter}. ' \
                     f'{self.question}:\n{"-" * self.len_delimiter_line}\n'
 
-    def __set_grade(self):
+    def set_grade(self):
         """
         ========================================================================
          Description: Return Grade of the Question bases on its Statistics.
@@ -139,8 +144,8 @@ class Quest:
         f_last_time = w_last_time * min(1, self.last_time / 1000)
         # Priority - In Range [0, w_priority]
         f_priority = w_priority * self.priority_val
-        return max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
-                          f_priority))
+        self.grade = max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
+                         f_priority))
 
     def _print_right_answer(self):
         """
@@ -150,5 +155,24 @@ class Quest:
         """
         print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
               f'{self.ans_true}')
+
+    def _update_stat(self, answer):
+        """
+        ========================================================================
+         Description: Update Question-Statistics after True/False Answer.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. answer : bool (True on True-Answer, False on False-Answer).
+        ========================================================================
+        """
+        self.asked += 1
+        ch = '0'
+        if answer:
+            self.answered += 1
+            ch = '1'
+        self.last_10 = self.last_10[-10:] + ch
+        self.last_time = 1
+        self.set_grade()
 
 

@@ -141,5 +141,6 @@ class Topics:
         set_topics_xlsx = {t.name for t in self.topics}
         self.is_valid = set_topics == set_topics_xlsx
         if not self.is_valid:
+            print('Topics is not valid!')
             print(set_topics - set_topics_xlsx)
             print(set_topics_xlsx - set_topics)

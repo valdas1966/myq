@@ -2,9 +2,6 @@ from f_excel.c_excel import Excel
 from f_utils import u_file
 from topics import Topics
 from topic import Topic
-from quest_one_answer import QuestOneAnswer
-from quest_yes_no_answer import QuestYesNo
-from quest_multi_answer import QuestMultiAnswer
 import factory_quest
 
 
@@ -45,7 +42,7 @@ class Quests:
     # Set of All Priorities
     priorities = set()
 
-    def __init__(self, path_myq, topics):
+    def __init__(self, path_myq, topics, stat):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
@@ -56,6 +53,8 @@ class Quests:
         ------------------------------------------------------------------------
             1. path_myq : str (Path to Myq-Directory).
             2. topics : Topics Class
+            3. stat : dict {qid -> tuple of values}
+                                    asked, answered, last_10, last_time
         ========================================================================
         """
         assert type(path_myq) == str
@@ -67,10 +66,8 @@ class Quests:
         for xlsx_qs in filepaths:
             name_topic = self.__to_topic_name(xlsx_qs)
             topic = self.topics.get_topic(name_topic)
-            if not topic:
-                print(name_topic)
             self.__load_qs(xlsx_qs, topic)
-        self.__load_stat()
+        self.__load_stat(stat)
 
     def __to_topic_name(self, xlsx_qs):
         """
@@ -119,24 +116,35 @@ class Quests:
             ans_true = self.__get_ans_true(excel, row)
             ans_false = self.__get_ans_false(excel, row)
             qtype = self.__get_qtype(ans_true, ans_false)
-            self.qs[qid] = factory_quest.build(qtype, qid, priority, topic,
+            self.qs[qid] = factory_quest.build(qtype, qid, row, priority, topic,
                                                question, ans_true, ans_false)
             self.priorities.add(priority)
             row += 1
         excel.close()
 
-    def __load_stat(self):
+    def __load_stat(self, stat):
         """
         ========================================================================
          Description: Load Stat to Questions.
         ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. stat : Dict of Tuple (Stat-Values).
+        ========================================================================
         """
         li = sorted(list(self.priorities), reverse=True)
         d = {p: round((i+1) / len(li), 2) for i, p in enumerate(li)}
-        for q in self.qs.values():
-            q.load_stat(asked=0, answered=0, last_10=str(), last_time=0,
-                        priority_val=d[q.priority])
-            
+        for qid, q in self.qs.items():
+            asked, answered, last_10, last_time = 0, 0, str(), 1000
+            priority_val = d[q.priority]
+            if qid in stat:
+                vals = stat[qid]
+                asked = int(vals[0])
+                answered = int(vals[1])
+                last_10 = vals[2]
+                last_time = int(vals[3])
+            q.load_stat(asked, answered, last_10, last_time, priority_val)
+
     def __get_qid(self, excel, row, topic):
         """
         ========================================================================
