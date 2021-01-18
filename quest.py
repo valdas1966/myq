@@ -124,11 +124,11 @@ class Quest:
          Return: int [1, 100]
         ========================================================================
         """
-        w_asked = 10
-        w_answered = 20
-        w_last_10 = 40
-        w_last_time = 10
-        w_priority = 30
+        w_asked = 5
+        w_answered = 10
+        w_last_10 = 20
+        w_last_time = 50
+        w_priority = 15
         # Asked - In Range [0, w_asked]
         f_asked = w_asked * min(0, 1 - (self.asked / 1000))
         # Answered - In Range [0, w_answered]
@@ -144,8 +144,8 @@ class Quest:
         f_last_time = w_last_time * min(1, self.last_time / 1000)
         # Priority - In Range [0, w_priority]
         f_priority = w_priority * self.priority_val
-        self.grade = max(1, int(f_asked + f_answered + f_last_10 + f_last_time +
-                         f_priority))
+        self.grade = max(1, int(f_asked + f_answered + f_last_10 +
+                                f_last_time + f_priority))
 
     def _print_right_answer(self):
         """
