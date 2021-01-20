@@ -532,7 +532,7 @@
 "quite	",0
 "along	",0
 "voice	",0
-"finally	",0
+"finally	",1
 "department	",0
 "either	",0
 "toward	",0
@@ -1990,7 +1990,7 @@
 "amendment	",0
 "paint	",0
 "secret	",0
-"complain	",0
+"complain	",1
 "extent	",0
 "pleasure	",0
 "nod	",0
@@ -2485,7 +2485,7 @@
 "employment	",0
 "waste	",0
 "relax	",0
-"owe	",0
+"owe	",-1
 "transform	",0
 "grass	",0
 "narrow	",0
