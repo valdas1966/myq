@@ -2,9 +2,11 @@ import random
 from topics import Topics
 from quests import Quests
 from f_utils import u_file
-
+from f_utils import u_dir
 
 path_myq = 'g:\\myq\\'
+if not u_dir.exist(path_myq[:-2]):
+    path_myq = 'd:\\myq\\'
 csv_stat = path_myq + 'stat.csv'
 
 
