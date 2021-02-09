@@ -1,96 +1,97 @@
 qid,asked,answered,last_10,last_time,priority_val,grade
-English -> Definitions 1000: 1,2,2,11,108,0.15,7
-English -> Definitions 1000: 2,2,2,11,102,0.15,7
-English -> Definitions 1000: 3,1,1,1,161,0.15,10
-English -> Definitions 1000: 4,2,2,11,142,0.15,9
-English -> Definitions 1000: 5,2,2,11,91,0.15,6
-English -> Definitions 1000: 6,3,3,111,23,0.15,3
-English -> Definitions 1000: 7,2,2,11,44,0.15,4
-English -> Definitions 1000: 8,3,3,111,20,0.15,3
-English -> Definitions 1000: 9,1,1,1,137,0.15,9
-English -> Definitions 1000: 10,1,1,1,141,0.15,9
-English -> Definitions 1000: 11,2,2,11,56,0.15,5
-English -> Definitions 2000: 1,2,2,11,140,0.1,8
-English -> Definitions 2000: 2,2,2,11,112,0.1,7
-English -> Mathematics: 1,1,1,1,95,0.15,7
-English -> Mathematics: 2,2,1,01,69,0.15,20
-English -> Myq Words: 1,1,1,1,202,0.1,11
-English -> Myq Words: 2,1,1,1,99,0.1,6
-English -> Phrases: 1,2,2,11,169,0.05,9
-English -> Phrases: 2,2,2,11,116,0.05,6
-English -> Phrases: 3,2,2,11,87,0.05,5
-English -> Phrases: 4,1,1,1,148,0.05,8
-English -> Popular 1000: 1,3,3,111,94,0.15,6
-English -> Popular 1000: 2,2,2,11,109,0.15,7
-English -> Popular 1000: 3,3,3,111,63,0.15,5
-English -> Popular 1000: 4,1,1,1,175,0.15,11
-English -> Popular 1000: 5,3,2,011,61,0.15,15
-English -> Popular 1000: 6,3,3,111,70,0.15,5
-English -> Popular 1000: 7,2,2,11,101,0.15,7
-English -> Popular 1000: 8,2,2,11,78,0.15,6
-English -> Popular 1000: 9,2,2,11,55,0.15,5
-English -> Popular 1000: 10,1,1,1,35,0.15,4
-English -> Popular 1000: 11,2,2,11,32,0.15,3
-English -> Popular 1000: 12,1,1,1,12,0.15,2
-English -> Popular 1000: 13,0,0,,1020,0.15,82
-English -> Popular 1000: 14,0,0,,1020,0.15,82
-English -> Popular 1000: 15,1,1,1,16,0.15,3
-English -> Popular 2000: 1,7,7,1111111,10,0.1,2
-English -> Popular 2000: 2,3,3,111,31,0.1,3
-English -> Popular 2000: 3,1,1,1,139,0.1,8
-English -> Popular 3000: 1,1,1,1,157,0.1,9
-English -> Popular 3000: 2,1,1,1,154,0.1,9
-Life -> Happiness: 1,3,3,111,158,1.0,22
-Life -> Happiness: 2,5,5,11111,49,1.0,17
-Life -> Happiness: 3,7,7,1111111,9,1.0,15
-Life -> Happiness: 4,4,4,1111,4,1.0,15
-Life -> Happiness: 5,3,3,111,19,1.0,15
-Life -> Happiness: 6,6,6,111111,6,1.0,15
-Life -> Happiness: 7,2,2,11,64,1.0,18
-Life -> Happiness: 8,3,3,111,14,1.0,15
-Life -> Parenthood -> Success: 1,3,3,111,104,0.95,19
-Life -> Parenthood -> Success: 2,5,5,11111,85,0.95,18
-Life -> Parenthood -> Success: 3,3,3,111,8,0.95,14
-Life -> Parenthood -> Success: 4,6,6,111111,13,0.95,14
-Mathematics -> Numeral System: 1,5,5,11111,38,0.9,15
-Mathematics -> Numeral System: 2,5,5,11111,53,0.9,16
-Programming Language -> Html -> Basic: 1,4,4,1111,28,0.2,4
-Programming Language -> Html -> Basic: 2,2,2,11,214,0.2,13
-Programming Language -> Html -> Basic: 3,2,2,11,201,0.2,13
-Programming Language -> Html -> Basic: 8,3,3,111,17,0.2,3
-Programming Language -> Html -> Basic: 4,2,2,11,155,0.25,11
-Programming Language -> Html -> Basic: 5,2,2,11,18,0.3,5
-Programming Language -> Html -> Basic: 6,2,2,11,113,0.25,9
-Programming Language -> Html -> Basic: 7,4,4,1111,11,0.2,3
-Programming Language -> Html -> Element -> Basic: 1,2,2,11,188,0.4,15
-Programming Language -> Html -> Element -> Basic: 2,5,5,11111,2,0.4,6
-Programming Language -> Html -> Element -> Basic: 3,3,3,111,26,0.35,6
-Programming Language -> Html -> Element -> Basic: 4,4,4,1111,21,0.35,6
-Programming Language -> Html -> Element -> Basic: 5,6,6,111111,7,0.35,5
-Programming Language -> Html -> Element -> Basic: 6,4,4,1111,73,0.35,8
-Programming Language -> Html -> Element -> Empty: 1,10,10,1111111111,41,0.65,11
-Programming Language -> Html -> Element -> Empty: 2,4,4,1111,51,0.6,11
-Programming Language -> Html -> Element -> Empty: 8,3,3,111,124,0.6,15
-Programming Language -> Html -> Element -> Empty: 5,6,6,111111,37,0.6,10
-Programming Language -> Html -> Element -> Empty: 6,6,6,111111,93,0.6,13
-Programming Language -> Html -> Element -> Empty: 7,4,4,1111,50,0.6,11
-Programming Language -> Html -> Element -> Empty: 3,6,6,111111,52,0.7,13
-Programming Language -> Html -> Element -> Empty: 4,9,9,111111111,30,0.7,12
-Programming Language -> Html -> Element -> Level: 1,6,6,111111,90,0.7,15
-Programming Language -> Html -> Element -> Level: 2,7,7,1111111,59,0.7,13
-Programming Language -> Html -> Element -> Level: 3,6,6,111111,22,0.65,10
-Programming Language -> Html -> Element -> Level: 4,8,8,11111111,48,0.65,12
-Programming Language -> Html -> Element -> Level: 5,8,8,11111111,29,0.6,10
-Programming Language -> Html -> Element -> Level: 6,7,7,1111111,1,0.6,9
-Programming Language -> Html -> Element -> Level: 7,5,5,11111,81,0.6,13
-Programming Language -> Html -> Element -> Level: 8,6,6,111111,66,0.6,12
-Programming Language -> Html -> Element -> Nesting: 1,8,8,11111111,75,0.55,12
-Programming Language -> Html -> Element -> Nesting: 2,4,4,1111,25,0.55,9
-Programming Language -> Html -> Element -> Nesting: 3,4,4,1111,3,0.5,7
-Programming Language -> Html -> Element -> Nesting: 4,5,5,11111,88,0.5,11
-Programming Language -> Html -> Element -> Nesting: 5,2,2,11,233,0.45,18
-Programming Language -> Html -> Element -> Nesting: 6,5,5,11111,129,0.45,13
-Programming Language -> Html -> Tag -> Basic: 1,6,6,111111,159,0.85,20
-Programming Language -> Html -> Tag -> Basic: 2,9,9,111111111,103,0.8,17
-Programming Language -> Html -> Tag -> Basic: 3,7,7,1111111,34,0.8,13
-Programming Language -> Html -> Tag -> Basic: 4,7,7,1111111,67,0.75,14
+English -> Definitions 1000: 1,2,2,11,110,0.15,7
+English -> Definitions 1000: 2,2,2,11,104,0.15,7
+English -> Definitions 1000: 3,1,1,1,163,0.15,10
+English -> Definitions 1000: 4,2,2,11,144,0.15,9
+English -> Definitions 1000: 5,2,2,11,93,0.15,6
+English -> Definitions 1000: 6,3,3,111,25,0.15,3
+English -> Definitions 1000: 7,2,2,11,46,0.15,4
+English -> Definitions 1000: 8,3,3,111,22,0.15,3
+English -> Definitions 1000: 9,1,1,1,139,0.15,9
+English -> Definitions 1000: 10,1,1,1,143,0.15,9
+English -> Definitions 1000: 11,2,2,11,58,0.15,5
+English -> Definitions 2000: 1,2,2,11,142,0.1,8
+English -> Definitions 2000: 2,2,2,11,114,0.1,7
+English -> Mathematics: 1,1,1,1,97,0.15,7
+English -> Mathematics: 2,2,1,01,71,0.15,20
+English -> Myq Words: 1,1,1,1,204,0.1,11
+English -> Myq Words: 2,1,1,1,101,0.1,6
+English -> Phrases: 1,2,2,11,171,0.05,9
+English -> Phrases: 2,2,2,11,118,0.05,6
+English -> Phrases: 3,2,2,11,89,0.05,5
+English -> Phrases: 4,1,1,1,150,0.05,8
+English -> Popular 1000: 1,3,3,111,96,0.15,7
+English -> Popular 1000: 2,2,2,11,111,0.15,7
+English -> Popular 1000: 3,3,3,111,65,0.15,5
+English -> Popular 1000: 4,1,1,1,177,0.15,11
+English -> Popular 1000: 5,4,3,0111,1,0.15,9
+English -> Popular 1000: 6,3,3,111,72,0.15,5
+English -> Popular 1000: 7,2,2,11,103,0.15,7
+English -> Popular 1000: 8,2,2,11,80,0.15,6
+English -> Popular 1000: 9,2,2,11,57,0.15,5
+English -> Popular 1000: 10,1,1,1,37,0.15,4
+English -> Popular 1000: 11,2,2,11,34,0.15,3
+English -> Popular 1000: 12,1,1,1,14,0.15,2
+English -> Popular 1000: 13,1,1,1,2,0.15,2
+English -> Popular 1000: 14,0,0,,1022,0.15,82
+English -> Popular 1000: 15,1,1,1,18,0.15,3
+English -> Popular 1000: 16,0,0,,1002,0.15,82
+English -> Popular 2000: 1,7,7,1111111,12,0.1,2
+English -> Popular 2000: 2,3,3,111,33,0.1,3
+English -> Popular 2000: 3,1,1,1,141,0.1,8
+English -> Popular 3000: 1,1,1,1,159,0.1,9
+English -> Popular 3000: 2,1,1,1,156,0.1,9
+Life -> Happiness: 1,3,3,111,160,1.0,23
+Life -> Happiness: 2,5,5,11111,51,1.0,17
+Life -> Happiness: 3,7,7,1111111,11,1.0,15
+Life -> Happiness: 4,4,4,1111,6,1.0,15
+Life -> Happiness: 5,3,3,111,21,1.0,16
+Life -> Happiness: 6,6,6,111111,8,1.0,15
+Life -> Happiness: 7,2,2,11,66,1.0,18
+Life -> Happiness: 8,3,3,111,16,1.0,15
+Life -> Parenthood -> Success: 1,3,3,111,106,0.95,19
+Life -> Parenthood -> Success: 2,5,5,11111,87,0.95,18
+Life -> Parenthood -> Success: 3,3,3,111,10,0.95,14
+Life -> Parenthood -> Success: 4,6,6,111111,15,0.95,15
+Mathematics -> Numeral System: 1,5,5,11111,40,0.9,15
+Mathematics -> Numeral System: 2,5,5,11111,55,0.9,16
+Programming Language -> Html -> Basic: 1,4,4,1111,30,0.2,4
+Programming Language -> Html -> Basic: 2,2,2,11,216,0.2,13
+Programming Language -> Html -> Basic: 3,2,2,11,203,0.2,13
+Programming Language -> Html -> Basic: 8,3,3,111,19,0.2,3
+Programming Language -> Html -> Basic: 4,2,2,11,157,0.25,11
+Programming Language -> Html -> Basic: 5,2,2,11,20,0.3,5
+Programming Language -> Html -> Basic: 6,2,2,11,115,0.25,9
+Programming Language -> Html -> Basic: 7,4,4,1111,13,0.2,3
+Programming Language -> Html -> Element -> Basic: 1,2,2,11,190,0.4,15
+Programming Language -> Html -> Element -> Basic: 2,5,5,11111,4,0.4,6
+Programming Language -> Html -> Element -> Basic: 3,3,3,111,28,0.35,6
+Programming Language -> Html -> Element -> Basic: 4,4,4,1111,23,0.35,6
+Programming Language -> Html -> Element -> Basic: 5,6,6,111111,9,0.35,5
+Programming Language -> Html -> Element -> Basic: 6,4,4,1111,75,0.35,9
+Programming Language -> Html -> Element -> Empty: 1,10,10,1111111111,43,0.65,11
+Programming Language -> Html -> Element -> Empty: 2,4,4,1111,53,0.6,11
+Programming Language -> Html -> Element -> Empty: 8,3,3,111,126,0.6,15
+Programming Language -> Html -> Element -> Empty: 5,6,6,111111,39,0.6,10
+Programming Language -> Html -> Element -> Empty: 6,6,6,111111,95,0.6,13
+Programming Language -> Html -> Element -> Empty: 7,4,4,1111,52,0.6,11
+Programming Language -> Html -> Element -> Empty: 3,6,6,111111,54,0.7,13
+Programming Language -> Html -> Element -> Empty: 4,9,9,111111111,32,0.7,12
+Programming Language -> Html -> Element -> Level: 1,6,6,111111,92,0.7,15
+Programming Language -> Html -> Element -> Level: 2,7,7,1111111,61,0.7,13
+Programming Language -> Html -> Element -> Level: 3,6,6,111111,24,0.65,10
+Programming Language -> Html -> Element -> Level: 4,8,8,11111111,50,0.65,12
+Programming Language -> Html -> Element -> Level: 5,8,8,11111111,31,0.6,10
+Programming Language -> Html -> Element -> Level: 6,7,7,1111111,3,0.6,9
+Programming Language -> Html -> Element -> Level: 7,5,5,11111,83,0.6,13
+Programming Language -> Html -> Element -> Level: 8,6,6,111111,68,0.6,12
+Programming Language -> Html -> Element -> Nesting: 1,8,8,11111111,77,0.55,12
+Programming Language -> Html -> Element -> Nesting: 2,4,4,1111,27,0.55,9
+Programming Language -> Html -> Element -> Nesting: 3,4,4,1111,5,0.5,7
+Programming Language -> Html -> Element -> Nesting: 4,5,5,11111,90,0.5,12
+Programming Language -> Html -> Element -> Nesting: 5,2,2,11,235,0.45,18
+Programming Language -> Html -> Element -> Nesting: 6,5,5,11111,131,0.45,13
+Programming Language -> Html -> Tag -> Basic: 1,6,6,111111,161,0.85,20
+Programming Language -> Html -> Tag -> Basic: 2,9,9,111111111,105,0.8,17
+Programming Language -> Html -> Tag -> Basic: 3,7,7,1111111,36,0.8,13
+Programming Language -> Html -> Tag -> Basic: 4,7,7,1111111,69,0.75,14
