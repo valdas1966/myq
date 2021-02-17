@@ -147,7 +147,6 @@ class Quest:
         self.grade = max(1, int(f_asked + f_answered + f_last_10 +
                                 f_last_time + f_priority))
 
-
     def _print_right_answer(self):
         """
         ========================================================================
