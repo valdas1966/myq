@@ -2,11 +2,14 @@ import random
 from topics import Topics
 from quests import Quests
 from f_utils import u_file
-from f_utils import u_dir
+from f_utils.c_timer import Timer
+from pathlib import Path
+from f_logger.tazak import LoggerTazak
 
-path_myq = 'g:\\myq\\'
-if not u_dir.exist(path_myq[:-2]):
-    path_myq = 'd:\\myq\\'
+
+path = Path(__file__)
+path_myq = str(path.parent)
+dir_log = f'{path_myq}\\log'
 csv_stat = path_myq + 'stat.csv'
 
 
@@ -18,13 +21,17 @@ def run():
     quests = Quests(path_myq, topics, stat)
 
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
+    logger = LoggerTazak()
 
     counter = 1
     while True:
         q = pick_quest(quests)
         # Get Answer to Question
-        if q.ask(counter):
+        ans = q.ask(counter)
+        if ans:
+        if q.ask(counter, logger):
             counter += 1
+            # Update Stats for all other Questions
             for q_other in quests.qs.values():
                 if not q_other == q:
                     q_other.last_time += 1

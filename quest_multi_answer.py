@@ -1,5 +1,6 @@
 import random
 from quest import Quest
+from f_utils.c_timer import Timer
 
 
 class QuestMultiAnswer(Quest):

@@ -1,5 +1,5 @@
-import random
 from topic import Topic
+from f_logger.tazak import LoggerTazak
 
 
 class Quest:
@@ -102,11 +102,13 @@ class Quest:
          Arguments:
         ------------------------------------------------------------------------
             1. counter : int (Number of Question in current Exam).
-            2. repeated : bool (Repeated-Question after False-Answer).
+            3. repeated : bool (Repeated-Question after False-Answer).
         ========================================================================
          Return: bool (True on Legal-Answer, False on Break - End of Exam).
         ========================================================================
         """
+        assert type(counter) == int
+        assert type(repeated) == bool
         # Load Question
         self.text = f'{"=" * self.len_delimiter_line}\n{self.topic}\n' \
                     f'{"=" * self.len_delimiter_line}\nAsked={self.asked}, ' \
