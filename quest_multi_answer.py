@@ -44,17 +44,17 @@ class QuestMultiAnswer(Quest):
         for i, answer in enumerate(self.answers):
             # i+1 because zero-based
             self.text += f'{i + 1}. {answer}\n'
-        ans = input(self.text + '-> ')
+        self.ans = input(self.text + '-> ')
         # Illegal Answer
-        if ans not in {'0', '1', '2'}:
+        if self.ans not in {'0', '1', '2'}:
             print('Illegal Answer')
             return self.ask(counter, repeated)
-        ans = int(ans)
+        self.ans = int(self.ans)
         # Break
-        if ans == 0:
+        if self.ans == 0:
             return False
         # True-Answer (ans-1 because zero-based)
-        if self.answers[ans - 1] == self.ans_true:
+        if self.answers[self.ans - 1] == self.ans_true:
             if not repeated:
                 self._update_stat(answer=True)
             return True

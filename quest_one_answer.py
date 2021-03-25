@@ -25,14 +25,14 @@ class QuestOneAnswer(Quest):
         ========================================================================
         """
         super().ask(counter, repeated)
-        ans = input(self.text + '-> ')
+        self.ans = input(self.text + '-> ')
         # True-Answer
-        if ans == self.ans_true:
+        if self.ans == self.ans_true:
             if not repeated:
                 self._update_stat(answer=True)
             return True
         # Break
-        if ans == '0':
+        if self.ans == '0':
             return False
         # False-Answer
         self._print_right_answer()

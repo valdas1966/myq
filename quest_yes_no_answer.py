@@ -24,19 +24,19 @@ class QuestYesNo(Quest):
         """
         super().ask(counter, repeated)
         text = f'{self.text}(Yes/No):\n-> '
-        ans = input(text)
+        self.ans = input(text)
         # Break
-        if ans == '0':
+        if self.ans == '0':
             return False
-        if ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
+        if self.ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
             ans = 'Yes'
-        elif ans in {'2', 'No', 'NO', 'no', 'N', 'n'}:
+        elif self.ans in {'2', 'No', 'NO', 'no', 'N', 'n'}:
             ans = 'No'
         # Illegal Answer
         else:
             return self.ask(counter, repeated)
         # True-Answer
-        if ans == self.ans_true:
+        if self.ans == self.ans_true:
             if not repeated:
                 self._update_stat(answer=True)
             return True

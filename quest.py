@@ -37,7 +37,7 @@ class Quest:
     # Full-Text of Questions and the Answers
     text = str()
     # Input from the User (Answer to the Question)
-    ans_user = str()
+    ans = str()
 
     def __init__(self, qid, row, priority, topic, question,
                  ans_true, ans_false):
@@ -148,6 +148,9 @@ class Quest:
         f_priority = w_priority * self.priority_val
         self.grade = max(1, int(f_asked + f_answered + f_last_10 +
                                 f_last_time + f_priority))
+
+    def log(self):
+
 
     def _print_right_answer(self):
         """
