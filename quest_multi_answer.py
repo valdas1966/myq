@@ -44,6 +44,8 @@ class QuestMultiAnswer(Quest):
         for i, answer in enumerate(self.answers):
             # i+1 because zero-based
             self.text += f'{i + 1}. {answer}\n'
+        timer = Timer()
+        timer.start()
         self.ans = input(self.text + '-> ')
         # Illegal Answer
         if self.ans not in {'0', '1', '2'}:
@@ -56,10 +58,12 @@ class QuestMultiAnswer(Quest):
         # True-Answer (ans-1 because zero-based)
         if self.answers[self.ans - 1] == self.ans_true:
             if not repeated:
-                self._update_stat(answer=True)
+                elapsed = timer.elapsed()
+                self._update_stat(answer=True, elapsed=elapsed)
             return True
         # False-Answer
         self._print_right_answer()
         if not repeated:
-            self._update_stat(answer=False)
+            elapsed = timer.elapsed()
+            self._update_stat(answer=False, elapsed=elapsed)
         return self.ask(counter, repeated=True)
