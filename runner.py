@@ -10,6 +10,7 @@ path = Path(__file__)
 path_myq = f'{path.parent[0]}:\\myq'
 dir_logger = f'{path_myq}\\logs'
 csv_stat = f'{path_myq}\\stat.csv'
+print(csv_stat)
 
 
 def run():
