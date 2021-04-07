@@ -12,14 +12,14 @@ class QuestMultiAnswer(Quest):
     """
 
     def __init__(self, qid, row, priority, topic, question,
-                 ans_true, ans_false):
+                 ans_true, ans_false, logger):
         """
         ========================================================================
          Constructor: Init the Private Attributes.
         ========================================================================
         """
         super().__init__(qid, row, priority, topic, question,
-                         ans_true, ans_false)
+                         ans_true, ans_false, logger)
         self.answers = [ans_true]
         if ans_false:
             self.answers.append(ans_false)
@@ -45,7 +45,6 @@ class QuestMultiAnswer(Quest):
             # i+1 because zero-based
             self.text += f'{i + 1}. {answer}\n'
         timer = Timer()
-        timer.start()
         self.ans = input(self.text + '-> ')
         # Illegal Answer
         if self.ans not in {'0', '1', '2'}:

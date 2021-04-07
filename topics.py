@@ -35,8 +35,8 @@ class Topics:
         """
         self.path_myq = path_myq
         li_rows = self.__get_li_rows()
-        self.__load(li_rows)
-        self.__check_valid()
+        self.__fill_topics(li_rows)
+        self.__check_topics()
 
     def get_topic(self, name):
         """
@@ -53,20 +53,6 @@ class Topics:
         for t in self.topics:
             if t.name == name:
                 return t
-
-    def get_priorities(self):
-        """
-        ========================================================================
-         Description: Return Dict of Priority and its Relative Value.
-        ========================================================================
-         Return: dict {str (Priority) -> float [0, 1] (Relative Value)}.
-        ========================================================================
-        """
-        set_priorities = set()
-        for t in self.topics:
-            set_priorities.add(t.priority)
-        li = sorted(list(set_priorities), reverse=True)
-        return
         
     def __get_li_rows(self):
         """
@@ -76,13 +62,30 @@ class Topics:
          Return: List (Rows) of List (Cols) of Str (Values).
         ========================================================================
         """
-        xlsx = self.path_myq + 'topics.xlsx'
+        xlsx = os.path.join(self.path_myq, 'topics.xlsx')
         excel = Excel(xlsx)
         li_rows = excel.to_linked_list(self.fr, self.fc)
         excel.close()
         return li_rows
 
-    def __load(self, li_rows):
+    def __get_father(self, name):
+        """
+        ========================================================================
+         Description: Return Father (Topic) of a given Topic-Name.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. name : str (Topic-Name).
+        ========================================================================
+         Return: Topic (Father of the given Topic-Name).
+        ========================================================================
+        """
+        name_father = self.delimiter.join(name.split(self.delimiter)[:-1])
+        for t in self.topics:
+            if t.name == name_father:
+                return t
+
+    def __fill_topics(self, li_rows):
         """
         ========================================================================
          Description: Fill Class Attributes (Level and Topics).
@@ -102,24 +105,7 @@ class Topics:
             self.level[topic.level].append(topic)
             self.topics.add(topic)
 
-    def __get_father(self, name):
-        """
-        ========================================================================
-         Description: Return Father (Topic) of a given Topic-Name.
-        ========================================================================
-         Arguments:
-        ------------------------------------------------------------------------
-            1. name : str (Topic-Name).
-        ========================================================================
-         Return: Topic (Father of the given Topic-Name).
-        ========================================================================
-        """
-        name_father = self.delimiter.join(name.split(self.delimiter)[:-1])
-        for t in self.topics:
-            if t.name == name_father:
-                return t
-
-    def __check_valid(self):
+    def __check_topics(self):
         """
         ========================================================================
          Description: Set Private Attribute Is_Valid to True if Excel-Topics

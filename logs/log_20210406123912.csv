@@ -1,0 +1,11 @@
+tazak,qid,priority_val,question,asked,answered,last_10,last_time,grade,ans,is_true,elapsed
+386,Mathematics -> Numbers -> Square Number: 274,0.5,N^2 is sum of the first N ***** numbers,1,1,1,1,7,odd,1,386
+403,Mathematics -> Numbers -> Number Types: 248,0.69,Integer = Number w***** no fractional part,1,1,1,1,10,with,1,16
+407,Life -> Happiness: 235,1.0,A happy man does not c***** all the time and thinks the world owes him,1,1,1,1,15,complain,1,4
+412,English -> Definitions 1000: 181,0.12,to be able to = to have the necessary a***** to do something,1,1,1,1,1,ability,1,5
+418,Mathematics -> Numbers -> Number Types: 249,0.69,Integer = Number with n***** fractional part,1,0,0,1,40,neural,0,6
+450,Mathematics -> Numbers -> Square Number: 282,0.35,Square Number can end with digit 7,1,1,1,1,5,No,1,8
+455,Programming Language -> Html -> Element -> Empty: 309,0.62,Empty HTML Element can nest other Elements within them,1,1,1,1,9,No,1,5
+459,Programming Language -> Html -> Basic: 292,0.23,Some HTML Tag Attributes are Case Sensitive,1,1,1,1,3,Yes,1,4
+463,English -> Popular 1000: 212,0.12,ל,1,1,1,1,1,to,1,3
+466,English -> Popular 2000: 226,0.08,להתלונן,1,1,1,1,1,to complain,1,3

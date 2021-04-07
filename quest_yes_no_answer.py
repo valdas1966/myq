@@ -1,4 +1,5 @@
 from quest import Quest
+from f_utils.c_timer import Timer
 
 
 class QuestYesNo(Quest):
@@ -24,24 +25,25 @@ class QuestYesNo(Quest):
         """
         super().ask(counter, repeated)
         text = f'{self.text}(Yes/No):\n-> '
+        timer = Timer()
         self.ans = input(text)
         # Break
         if self.ans == '0':
             return False
         if self.ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
-            ans = 'Yes'
+            self.ans = 'Yes'
         elif self.ans in {'2', 'No', 'NO', 'no', 'N', 'n'}:
-            ans = 'No'
+            self.ans = 'No'
         # Illegal Answer
         else:
             return self.ask(counter, repeated)
         # True-Answer
         if self.ans == self.ans_true:
             if not repeated:
-                self._update_stat(answer=True)
+                self._update_stat(answer=True, elapsed=timer.elapsed())
             return True
         # False-Answer
         self._print_right_answer()
         if not repeated:
-            self._update_stat(answer=False)
+            self._update_stat(answer=False, elapsed=timer.elapsed())
         return self.ask(counter, repeated=True)

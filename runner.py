@@ -2,14 +2,13 @@ import random
 from topics import Topics
 from quests import Quests
 from f_utils import u_file
-from f_utils.c_timer import Timer
 from pathlib import Path
 from f_logger.tazak import LoggerTazak
 
 
 path = Path(__file__)
 path_myq = str(path.parent)
-dir_log = f'{path_myq}\\log'
+dir_logger = f'{path_myq}\\logs'
 csv_stat = path_myq + 'stat.csv'
 
 
@@ -17,19 +16,21 @@ def run():
     topics = Topics(path_myq)
     if not topics.is_valid:
         return
+
     stat = load_stat()
-    quests = Quests(path_myq, topics, stat)
+    titles_logger = ['qid', 'priority_val', 'question', 'asked', 'answered',
+                     'last_10', 'last_time', 'grade', 'ans', 'is_true',
+                     'elapsed']
+    logger = LoggerTazak(titles_logger, dir_logger)
+    quests = Quests(path_myq, topics, stat, logger)
 
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
-    logger = LoggerTazak()
 
     counter = 1
     while True:
         q = pick_quest(quests)
         # Get Answer to Question
-        ans = q.ask(counter)
-        if ans:
-        if q.ask(counter, logger):
+        if q.ask(counter):
             counter += 1
             # Update Stats for all other Questions
             for q_other in quests.qs.values():
@@ -39,6 +40,7 @@ def run():
         # Break-Command
         else:
             dump_stat(quests)
+            logger.close()
             break
 
 

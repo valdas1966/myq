@@ -2,6 +2,7 @@ from f_excel.c_excel import Excel
 from f_utils import u_file
 from topics import Topics
 from topic import Topic
+from f_logger.tazak import LoggerTazak
 import factory_quest
 
 
@@ -42,7 +43,7 @@ class Quests:
     # Set of All Priorities
     priorities = set()
 
-    def __init__(self, path_myq, topics, stat):
+    def __init__(self, path_myq, topics, stat, logger):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
@@ -55,12 +56,16 @@ class Quests:
             2. topics : Topics Class
             3. stat : dict {qid -> tuple of values}
                                     asked, answered, last_10, last_time
+            4. logger : TazakLogger
         ========================================================================
         """
         assert type(path_myq) == str
         assert type(topics) == Topics
+        assert type(stat) == dict
+        assert type(logger) == LoggerTazak
         self.path_myq = path_myq
         self.topics = topics
+        self.logger = logger
         path_dir = self.path_myq + '\\Questions'
         filepaths = u_file.filepaths(path_dir, extensions='xlsx')
         for xlsx_qs in filepaths:
@@ -117,7 +122,8 @@ class Quests:
             ans_false = self.__get_ans_false(excel, row)
             qtype = self.__get_qtype(ans_true, ans_false)
             self.qs[qid] = factory_quest.build(qtype, qid, row, priority, topic,
-                                               question, ans_true, ans_false)
+                                               question, ans_true, ans_false,
+                                               self.logger)
             self.priorities.add(priority)
             row += 1
         excel.close()
@@ -162,10 +168,7 @@ class Quests:
         assert type(row) == int
         assert type(topic) == Topic
         assert row >= 1
-        qid = excel.get_value(row, self.col_qid)
-        if qid:
-            return f'{topic}: {qid}'
-        return None
+        return excel.get_value(row, self.col_qid)
 
     def __get_is_valid(self, excel, row):
         """

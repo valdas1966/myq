@@ -45,7 +45,7 @@ class Quest:
         ========================================================================
          Description: Constructor - Init Attributes.
         ========================================================================
-            1. qid : str
+            1. qid : int
             2. row : int (Row in Excel - for Ordering).
             3. priority : str [A | B | C | ABA]
             4. topic : Topic Class
@@ -55,7 +55,7 @@ class Quest:
             8. logger : LoggerTazak
         ========================================================================
         """
-        assert type(qid) == str
+        assert type(qid) == int
         assert type(row) == int
         assert type(priority) == str
         assert type(topic) == Topic
