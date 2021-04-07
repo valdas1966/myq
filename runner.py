@@ -9,7 +9,7 @@ from f_logger.tazak import LoggerTazak
 path = Path(__file__)
 path_myq = str(path.parent)
 dir_logger = f'{path_myq}\\logs'
-csv_stat = path_myq + 'stat.csv'
+csv_stat = f'{path_myq}\\stat.csv'
 
 
 def run():
