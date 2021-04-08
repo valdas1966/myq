@@ -161,14 +161,17 @@ class Quests:
             1. excel : Excel Class
             2. row : int
         ========================================================================
-         Return: str (Topic-Name: Qid).
+         Return: int
         ========================================================================
         """
         assert type(excel) == Excel
         assert type(row) == int
         assert type(topic) == Topic
         assert row >= 1
-        return excel.get_value(row, self.col_qid)
+        qid = excel.get_value(row, self.col_qid)
+        if qid:
+            qid = int(qid)
+        return qid
 
     def __get_is_valid(self, excel, row):
         """

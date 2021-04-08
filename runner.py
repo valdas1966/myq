@@ -10,7 +10,6 @@ path = Path(__file__)
 path_myq = f'{str(path.parent)[0]}:\\myq'
 dir_logger = f'{path_myq}\\logs'
 csv_stat = f'{path_myq}\\stat.csv'
-print(csv_stat)
 
 
 def run():
@@ -81,6 +80,10 @@ def load_stat():
     file.close()
     for line in lines[1:]:
         qid, asked, answered, last_10, last_time = line.strip().split(',')[:-2]
+        qid = int(qid)
+        asked = int(asked)
+        answered = int(answered)
+        last_time = int(last_time)
         stat[qid] = (asked, answered, last_10, last_time)
     return stat
 
