@@ -195,7 +195,7 @@ class Quest:
         values = list()
         values.append(self.qid)
         values.append(self.priority_val)
-        values.append(self.question)
+        values.append(self.question.replace(',', ';'))
         values.append(self.asked)
         values.append(self.answered)
         values.append(self.last_10)
