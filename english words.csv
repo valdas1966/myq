@@ -17,9 +17,9 @@
 "on	",1
 "this	",1
 "we	",1
-"not	",0
-"but	",0
-"they	",0
+"not	",-1
+"but	",1
+"they	",1
 "say	",0
 "at	",0
 "what	",0
@@ -1018,7 +1018,7 @@
 "scientist	",0
 "hide	",0
 "obviously	",0
-"refer	",0
+"refer	",1
 "alone	",0
 "drink	",0
 "investigation	",0
@@ -1507,7 +1507,7 @@
 "excuse	",0
 "familiar	",0
 "classroom	",0
-"reference	",0
+"reference	",1
 "emerge	",0
 "lunch	",0
 "ad	",0
