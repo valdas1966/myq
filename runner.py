@@ -18,9 +18,9 @@ def run():
         return
 
     stat = load_stat()
-    titles_logger = ['qid', 'priority_val', 'question', 'asked', 'answered',
-                     'last_10', 'last_time', 'grade', 'ans', 'is_true',
-                     'elapsed']
+    titles_logger = ['qid', 'question', 'asked', 'answered',
+                     'last_10', 'last_time', 'priority_val', 'grade', 'ans',
+                     'is_true', 'elapsed']
     logger = LoggerTazak(titles_logger, dir_logger)
     quests = Quests(path_myq, topics, stat, logger)
 

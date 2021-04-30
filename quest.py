@@ -171,6 +171,7 @@ class Quest:
             1. answer : bool (True on True-Answer, False on False-Answer).
         ========================================================================
         """
+        self._log(int(answer), elapsed)
         self.asked += 1
         ch = '0'
         if answer:
@@ -179,7 +180,6 @@ class Quest:
         self.last_10 = self.last_10[-10:] + ch
         self.last_time = 1
         self.set_grade()
-        self._log(int(answer), elapsed)
 
     def _log(self, is_true, elapsed):
         """
@@ -194,12 +194,12 @@ class Quest:
         """
         values = list()
         values.append(self.qid)
-        values.append(self.priority_val)
         values.append(self.question.replace(',', ';'))
         values.append(self.asked)
         values.append(self.answered)
         values.append(self.last_10)
         values.append(self.last_time)
+        values.append(self.priority_val)
         values.append(self.grade)
         values.append(self.ans)
         values.append(is_true)
