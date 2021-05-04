@@ -1,0 +1,18 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+7,390,<b> = ***** level tag,0,0,,1000,0.54,88,inline,1,7
+10,339,Multiplication = The process of adding a number to i***** a particular number of times,2,2,11,132,0.04,7,itself,1,3
+15,359,Number Type Ordering: Natural (Counting) => Whole => Integer => Rational => *****,3,3,111,16,0.88,14,real,1,4
+25,366,Empty HTML Element is without Content (<img src="path">),0,0,,1003,0.54,88,Yes,1,10
+29,349,Natural Numbers = p***** i*****,2,2,11,140,0.69,17,positive integers,1,4
+33,242,Children with worries have little learning a*****,5,5,11111,139,0.96,21,ability,1,5
+41,382,Tag Attributes values should be e***** in quotation marks ,0,0,,1006,0.58,88,enclosed,1,8
+45,367,להגיד,0,0,,1007,0.12,81,to say,1,4
+53,379,B***** Tag Attribute is without value (ex: checked; required),0,0,,1008,0.54,88,boolean,1,9
+59,202,להיות,1,1,1,267,0.12,15,to be,1,6
+62,389,<a> = ***** level tag,0,0,,1010,0.54,88,inline,1,3
+64,263,Rational Numbers can be negative,2,2,11,94,0.88,17,Yes,1,2
+90,376,Tag Attributes u**** consists of a key-value pairs (ex: key="value"),0,0,,1012,0.62,89,usually,1,26
+93,189,those = p***** form of that,1,1,1,252,0.12,14,plural,1,3
+96,236,Happy people share p***** energy with those around them,4,4,1111,122,1.0,21,positive,1,3
+101,387,<h1> = ***** level tag,0,0,,1015,0.54,88,block,1,5
+108,382,Tag Attributes values should be e***** in quotation marks ,1,1,1,10,0.58,9,enclosed,1,8
