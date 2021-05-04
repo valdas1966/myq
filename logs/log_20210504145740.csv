@@ -1,0 +1,51 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+3,404,available = ready for immediate u*****,0,0,,1049,0.09,81,use,1,2
+5,237,Happy people share positive energy with t***** around them,4,4,1111,66,1.0,18,those,1,3
+7,250,Integer can be negative,7,7,1111111,267,0.91,27,Yes,1,2
+10,459,Head Tag is empty element,0,0,,1052,0.88,93,No,1,2
+12,328,Number Line is a s***** line that serves as abstraction for real numbers,2,2,11,68,0.44,10,straight,1,2
+19,441,Write one-line comment with content "comment",0,0,,1054,0.72,90,<!--comment-->,1,7
+24,470,HTML Tag is indication for the start and the end of HTML d*****,0,0,,1055,0.88,93,document,1,4
+28,452,Doctype Tag is an empty element,0,0,,1056,0.69,90,No,0,4
+33,431,כותרת *****t,0,0,,1057,0.06,80,title,1,2
+63,432,כותרת e*****h,0,0,,1058,0.06,80,headline,1,30
+67,374,Tag Attributes are located in the ***** tag,2,2,11,131,0.56,14,opening,1,3
+69,428,דף; עמוד,0,0,,1060,0.09,81,page,1,2
+73,230,If one of the family members is not happy; eventually none of them will be h*****,5,5,11111,238,1.0,26,happy,1,5
+78,454,Head Tag h***** the metadata of the HTML Document,0,0,,1062,0.88,93,holds,1,5
+82,234,A happy man does not complain all the time and thinks the world o***** him,5,4,01111,45,1.0,23,owes,1,4
+84,394,רוב *****mo,2,2,11,137,0.09,8,most,1,2
+91,457,Head Tag is located in the start of the document; after ***** opening tag,0,0,,1065,0.88,93,html,1,7
+95,413,כיכר *****p,0,0,,1066,0.06,80,plaza,1,4
+97,452,Doctype Tag is an empty element,1,0,0,11,0.69,40,Yes,1,2
+103,455,Head Tag holds the m***** of the HTML Document,0,0,,1068,0.88,93,metadata,1,6
+106,262,Rational Numbers = {p/q : p and q are i*****; q is not zero},3,3,111,40,0.78,13,integers,1,3
+110,277,Square Number can end with digit 2,1,1,1,370,0.47,25,No,1,4
+132,456,Head Tag for English language,0,0,,1071,0.88,93,<head charset="UTF-8"></head>,1,22
+143,452,Doctype Tag is an empty element,2,1,01,5,0.69,25,Yes,1,11
+148,462,Heading Tag defines the hierarchy and the s***** of the web page content,0,0,,1073,0.81,92,structure,1,5
+151,332,אבל / אולם,2,2,11,351,0.09,18,but,1,2
+153,359,Number Type Ordering: Natural (Counting) => Whole => Integer => Rational => *****,4,4,1111,151,0.91,21,real,1,2
+156,457,Head Tag is located in the start of the document; after ***** opening tag,1,1,1,11,0.88,13,html,1,3
+164,401,G***** Tag Attributes can be used in most elements (ex: class; draggable),2,2,11,142,0.59,15,global,1,8
+168,451,Doctype Tag is located in the ***** line of an HTML document,0,0,,1078,0.75,91,first,1,4
+171,239,Because of bad parents; children learn that one can love someone w***** hurts them,3,3,111,316,0.94,29,who,1,4
+174,227,חלוקה *****d,1,1,1,605,0.06,31,division,1,2
+175,223,אנחנו,2,2,11,328,0.09,17,we,1,2
+184,247,Composite Number that is not a Square Number; have an ***** number of positive divisors,4,3,0111,131,0.62,23,even,1,9
+189,237,Happy people share positive energy with t***** around them,5,5,11111,33,1.0,16,those,1,5
+193,410,Block Level occupies 100% of the available w*****,0,0,,1084,0.41,86,width,1,4
+197,274,N^2 is sum of the first N ***** numbers,2,2,11,88,0.5,11,odd,1,4
+273,430,הכי,0,0,,1086,0.09,81,the most,1,76
+279,351,Composite Number is a positive integer that can be performed by m***** two smaller positive integers,6,5,011111,80,0.5,16,multiplying,1,7
+281,345,Ten fingers on two h***** is the possible origin of decimal system,2,2,11,173,0.44,15,hands,1,2
+284,242,Children with worries have little learning a*****,6,6,111111,175,0.97,23,ability,1,3
+287,429,מבנה *****s,0,0,,1090,0.09,81,structure,1,3
+288,213,בתוך *i,2,2,11,205,0.09,11,in,1,2
+292,281,Square Number can end with digit 6,2,2,11,204,0.47,17,Yes,1,4
+296,458,Head Tag is located in the start of the document; after HTML ***** tag,0,0,,1093,0.88,93,opening,1,4
+299,192,division = splitting into e***** parts,4,4,1111,146,0.06,8,equal,1,3
+302,302,Empty HTML Element must be without Tag Attributes,1,1,1,546,0.34,32,No,1,2
+304,180,and = used to j***** two words,1,1,1,543,0.09,28,join,1,2
+307,474,HTML Tag is empty element,0,0,,1097,0.88,93,No,1,3
+313,355,Number Type Ordering: ***** => Whole => Integer => Rational => Real,1,1,1,483,0.91,37,natural,1,7
