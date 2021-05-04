@@ -87,7 +87,7 @@
 "use	",0
 "tell	",0
 "good	",0
-"first	",0
+"first	",1
 "man	",0
 "day	",0
 "find	",0
@@ -568,7 +568,7 @@
 "election	",0
 "uh	",0
 "check	",0
-"page	",0
+"page	",1
 "fight	",0
 "itself	",0
 "test	",0
@@ -989,7 +989,7 @@
 "unless	",0
 "nor	",0
 "expert	",0
-"structure	",0
+"structure	",1
 "budget	",0
 "insurance	",0
 "text	",0
@@ -1051,7 +1051,7 @@
 "safety	",0
 "weekend	",0
 "worth	",0
-"title	",0
+"title	",1
 "heat	",0
 "normal	",0
 "yard	",0
@@ -2921,7 +2921,7 @@
 "nerve	",0
 "lung	",0
 "steady	",0
-"headline	",0
+"headline	",1
 "sudden	",0
 "successfully	",0
 "defendant	",0
@@ -4347,7 +4347,7 @@
 "rude	",0
 "usage	",0
 "testament	",0
-"browser	",0
+"browser	",1
 "processor	",0
 "thigh	",0
 "perceived	",0

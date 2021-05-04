@@ -15,6 +15,7 @@ def auto_fill():
     col_id = 1
     col_valid = 2
     col_priority = 3
+    col_question = 4
     col_date = 7
     date = u_datetime.to_str(datetime.now(), 'yymmdd')
     id_last = params.get('id last')
@@ -24,6 +25,8 @@ def auto_fill():
         excel = Excel(xlsx)
         row_last = excel.ws.max_row
         for row in range(row_first, row_last+1):
+            if excel.is_blank(row, col_question):
+                continue
             # AutoFill Id
             if excel.is_blank(row, col_id):
                 excel.set_value(row, col_id, id_last + 1)
