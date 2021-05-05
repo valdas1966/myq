@@ -1,0 +1,44 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+4,209,אלה **e**,2,2,11,406,0.09,21,these,1,4
+7,215,בתוך *****i,2,2,11,302,0.09,16,inside,1,3
+20,303,Empty HTML Element may have Tag Attributes,3,3,111,318,0.34,21,Yes,1,12
+38,459,Head Tag is empty element,1,1,1,50,0.88,15,No,1,18
+45,302,Empty HTML Element must be without Tag Attributes,2,2,11,8,0.34,5,No,1,7
+53,186,these = plural form of *****,3,2,011,267,0.09,24,this,1,8
+58,400,Tag Attribute value with double quotes should be enclosed in single q*****,1,1,1,311,0.53,23,quotes,1,5
+60,256,Natual Numbers can be negative,2,2,11,300,0.91,28,No,1,2
+64,369,Irrational Numbers cannot be w***** as a fraction,2,2,11,136,0.91,20,written,1,4
+70,384,Tag Attributes values should be enclosed in quotation ***** (usually by double quotes),3,3,111,70,0.56,11,marks,1,5
+72,236,Happy people share p***** energy with those around them,6,6,111111,136,1.0,21,positive,1,3
+76,454,Head Tag h***** the metadata of the HTML Document,1,1,1,48,0.88,15,holds,1,3
+78,327,HTML Tags are e***** into each other to indicate the document's ogranization,2,2,11,434,0.81,33,embedded,1,3
+90,286,Square Number (except zero) has an ***** number of positive divisors,5,4,01111,66,0.5,16,odd,1,12
+98,477,שלו,0,0,,1014,0.09,81,his,1,7
+102,242,Children with worries have little learning a*****,7,7,1111111,25,0.97,15,ability,1,4
+113,273,The number N is a Square Number iff one can arrange N points in a *****,4,4,1111,261,0.62,22,square,1,11
+117,392,מרכאות,1,1,1,277,0.06,14,quotation marks,1,4
+119,241,Children w***** succeed in what they love to do,2,2,11,292,0.97,29,will,1,2
+121,481,או,0,0,,1019,0.09,81,or,1,2
+124,238,Because of bad p*****; children learn that one can love someone who hurts them,2,2,11,488,0.94,38,parents,1,3
+127,185,this = someone or something n***** in the place or time,2,2,11,374,0.09,20,near,1,3
+130,333,they = used to r***** to two or more people,4,2,0011,377,0.09,35,refer,1,3
+133,231,If one of the family members is not happy; e***** none of them will be happy,3,3,111,398,1.0,34,eventually,1,3
+138,329,Number Line is a straight line that serves as a***** for real numbers,3,2,011,291,0.44,31,abstraction,1,5
+141,307,<img src="path"> is Empty HTML Element,2,2,11,421,0.41,27,Yes,1,3
+144,487,שלי e*****,0,0,,1026,0.09,81,mine,1,4
+155,473,HTML Closing Tag is located in the ***** of the document,0,0,,1126,0.88,93,end,1,10
+160,339,Multiplication = The process of adding a number to i***** a particular number of times,2,2,11,464,0.03,23,itself,1,5
+162,277,Square Number can end with digit 2,2,2,11,58,0.47,9,No,1,2
+166,452,Doctype Tag is an empty element,3,2,011,57,0.69,23,Yes,1,4
+169,216,אני,2,2,11,177,0.09,10,i,1,3
+174,325,HTML Tag holds instructions to the b****** about the meaning of the text,4,4,1111,98,0.84,17,browser,1,5
+179,309,Empty HTML Element can nest other Elements within them,3,3,111,266,0.41,19,No,1,5
+181,255,Natural Numbers = p***** integers,4,4,1111,163,0.78,19,positive,1,2
+211,405,לכבוש to c*****,1,1,1,103,0.06,6,to conquer,1,30
+246,182,to be able to = to h***** the necessary ability to do something,1,1,1,601,0.09,31,have,1,34
+249,245,Composite Number is a positive i***** that can be performed by multiplying two smaller positive integers,2,2,11,430,0.5,29,integer,1,3
+264,387,<h1> = ***** level tag,1,1,1,295,0.34,19,block,1,15
+267,349,Natural Numbers = p***** i*****,2,2,11,480,0.66,33,positive integers,1,3
+273,330,If we add the number N to its o***** number we get zero,1,1,1,585,0.44,35,opposite,1,7
+275,232,Without happiness; we will not be a***** to share it,7,7,1111111,119,1.0,20,able,1,2
+278,486,שלי y*****,0,0,,1042,0.09,81,my,1,2
