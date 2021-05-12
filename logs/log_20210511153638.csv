@@ -1,0 +1,52 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+12,449,Doctype Tag is instruction to the browser about what version of HTML the page is w***** in,0,0,,1172,0.72,90,written,1,11
+15,327,HTML Tags are e***** into each other to indicate the document's ogranization,3,3,111,62,0.81,15,embedded,1,3
+18,468,<h6> is the most important heading on the page,1,1,1,174,0.88,21,No,1,3
+21,240,Children will s***** in what they love to do,7,6,0111111,172,0.97,27,succeed,1,3
+33,373,Tag Attributes are l***** in the opening tag,2,2,11,224,0.56,19,located,1,12
+39,270,Square Number is ***** of the number with itself,4,4,1111,184,0.47,16,multiplication,1,6
+48,301,Empty HTML Element,3,3,111,482,0.38,29,1,1,9
+58,469,HTML Tag is i***** for the start and the end of HTML document,1,1,1,22,0.88,14,indication,1,10
+66,357,Number Type Ordering: Natural (Counting) => Whole => ***** => Rational => Real,3,2,011,213,0.91,34,integer,1,9
+71,320,HTML Parent Element have a n**** Element within it,4,4,1111,220,0.25,14,nested,1,5
+77,256,Natual Numbers can be negative,3,3,111,76,0.91,17,No,1,6
+159,403,Global Tag Attributes can be used in m***** elements (ex: class; draggable),1,1,1,378,0.59,27,most,1,82
+208,441,Write one-line comment with content "comment",1,1,1,130,0.72,17,<!--comment-->,1,50
+229,296,HTML Document consists of HTML Elements,2,2,11,593,0.16,32,Yes,1,21
+233,344,כפל,2,2,11,328,0.09,17,multiplication,1,4
+240,273,The number N is a Square Number iff one can arrange N points in a *****,5,5,11111,72,0.62,12,square,1,6
+243,264,Numeral System = Writing system for expressing n*****,3,3,111,450,0.19,25,numbers,1,3
+248,290,Markup Language = tags that c***** the text,4,4,1111,212,0.19,13,characterize,1,5
+257,306,Empty HTML Element is without Content,2,2,11,453,0.34,27,Yes,1,9
+262,288,Hyper Text = Text with *****k to another text,5,3,01101,269,0.19,28,link,1,4
+265,235,A happy man does not c***** all the time and thinks the world owes him,4,4,1111,391,1.0,34,complain,1,3
+277,371,In ***** numbers; the decimal expansion goes on forever without repeating,1,1,1,331,0.91,30,irrational,1,12
+288,294,You can write and read HTML code in any text editor,2,2,11,440,0.19,24,Yes,1,11
+292,346,Ten fingers on two hands is the p***** origin of decimal system,2,2,11,214,0.44,17,possible,1,4
+299,454,Head Tag h***** the metadata of the HTML Document,2,2,11,86,0.88,17,holds,1,7
+320,354,Counting Numbers = Natural Numbers,4,4,1111,186,0.66,19,Yes,1,21
+322,467,<h1> is the most important heading on the page,0,0,,1198,0.88,93,Yes,1,2
+334,471,HTML Tag for English language,1,1,1,164,0.88,21,<html lang="en"><"en>,0,12
+385,286,Square Number (except zero) has an ***** number of positive divisors,6,5,011111,88,0.5,16,odd,1,10
+392,485,היא,0,0,,1102,0.09,81,she,1,7
+397,233,Without happiness; we w***** not be able to share it,4,4,1111,238,1.0,26,will,1,5
+402,408,Block Level o***** 100% of the available width,1,1,1,177,0.41,15,occupies,1,5
+405,459,Head Tag is empty element,2,2,11,102,0.88,18,No,1,3
+408,205,בסופו של דבר *****f,3,3,111,285,0.09,15,finally,1,3
+412,239,Because of bad parents; children learn that one can love someone w***** hurts them,4,4,1111,127,0.94,20,who,1,4
+417,329,Number Line is a straight line that serves as a***** for real numbers,4,3,0111,84,0.44,18,abstraction,1,5
+420,210,אלה **o**,2,2,11,491,0.09,25,thos,0,2
+462,449,Doctype Tag is instruction to the browser about what version of HTML the page is w***** in,1,1,1,37,0.72,12,written,1,38
+465,336,הפניה / התייחסות,3,3,111,209,0.06,11,reference,1,4
+468,321,HTML Child Element is n***** within other Element,4,4,1111,257,0.25,16,nested,1,3
+471,252,Whole Numbers = positive i***** with zero,6,6,111111,317,0.66,25,integers,1,3
+473,311,HTML Element Inline Level,4,4,1111,223,0.41,17,1,1,3
+475,218,בשביל,2,2,11,480,0.09,25,for,1,2
+480,349,Natural Numbers = p***** i*****,4,4,1111,71,0.66,13,positive integers,1,5
+503,457,Head Tag is located in the start of the document; after ***** opening tag,2,2,11,140,0.88,20,html,1,22
+518,381,Tag Attributes *****s should be enclosed in quotation marks ,4,3,1011,255,0.56,28,values,1,15
+527,287,HTML Acronym (4 words),3,3,111,246,0.19,15,hyper text markup language,0,9
+557,306,Empty HTML Element is without Content,3,3,111,29,0.34,6,Yes,1,2
+560,276,Square Number can end with digit 1,3,3,111,438,0.47,28,Yes,1,3
+563,424,metadata = data that provides information about o***** data,1,1,1,181,0.03,9,other,1,4
+568,271,Square Number is multiplication of the number with *****,2,2,11,638,0.47,38,sero,0,5
