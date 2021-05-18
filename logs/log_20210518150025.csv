@@ -1,0 +1,101 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+8,479,ללכת *****g to,0,0,,1123,0.08,81,to go,1,7
+85,373,Tag Attributes are l***** in the opening tag,3,3,111,47,0.41,8,located,1,77
+91,354,Counting Numbers = Natural Numbers,5,5,11111,27,0.87,14,Yes,1,6
+94,412,מלבן,1,0,0,189,0.08,40,rectangle,1,3
+97,231,If one of the family members is not happy; e***** none of them will be happy,4,4,1111,104,1.0,20,eventually,1,3
+101,345,Ten fingers on two h***** is the possible origin of decimal system,3,3,111,139,0.74,18,hands,1,4
+129,456,Head Tag for English language,1,1,1,157,0.67,17,<head metaset="utf-8"></head>,0,28
+162,266,The most common today numeral system is d***** [0:9],2,2,11,331,0.72,27,decimal,1,4
+236,190,eventually = after a l**** delay or series of problems,1,1,1,688,0.05,35,long,1,74
+246,265,The first numeral systems w***** created at the same time as agriculture and commerce,3,3,111,446,0.72,33,were,1,10
+249,262,Rational Numbers = {p/q : p and q are i*****; q is not zero},4,4,1111,163,0.9,21,integers,1,3
+252,278,Square Number can end with digit 3,2,2,11,512,0.79,37,No,1,3
+266,462,Heading Tag defines the hierarchy and the s***** of the web page content,1,1,1,161,0.62,17,structure,1,13
+271,212,ל,2,2,11,237,0.08,13,to,1,5
+275,330,If we add the number N to its o***** number we get zero,2,2,11,97,0.74,15,opposite,1,4
+279,447,Doctype Tag is instruction to the b***** about what version of HTML the page is written in,0,0,,1237,0.56,88,browser,1,4
+299,456,Head Tag for English language,2,1,10,10,0.67,25,<head charset="UTF-8"></head>,1,20
+302,319,Non Empty Element can contain any number of Elements inside it,2,2,11,484,0.23,27,Yes,1,3
+312,494,The Interactive Mode a***** prints on the screen the result of the typed expression,0,0,,1018,0.77,91,automatically,1,10
+314,302,Empty HTML Element must be without Tag Attributes,3,3,111,138,0.28,11,No,1,2
+317,325,HTML Tag holds instructions to the b****** about the meaning of the text,5,5,11111,111,0.49,12,browser,1,3
+319,282,Square Number can end with digit 7,3,3,111,334,0.79,28,No,1,3
+323,502,In the Interactive Mode; a multiline statement terminates with a b***** line,0,0,,1022,0.77,91,blank,1,4
+326,373,Tag Attributes are l***** in the opening tag,4,4,1111,22,0.41,7,located,1,3
+328,375,Tag Attributes are located in the opening *****,2,2,11,320,0.41,22,tag,1,2
+335,501,In the Interactive Mode; a multiline statement t***** with a blank line,0,0,,1025,0.77,91,terminates,1,7
+349,471,HTML Tag for English language,2,1,10,49,0.67,27,<html lang="en></html>,0,14
+379,403,Global Tag Attributes can be used in m***** elements (ex: class; draggable),2,2,11,66,0.44,9,most,1,17
+383,250,Integer can be negative,8,8,11111111,199,0.92,23,Yes,1,4
+388,493,To run the Interactive Mode type "python" or "py" in the c***** p*****,0,0,,1029,0.77,91,command prompt,1,6
+396,417,browser = a computer program for displaying and n***** between web pages,0,0,,1252,0.03,80,navigating,1,7
+401,264,Numeral System = Writing system for expressing n*****,4,4,1111,65,0.69,13,numbers,1,5
+405,395,רוב *****ma,1,1,1,441,0.08,23,majority,1,4
+407,222,על *o,3,3,111,318,0.08,17,on,1,2
+412,498,The drawback of the Interactive Mode is it does not save the typed c***** in a file,0,0,,1034,0.77,91,code,1,5
+425,362,Rational Numbers = {p/q : ***** and ***** are *****; q is not zero},1,1,1,443,0.92,35,p and 1 are integers,0,13
+438,242,Children with worries have little learning a*****,8,8,11111111,144,0.97,21,ability,1,4
+441,492,To run the Interactive Mode type "python" or "*****" in the command prompt,0,0,,1037,0.77,91,py,1,2
+445,503,In the Interactive Mode; a multiline statement terminates with a blank l*****,0,0,,1038,0.77,91,line,1,4
+449,440,The goal of the comments is to make the code e***** to understand,0,0,,1261,0.54,88,easier,1,4
+454,305,Empty HTML Element is without Closing Tag,4,4,1111,515,0.28,29,Yes,1,5
+466,464,Heading Tag has ***** levels of hierarchy len(h1; h2;…),1,1,1,241,0.64,21,6,1,12
+509,310,HTML Element Block Level,5,5,11111,397,0.33,24,1,1,43
+515,410,Block Level occupies 100% of the available w*****,1,1,1,181,0.33,14,width,1,6
+540,372,In Irrational Numbers; the decimal expansion goes on forever without *****ing,4,4,1111,236,0.92,25,repeating,1,25
+705,206,זה *i,1,1,1,770,0.08,39,it,1,165
+708,491,To run the Interactive Mode type "*****" or "py" in the command prompt,0,0,,1046,0.77,91,python,1,3
+715,454,Head Tag h***** the metadata of the HTML Document,3,3,111,73,0.67,13,holds,1,7
+719,292,Some HTML Tag Attributes are Case Sensitive,2,2,11,360,0.36,23,Yes,1,4
+726,371,In ***** numbers; the decimal expansion goes on forever without repeating,2,2,11,78,0.92,17,irrational,1,7
+731,327,HTML Tags are e***** into each other to indicate the document's ogranization,4,4,1111,99,0.46,11,embedded,1,5
+743,378,Tag Attributes usually consists of a key-value p***** (ex: width="50"),2,2,11,391,0.44,26,pairs,1,12
+749,188,these = p***** form of this,3,3,111,343,0.08,18,plural,1,6
+754,463,Heading Tag defines the hierarchy and the structure of the web page c*****,1,0,0,267,0.62,52,content,1,5
+758,338,Multiplication = The process of a***** a number to itself a particular number of times,2,2,11,498,0.03,25,adding,1,4
+764,499,The drawback of the Interactive Mode is it does not save the typed code in a f*****,0,0,,1055,0.77,91,file,1,6
+768,303,Empty HTML Element may have Tag Attributes,4,4,1111,177,0.28,13,Yes,1,4
+771,474,HTML Tag is empty element,2,2,11,125,0.67,16,No,1,3
+773,308,<b><img src="path"></b> is Empty HTML Element,4,4,1111,111,0.33,10,No,1,2
+775,431,כותרת *****t,1,1,1,224,0.05,11,title,1,2
+782,500,In the Interactive Mode; a m***** statement terminates with a blank line,0,0,,1060,0.77,91,multiline,1,7
+786,193,סוגריים (),3,3,111,259,0.08,14,parentheses,1,4
+790,263,Rational Numbers can be negative,4,4,1111,302,0.92,28,Yes,1,5
+794,497,The drawback of the Interactive Mode is it does not s***** the typed code in a file,0,0,,1063,0.77,91,save,1,4
+802,382,Tag Attributes values should be e***** in quotation marks (usually by double quotes),2,2,11,336,0.41,22,enclosed,1,8
+809,271,Square Number is multiplication of the number with *****,3,2,110,66,0.79,25,itself,1,7
+819,386,<div> = ***** level tag,1,1,1,472,0.28,27,block,1,9
+826,451,Doctype Tag is located in the ***** line of an HTML document,1,1,1,211,0.59,19,first,1,7
+834,286,Square Number (except zero) has an ***** number of positive divisors,7,6,0111111,90,0.82,21,odd,1,8
+842,488,Interactive Mode is good for running e*****,0,0,,1069,0.77,91,experiments,1,8
+847,339,Multiplication = The process of adding a number to i***** a particular number of times,3,3,111,165,0.03,8,itself,1,5
+849,394,רוב *****mo,3,3,111,229,0.08,12,most,1,2
+852,374,Tag Attributes are located in the ***** tag,3,3,111,235,0.41,17,opening,1,3
+860,472,HTML Opening Tag is located in the start of the document after the ***** tag,1,1,1,153,0.67,17,doctype,1,8
+903,254,Natural Numbers = positive i*****,2,2,11,423,0.9,34,integers,1,43
+906,203,להתחיל להיות,2,2,11,568,0.08,29,to become,1,3
+909,179,to become = to b***** to be,3,3,111,393,0.08,20,begin,1,3
+912,247,Composite Number that is not a Square Number; have an ***** number of positive divisors,6,5,011111,140,0.85,24,even,1,3
+917,240,Children will s***** in what they love to do,8,7,01111111,125,0.97,24,succeed,1,5
+919,368,מה,1,1,1,460,0.08,24,what,1,2
+922,243,Children with worries h***** little learning ability,3,3,111,323,0.97,30,have,1,3
+925,483,לקבל *****g to,0,0,,1204,0.08,81,to get,1,3
+929,197,אני אצליח,3,2,110,134,0.03,17,i will succeed,1,4
+933,283,Square Number can end with digit 8,1,1,1,761,0.79,49,No,1,4
+958,489,Interactive Mode i***** executes python statements,0,0,,1084,0.77,91,,0,25
+1018,231,If one of the family members is not happy; e***** none of them will be happy,5,5,11111,81,1.0,19,eventually,1,8
+1022,209,אלה **e**,3,3,111,209,0.08,11,these,1,4
+1026,279,Square Number can end with digit 4,2,2,11,627,0.79,43,Yes,1,4
+1030,398,Tag Attribute value with double quotes should be e***** in single quotes,1,1,1,488,0.38,30,enclosed,1,4
+1033,188,these = p***** form of this,4,4,1111,37,0.08,3,plural,1,2
+1042,476,***** is sum of the first n odd numbers,1,1,1,163,0.82,20,n^2,1,9
+1048,490,Interactive Mode immediately e***** python statements,0,0,,1091,0.77,91,executes,1,6
+1061,448,Doctype Tag is instruction to the browser about what version of HTML the p***** is written in,1,1,1,269,0.56,21,page,1,13
+1107,490,Interactive Mode immediately e***** python statements,1,1,1,2,0.77,11,executes,1,45
+1109,280,Square Number can end with digit 5,3,3,111,445,0.79,34,Yes,1,2
+1116,496,The Interactive Mode automatically prints on the screen the result of the t***** expression,0,0,,1095,0.77,91,typed,1,7
+1118,492,To run the Interactive Mode type "python" or "*****" in the command prompt,1,1,1,59,0.77,14,py,1,2
+1120,202,להיות,2,2,11,498,0.08,26,to be,1,2
+1123,502,In the Interactive Mode; a multiline statement terminates with a b***** line,1,1,1,76,0.77,15,blank,1,3
+1129,239,Because of bad parents; children learn that one can love someone w***** hurts them,5,5,11111,115,0.95,20,who,1,6
