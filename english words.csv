@@ -38,11 +38,11 @@
 "me	",1
 "your	",1
 "all	",1
-"who	",0
-"about	",0
-"their	",0
-"will	",0
-"so	",0
+"who	",1
+"about	",1
+"their	",1
+"will	",1
+"so	",1
 "would	",0
 "make	",0
 "just	",0
@@ -85,7 +85,7 @@
 "also	",0
 "two	",0
 "use	",0
-"tell	",0
+"tell	",1
 "good	",0
 "first	",1
 "man	",0
