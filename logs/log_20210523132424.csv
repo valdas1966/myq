@@ -1,0 +1,101 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+55,543,will = used to talk about what is going to h***** in the future,0,0,,1010,0.07,81,happen,1,55
+203,538,Importing Module process e***** the module (once per session),0,0,,1111,0.79,91,executes,1,148
+206,274,N^2 is sum of the first N ***** numbers,6,6,111111,55,0.83,15,odd,1,4
+214,545,will = the mental power used to control and direct your t***** and actions,0,0,,1013,0.07,81,thoughts,1,8
+231,486,שלי y*****,1,1,1,295,0.07,15,my,1,17
+238,458,Head Tag is located in the start of the document; after HTML ***** tag,1,1,1,344,0.62,26,doctype,0,7
+248,242,Children with worries have little learning a*****,10,10,1111111111,73,0.98,18,ability,1,3
+253,539,Importing Module process executes the m***** (once per session),0,0,,1117,0.79,91,module,1,5
+267,304,Empty HTML Element is without Opening Tag,5,5,11111,272,0.26,17,No,1,14
+273,384,Tag Attributes values should be enclosed in quotation ***** (usually by double quotes),4,4,1111,333,0.38,22,marks,1,6
+1046,391,<img> = ***** level tag,2,2,11,448,0.26,26,inline,1,773
+1208,510,כמו *****l,1,1,1,114,0.07,6,like,1,162
+1213,329,Number Line is a straight line that serves as a***** for real numbers,6,4,011110,28,0.69,21,abstraction,1,5
+1216,552,שלהם,0,0,,1023,0.07,81,their,1,2
+1226,518,כלשהו; איזשהו,0,0,,1124,0.07,81,any,1,10
+1246,466,<h1> is the most i***** heading on the page,1,1,1,420,0.62,30,important,1,20
+1248,211,של,4,4,1111,462,0.07,24,of,1,2
+1250,284,Square Number can end with digit 9,3,3,111,461,0.74,34,Yes,1,3
+1255,558,בנים ובנות,0,0,,1018,0.02,80,boys and girls,1,4
+1257,250,Integer can be negative,9,9,111111111,201,0.93,24,Yes,1,2
+1259,349,Natural Numbers = p***** i*****,5,5,11111,237,0.88,25,positive integers,1,3
+1266,516,כל; כל אחד y*****,0,0,,1131,0.07,81,every,1,6
+1269,562,בזמן הזה,0,0,,1022,0.02,80,in this time,0,3
+1408,554,כל כך *****s,0,0,,1033,0.07,81,דם,0,134
+1428,541,t***** = of or belonging to them,0,0,,1034,0.07,81,their,1,17
+1433,197,אני אצליח,4,3,1101,153,0.02,15,i will succeed,1,5
+1442,540,Importing Module process executes the module (once per s*****),0,0,,1136,0.79,91,session,1,9
+1444,283,Square Number can end with digit 8,2,2,11,154,0.74,18,No,1,2
+1449,549,הסיפור מספר,0,0,,1038,0.02,80,the story tells,1,5
+1452,393,הפשטה *****a,2,2,11,531,0.05,27,abstraction,1,3
+1468,430,הכי,1,1,1,376,0.07,19,,0,15
+1517,525,Execute module.py in Command Prompt,3,0,000,42,0.81,44,python module,0,46
+1525,209,אלה **e**,4,4,1111,156,0.07,8,these,1,3
+1530,546,will = the mental power used to control and direct your thoughts and a*****,0,0,,1043,0.07,81,actions,1,5
+1535,537,Import module_py,0,0,,1144,0.81,92,import module,1,5
+1544,471,HTML Tag for English language,3,1,100,219,0.62,40,<html lang="en"></html,0,10
+1559,561,זה אבא שלי,0,0,,1036,0.02,80,this is my father,1,4
+1563,555,לספר,0,0,,1047,0.07,81,to tell,1,4
+1565,425,היררכיה,1,1,1,307,0.05,16,hierarchy,1,3
+1567,282,Square Number can end with digit 7,5,5,11111,69,0.74,14,No,1,1
+1576,269,The first systematic study of numbers as absractions is usually credited to the Greek p***** Pythagoras and Archimedes,2,2,11,561,0.67,38,philosophers,1,9
+1581,225,בסופו של דבר *****u,3,3,111,439,0.05,22,ultimately,1,6
+1585,564,מלך ישראל,0,0,,1042,0.02,80,king of israel,1,4
+1594,376,Tag Attributes u**** consists of a key-value pairs (ex: width="50"),3,2,011,470,0.4,39,usually,1,9
+1607,533,"*****" load another module and grant access to its content,0,0,,1154,0.79,91,import,1,13
+1611,503,In the Interactive Mode; a multiline statement terminates with a blank l*****,1,1,1,217,0.71,21,line,1,4
+1614,479,ללכת to g,1,1,1,256,0.07,13,to go,1,3
+1618,335,להפנות,2,2,11,796,0.05,40,to refer,1,4
+1622,536,"import" load another module and grant a***** to its content,2,2,11,97,0.79,16,access,1,4
+1626,189,those = p***** form of that,2,2,11,558,0.07,28,plural,1,4
+1630,350,Positive Integers = n***** n*****,5,5,11111,148,0.88,20,natural numbers,1,4
+1632,280,Square Number can end with digit 5,4,4,1111,167,0.74,19,Yes,1,2
+1634,275,Square Number can end with digit 0,3,3,111,552,0.74,38,Yes,1,2
+1638,192,division = splitting into e***** parts,5,5,11111,391,0.05,20,equal,1,3
+1645,557,נהייתי אבא,0,0,,1054,0.02,80,i became a father,1,7
+1649,232,Without happiness; we will not be a***** to share it,8,8,11111111,347,1.0,32,able,1,5
+1652,238,Because of bad p*****; children learn that one can love someone who hurts them,4,4,1111,330,0.95,30,parents,1,2
+1653,279,Square Number can end with digit 4,3,3,111,180,0.74,20,Yes,1,1
+1660,527,Executing a module in interactive m***** enables printing the variables' values,1,1,1,153,0.79,19,mode,1,7
+1666,402,Global Tag Attributes can be u***** in most elements (ex: class; draggable),2,2,11,128,0.4,12,used,1,7
+1675,533,"*****" load another module and grant access to its content,1,1,1,16,0.79,12,import,1,8
+1677,404,available = ready for immediate u*****,1,1,1,444,0.07,23,use,1,3
+1686,387,<h1> = ***** level tag,2,2,11,357,0.26,21,block,1,9
+1703,471,HTML Tag for English language,4,1,1000,28,0.62,33,<html lang="en"></html>,1,16
+1707,400,Tag Attribute value with double quotes should be enclosed in single q*****,4,4,1111,111,0.36,10,quotes,1,4
+1711,496,The Interactive Mode automatically prints on the screen the result of the t***** expression,1,1,1,180,0.71,19,typed,1,4
+1713,219,לעשות,2,2,11,450,0.07,23,to do,1,2
+1717,330,If we add the number N to its o***** number we get zero,3,3,111,263,0.69,23,opposite,1,3
+1721,498,The drawback of the Interactive Mode is it does not save the typed c***** in a file,1,1,1,244,0.71,22,code,1,4
+1725,542,their = of or belonging to t*****,0,0,,1079,0.07,81,them,1,4
+1728,367,להגיד,1,1,1,633,0.07,32,to say,1,3
+1730,565,טייס,0,0,,1071,0.05,80,pilot,1,2
+1734,492,To run the Interactive Mode type "python" or "*****" in the command prompt,2,2,11,186,0.71,19,py,1,3
+1737,332,אבל / אולם,3,3,111,431,0.07,22,but,1,4
+1748,399,Tag Attribute value with double quotes should be enclosed in s***** quotes,3,3,111,543,0.36,32,single,1,11
+1750,515,שלך,0,0,,1185,0.07,81,yours,0,2
+2879,247,Composite Number that is not a Square Number; have an ***** number of positive divisors,7,6,0111111,209,0.86,27,even,1,1123
+2881,212,ל,4,4,1111,134,0.07,7,to,1,2
+2883,459,Head Tag is empty element,3,3,111,306,0.62,24,No,1,3
+2886,185,this = someone or something n***** in the place or time,3,3,111,391,0.07,20,near,1,3
+2890,260,Rational Number = Number that can be written as a f*****,3,3,111,719,0.9,49,fraction,1,4
+2895,524,Python Module file ends with .***** extension,0,0,,1191,0.79,91,py,1,5
+2904,563,בזמן ההוא,0,0,,1082,0.02,80,at that time,1,9
+2906,228,בסופו של דבר *****e,3,3,111,577,0.05,29,eventually,1,2
+2910,544,will = used to talk about what is going to happen in the f*****,0,0,,1094,0.07,81,future,1,4
+2913,307,<img src="path"> is Empty HTML Element,3,3,111,393,0.31,24,Yes,1,3
+2916,233,Without happiness; we w***** not be able to share it,5,5,11111,316,1.0,30,will,1,3
+2921,474,HTML Tag is empty element,3,3,111,240,0.62,21,No,1,5
+2923,447,Doctype Tag is instruction to the b***** about what version of HTML the page is written in,1,1,1,283,0.52,21,browser,1,2
+2926,527,Executing a module in interactive m***** enables printing the variables' values,2,2,11,31,0.79,13,mode,1,3
+2928,560,אני יכול לעשות את זה,0,0,,1090,0.02,80,i can do it,1,2
+2935,556,אני רוצה להיות טייס,0,0,,1091,0.02,80,i want to be a pilot,1,7
+2976,554,כל כך *****s,1,0,0,69,0.07,34,דם,0,41
+2984,361,Recommended HTML Style is uppercase,2,2,11,609,0.24,34,No,1,4
+2988,331,If we add the number N to its opposite number we get *****,4,4,1111,620,0.69,41,zero,1,4
+2992,290,Markup Language = tags that c***** the text,5,5,11111,338,0.14,19,characterize,1,4
+2999,559,סוף סוף הגעתי הביתה,0,0,,1096,0.02,80,finally i got home,0,7
+3056,495,The Interactive Mode automatically prints on the screen the r***** of the typed expression,1,1,1,184,0.71,19,result,1,10
+3058,294,You can write and read HTML code in any text editor,3,3,111,336,0.14,18,Yes,1,3
+3066,562,בזמן הזה,1,0,0,77,0.02,34,at this time,1,7
