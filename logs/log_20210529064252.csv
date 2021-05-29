@@ -1,0 +1,190 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+4,300,All HTML Elements have Content,3,3,111,268,0.1,14,No,1,3
+23,397,Tag Attributes values should be enclosed in quotation marks (usually by double q*****),2,2,11,586,0.38,35,quotes,1,20
+28,292,Some HTML Tag Attributes are Case Sensitive,3,3,111,360,0.33,22,Yes,1,5
+34,307,<img src="path"> is Empty HTML Element,4,4,1111,114,0.31,10,Yes,1,5
+38,497,The drawback of the Interactive Mode is it does not s***** the typed code in a file,3,3,111,210,0.71,21,save,1,5
+56,396,Tag Attributes values should be enclosed in quotation marks (usually by d**** quotes),2,2,11,614,0.38,36,double,1,18
+61,539,Importing Module process executes the m***** (once per session),1,1,1,195,0.79,21,module,1,4
+66,582,מה קרה לו,0,0,,1103,0.02,80,what happened to him,1,5
+68,514,לי,1,1,1,285,0.07,15,me,1,2
+73,493,To run the Interactive Mode type "python" or "py" in the c***** p*****,1,1,1,386,0.71,29,command prompt,1,5
+94,531,Execute module.py in Comand Prompt with Interactive Mode,1,0,0,213,0.81,52,python -i module.py,1,21
+100,378,Tag Attributes usually consists of a key-value p***** (ex: width="50"),3,3,111,366,0.4,24,pairs,1,6
+106,193,סוגריים (),4,4,1111,357,0.07,18,parentheses,1,6
+146,318,Empty Element can contain Elements inside it,5,5,11111,676,0.21,36,No,1,40
+150,502,In the Interactive Mode; a multiline statement terminates with a b***** line,3,3,111,63,0.71,13,blank,1,4
+164,581,הם רצו להגיד,0,0,,1111,0.02,80,they wanted to say,1,15
+199,489,Interactive Mode i*****y executes python statements,2,1,01,235,0.71,37,immediately,1,35
+203,519,כל,2,1,10,18,0.07,16,all,1,3
+209,501,In the Interactive Mode; a multiline statement t***** with a blank line,1,1,1,399,0.71,30,terminates,1,6
+216,190,eventually = after a l**** delay or series of problems,2,2,11,417,0.05,21,long,1,7
+225,247,Composite Number that is not a Square Number; have an ***** number of positive divisors,8,7,01111111,140,0.86,23,even,1,10
+229,330,If we add the number N to its o***** number we get zero,4,4,1111,150,0.69,17,opposite,1,3
+236,247,Composite Number that is not a Square Number; have an ***** number of positive divisors,9,8,011111111,2,0.86,16,even,1,7
+238,303,Empty HTML Element may have Tag Attributes,5,5,11111,373,0.26,22,Yes,1,2
+240,207,זה *i**,4,4,1111,295,0.07,15,this,1,2
+266,337,Multiplication = The p***** of adding a number to itself a particular number of times,3,3,111,769,0.02,38,process,1,25
+317,351,Composite Number is a positive integer that can be performed by m***** two smaller positive integers,9,8,011111111,93,0.83,20,multiplying,1,51
+322,496,The Interactive Mode automatically prints on the screen the result of the t***** expression,2,2,11,158,0.71,18,typed,1,5
+328,568,בתוך הקווים,0,0,,1124,0.02,80,within line,0,5
+340,345,Ten fingers on two h***** is the possible origin of decimal system,4,4,1111,430,0.69,31,hands,1,4
+345,473,HTML Closing Tag is located in the ***** of the document,4,4,1111,87,0.62,13,end,1,6
+351,548,תספר לי על עצמך,1,1,1,99,0.02,5,tell me about yourself,1,5
+355,266,The most common today numeral system is d***** [0:9],3,3,111,431,0.67,31,decimal,1,4
+358,512,לדעת,1,1,1,281,0.07,15,to know,1,3
+361,356,Number Type Ordering: Natural (Counting) => ***** => Integer => Rational => Real,5,5,11111,304,0.93,29,whole,1,4
+401,271,Square Number is multiplication of the number with *****,4,3,1101,376,0.74,37,itself,1,39
+406,273,The number N is a Square Number iff one can arrange N points in a *****,6,6,111111,477,0.86,36,square,1,6
+409,466,<h1> is the most i***** heading on the page,3,3,111,66,0.62,12,important,1,3
+479,535,"import" load another module and g***** access to its content,1,1,1,318,0.79,27,grant,1,69
+488,470,HTML Tag is indication for the start and the end of HTML d*****,2,2,11,341,0.62,26,document,1,9
+493,518,כלשהו; איזשהו,1,1,1,222,0.07,12,any,1,5
+511,346,Ten fingers on two hands is the p***** origin of decimal system,3,3,111,474,0.69,34,possible,1,17
+525,462,Heading Tag defines the hierarchy and the s***** of the web page content,2,2,11,436,0.57,30,structure,1,14
+538,200,אלה כאן ואלה שם,5,4,11101,119,0.02,12,these are here and those are there,1,13
+542,467,<h1> is the most important heading on the page,1,1,1,474,0.62,33,Yes,1,4
+549,580,אבל הוא לא נפל,1,0,0,77,0.02,34,but he did not fall,1,7
+553,304,Empty HTML Element is without Opening Tag,7,7,1111111,118,0.26,9,No,1,4
+558,424,metadata = data that provides information about o***** data,2,2,11,454,0.02,23,other,1,5
+561,345,Ten fingers on two h***** is the possible origin of decimal system,5,5,11111,19,0.69,11,hands,1,3
+581,287,HTML Acronym (4 words),4,3,1110,459,0.14,32,Hyper Text Markup Language,1,21
+585,182,to be able to = to h***** the necessary ability to do something,2,2,11,543,0.07,28,have,1,3
+589,374,Tag Attributes are located in the ***** tag,4,4,1111,385,0.38,24,opening,1,5
+602,529,Executing a module in interactive mode enables printing the v***** values,0,0,,1358,0.79,91,variables',1,13
+609,470,HTML Tag is indication for the start and the end of HTML d*****,3,3,111,14,0.62,10,document,1,7
+613,574,אתה צודק,0,0,,1150,0.02,80,you are right,1,3
+620,232,Without happiness; we will not be a***** to share it,10,10,1111111111,132,1.0,21,able,1,7
+626,567,הספר הזה שלך,0,0,,1152,0.02,80,this book is yours,1,6
+634,264,Numeral System = Writing system for expressing n*****,5,5,11111,432,0.64,31,numbers,1,8
+640,249,Integer = Number with n***** fractional part,3,3,111,866,0.88,56,no,1,5
+644,327,HTML Tags are e***** into each other to indicate the document's ogranization,5,5,11111,415,0.43,27,embedded,1,4
+657,547,את כל כך יפה,0,0,,1266,0.02,80,you are so beatiful,0,13
+674,499,The drawback of the Interactive Mode is it does not save the typed code in a f*****,2,2,11,316,0.71,26,file,1,8
+680,377,Tag Attributes usually consists of a *****-***** pairs (ex: width="50"),3,3,111,158,0.4,13,key-values,0,5
+692,463,Heading Tag defines the hierarchy and the structure of the web page c*****,2,1,01,416,0.57,44,content,1,5
+695,196,לכפול,3,3,111,130,0.05,7,to multiply,1,3
+698,253,Whole Numbers can be negative,6,6,111111,347,0.93,31,No,1,2
+699,223,אנחנו,4,4,1111,152,0.07,8,we,1,2
+703,296,HTML Document consists of HTML Elements,4,4,1111,280,0.12,15,Yes,1,3
+706,197,אני אצליח,5,4,11011,239,0.02,18,i will succeed,1,3
+726,562,הפעם,2,1,01,166,0.02,23,this time,1,20
+732,212,ל,5,5,11111,189,0.07,10,to,1,5
+734,480,ללכת to w,1,1,1,528,0.07,27,to walk,1,3
+746,416,browser = a computer program for d***** and navigating between web pages,1,1,1,661,0.02,33,displaying,1,12
+749,414,ריבוע,1,1,1,695,0.05,35,square,1,2
+751,235,A happy man does not c***** all the time and thinks the world owes him,7,7,1111111,111,1.0,20,complain,1,2
+754,543,will = used to talk about what is going to h***** in the future,1,1,1,271,0.07,14,happen,1,3
+756,217,אתה,3,3,111,369,0.07,19,you,1,2
+760,576,אני איתך,1,1,1,141,0.02,7,i am with you,1,3
+769,355,Number Type Ordering: ***** => Whole => Integer => Rational => Real,2,2,11,608,0.93,44,natural,1,9
+775,566,ספר שלך,0,0,,1175,0.02,80,your book,1,6
+782,195,הורות,4,4,1111,376,0.05,19,parenthood,1,7
+798,194,סוגריים [],3,2,110,320,0.07,27,brackets,1,16
+801,565,טייס,1,1,1,207,0.05,11,piulot,0,3
+806,283,Square Number can end with digit 8,3,3,111,252,0.74,23,No,1,2
+812,270,Square Number is ***** of the number with itself,6,6,111111,142,0.74,18,multiplication,1,6
+815,244,Composite Number is a p***** integer that can be performed by multiplying two smaller positive integers,7,7,1111111,138,0.83,19,positive,1,3
+820,376,Tag Attributes u**** consists of a key-value pairs (ex: width="50"),4,3,0111,239,0.4,25,usually,1,5
+836,441,Write one-line comment with content "comment",3,2,110,120,0.52,23,<!--comment-->,1,16
+1083,289,Markup Language = t***** that characterize the text,3,3,111,388,0.14,21,tags,1,246
+1096,494,The Interactive Mode a***** prints on the screen the result of the typed expression,1,1,1,477,0.71,34,automatically,1,13
+1102,498,The drawback of the Interactive Mode is it does not save the typed c***** in a file,2,2,11,218,0.71,21,code,1,6
+1115,255,Natural Numbers = p***** integers,6,6,111111,121,0.9,19,positive,1,13
+1118,510,כמו *****l,2,2,11,277,0.07,14,like,1,3
+1120,274,N^2 is sum of the first N ***** numbers,7,7,1111111,287,0.83,26,odd,1,3
+1632,381,Tag Attributes *****s should be enclosed in quotation marks ,5,4,10111,505,0.38,36,values,1,512
+1634,224,בסופו של דבר *****e,3,3,111,727,0.05,37,eventually,1,2
+1638,352,Composite Number is a positive integer that can be performed by multiplying two s***** positive integers,4,4,1111,353,0.74,28,smaller,1,3
+1640,238,Because of bad p*****; children learn that one can love someone who hurts them,6,6,111111,142,0.95,21,parents,1,2
+1641,368,מה,2,2,11,425,0.07,22,what,1,2
+1644,577,על השולחן,0,0,,1195,0.02,80,on the table,1,3
+1648,503,In the Interactive Mode; a multiline statement terminates with a blank l*****,2,2,11,251,0.71,23,line,1,4
+1650,570,אני בפנים,1,1,1,139,0.02,7,i am in,1,2
+1653,205,בסופו של דבר *****f,4,4,1111,525,0.07,27,finally,1,2
+1655,180,and = used to j***** two words,2,2,11,635,0.07,32,join,1,3
+1661,372,In Irrational Numbers; the decimal expansion goes on forever without *****ing,5,5,11111,466,0.93,37,repeating,1,6
+1679,358,Number Type Ordering: Natural (Counting) => Whole => Integer => ***** => Real,2,2,11,794,0.93,53,rational,1,18
+1686,537,Import module_py,1,1,1,268,0.81,25,import module,1,7
+1688,519,כל,3,2,101,90,0.07,15,all,1,3
+1691,183,to be able to = to have the n***** ability to do something,4,4,1111,591,0.07,30,necessary,1,3
+1697,351,Composite Number is a positive integer that can be performed by m***** two smaller positive integers,10,9,0111111111,83,0.83,19,multiplying,1,6
+1701,511,לחבב,1,1,1,351,0.07,18,to like,1,4
+1704,299,All HTML Elements have Tag Attributes,3,3,111,409,0.1,21,No,1,3
+1732,456,Head Tag for English language,3,2,101,502,0.62,44,<head charset="UTF-8"></head>,1,28
+1740,263,Rational Numbers can be negative,6,6,111111,331,0.93,30,Yes,1,7
+1744,380,Boolean Tag Attribute is without ***** (ex: checked; required),2,2,11,864,0.36,48,values,0,4
+1754,458,Head Tag is located in the start of the document; after HTML ***** tag,3,2,101,135,0.62,26,opening,1,5
+1761,528,Executing a module in interactive mode e***** printing the variables' values,1,1,1,385,0.79,31,enables,1,7
+1765,489,Interactive Mode i*****y executes python statements,3,2,011,101,0.71,25,immediately,1,5
+1768,251,Whole Numbers = positive integers with z*****,7,7,1111111,422,0.88,34,zero,1,3
+1773,199,אני חייב לך,1,1,1,1305,0.02,50,i owe you,1,5
+1788,326,HTML Tags are embedded into each other to indicate the document's o********,5,5,11111,387,0.45,26,organization,1,15
+1791,513,אם *****i,1,1,1,416,0.07,21,if,1,3
+1798,320,HTML Parent Element have a n**** Element within it,5,5,11111,569,0.19,31,nested,1,7
+1819,552,שלהם,2,2,11,151,0.07,8,their,1,21
+1822,426,כותרת h*****r,3,3,111,334,0.05,17,header,1,2
+1825,242,Children with worries have little learning a*****,11,11,11111111111,315,0.98,30,ability,1,3
+1829,580,אבל הוא לא נפל,2,1,01,81,0.02,19,but he did not fall,1,4
+1831,322,HTML P***** Element have a Nested Element within it,3,3,111,943,0.17,49,parent,1,2
+1832,220,הוא,2,2,11,907,0.07,46,he,1,1
+1836,313,HTML Inline Level is rendered with a line break before and after,4,4,1111,779,0.29,43,No,1,4
+1839,185,this = someone or something n***** in the place or time,4,4,1111,247,0.07,13,near,1,3
+1842,507,אתה יכול לעשות את זה,1,1,1,403,0.02,20,you can do it,1,4
+1846,239,Because of bad parents; children learn that one can love someone w***** hurts them,7,7,1111111,363,0.95,32,who,1,3
+1850,403,Global Tag Attributes can be used in m***** elements (ex: class; draggable),3,3,111,512,0.4,31,most,1,4
+1855,275,Square Number can end with digit 0,4,4,1111,278,0.74,25,Yes,1,5
+1859,400,Tag Attribute value with double quotes should be enclosed in single q*****,5,5,11111,267,0.36,18,quotes,1,4
+1863,580,אבל הוא לא נפל,3,2,011,10,0.02,10,but he did not fall,1,4
+1866,375,Tag Attributes are located in the opening *****,3,3,111,519,0.38,31,tag,1,4
+1868,211,של,6,6,111111,221,0.07,12,of,1,2
+1873,501,In the Interactive Mode; a multiline statement t***** with a blank line,2,2,11,121,0.71,16,terminates,1,5
+1876,537,Import module_py,2,2,11,34,0.81,13,import module,1,3
+1879,201,צורת רבים,3,3,111,214,0.02,11,plural form,1,3
+1884,449,Doctype Tag is instruction to the browser about what version of HTML the page is w***** in,2,2,11,561,0.52,35,written,1,5
+1889,447,Doctype Tag is instruction to the b***** about what version of HTML the page is written in,2,2,11,251,0.52,20,browser,1,5
+1896,458,Head Tag is located in the start of the document; after HTML ***** tag,4,3,1011,29,0.62,18,opening,1,6
+1898,241,Children w***** succeed in what they love to do,4,4,1111,613,0.98,45,will,1,2
+1900,492,To run the Interactive Mode type "python" or "*****" in the command prompt,4,4,1111,196,0.71,20,py,1,2
+1906,440,The goal of the comments is to make the code e***** to understand,1,1,1,514,0.5,33,easy,0,6
+1919,556,אני אהיה טייס,1,1,1,253,0.02,12,i will be a pilot,0,5
+1931,491,To run the Interactive Mode type "*****" or "py" in the command prompt,1,1,1,509,0.71,36,python,1,3
+1937,226,להתלונן,3,3,111,877,0.05,44,to complain,1,6
+1945,525,Execute module.py in Command Prompt,4,0,0000,316,0.81,57,python module.py,1,8
+1948,387,<h1> = (block | inline) ***** level tag,3,3,111,286,0.26,18,block,1,3
+1951,295,HTML Elements consists of HTML Documents,4,4,1111,812,0.12,42,No,1,3
+1955,246,The Number N is a Composite Number iff one can arrange N points in a r*****,6,6,111111,406,0.86,33,rectangle,1,4
+1959,268,Numbers are not only an invention; it is a**** a discovery,6,6,111111,371,0.69,28,also,1,4
+1964,240,Children will s***** in what they love to do,11,10,01111111111,172,0.98,26,succeed,1,5
+1966,281,Square Number can end with digit 6,3,3,111,693,0.74,45,Yes,1,2
+1969,256,Natual Numbers can be negative,5,5,11111,455,0.93,36,No,1,2
+1972,237,Happy people share positive energy with t***** around them,7,7,1111111,167,1.0,23,those,1,3
+1974,587,ליפול,1,1,1,234,0.07,12,to fall,1,2
+1978,309,Empty HTML Element can nest other Elements within them,4,4,1111,657,0.31,37,No,1,4
+1981,259,Counting Numbers can be negative,4,4,1111,440,0.93,35,No,1,3
+1984,565,טייס,2,1,10,81,0.05,19,pilot,1,3
+1990,301,Empty HTML Element,4,4,1111,614,0.29,35,2,1,6
+2006,351,Composite Number is a positive integer that can be performed by m***** two smaller positive integers,11,10,01111111111,56,0.83,17,multiplying,1,16
+2008,210,אלה **o**,3,2,110,586,0.07,40,those,1,2
+2012,464,Heading Tag has ***** levels of hierarchy [len(h1; h2;…)],3,3,111,451,0.6,31,6,1,4
+2016,231,If one of the family members is not happy; e***** none of them will be happy,6,6,111111,489,1.0,39,eventually,1,3
+2018,251,Whole Numbers = positive integers with z*****,8,8,11111111,51,0.88,15,zero,1,2
+2020,334,הם,3,3,111,933,0.07,47,they,1,2
+2025,476,***** is sum of the first n odd numbers,2,2,11,487,0.83,36,N^2,0,5
+2037,225,בסופו של דבר *****u,4,4,1111,327,0.05,17,ultimately,1,8
+2047,249,Integer = Number with n***** fractional part,4,4,1111,115,0.88,18,no,1,10
+2057,430,הכי ***** *****,2,1,10,340,0.07,33,the most,1,10
+2070,242,Children with worries have little learning a*****,12,12,11111111111,50,0.98,17,ability,1,13
+2073,252,Whole Numbers = positive i***** with zero,7,7,1111111,592,0.88,42,integers,1,4
+2083,580,אבל הוא לא נפל,4,3,0111,41,0.02,9,but he did not fall,1,10
+2086,248,Integer = Number w***** no fractional part,6,6,111111,956,0.88,61,with,1,2
+2097,559,סוף סוף הגעתי הביתה,1,0,0,279,0.02,44,finally i got home,0,11
+2152,402,Global Tag Attributes can be u***** in most elements (ex: class; draggable),3,3,111,317,0.4,21,used,1,42
+2154,335,להפנות,3,3,111,330,0.05,17,to refer,1,2
+2156,213,בתוך *i,4,4,1111,194,0.07,10,in,1,1
+2158,431,כותרת *****t,2,2,11,530,0.05,27,title,1,2
+2159,481,או,1,1,1,694,0.07,35,or,1,2
+2164,526,Executing a module in i***** mode enables printing the variables' values,2,1,10,399,0.79,46,interactive,1,4
+2166,233,Without happiness; we w***** not be able to share it,6,6,111111,296,1.0,29,will,1,2
+2167,222,על *o,4,4,1111,560,0.07,29,on,1,2
+2172,454,Head Tag h***** the metadata of the HTML Document,5,5,11111,442,0.62,31,holds,1,5
