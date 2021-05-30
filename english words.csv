@@ -200,7 +200,7 @@
 "city	",0
 "company	",0
 "story	",0
-"today	",0
+"today	",1
 "job	",0
 "move	",0
 "must	",0
@@ -257,7 +257,7 @@
 "best	",0
 "team	",0
 "eye	",0
-"long	",0
+"long	",1
 "side	",0
 "water	",0
 "young	",0
@@ -1654,7 +1654,7 @@ unaware,0
 "used	",0
 "bear	",0
 "meal	",0
-"minority	",0
+"minority	",1
 "sight	",0
 "russian	",0
 "soviet	",0
@@ -1665,7 +1665,7 @@ unaware,0
 "ocean	",0
 "unidentified	",0
 "host	",0
-"grant	",0
+"grant	",1
 "circumstance	",0
 "boss	",0
 "declare	",0
@@ -1696,7 +1696,7 @@ unaware,0
 "bottle	",0
 "component	",0
 "fee	",0
-"jewish	",0
+"jewish	",1
 "yours	",0
 "dry	",0
 "dance	",0
@@ -2286,7 +2286,7 @@ unaware,0
 "bend	",0
 "shock	",0
 "criteria	",0
-"arab	",0
+"arab	",1
 "dirty	",0
 "toy	",0
 "potentially	",0
