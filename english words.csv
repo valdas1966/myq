@@ -126,7 +126,7 @@
 "yeah	",0
 "great	",0
 "last	",0
-"child	",0
+"child	",1
 "oh	",0
 "over	",0
 "ask	",0
@@ -248,7 +248,7 @@
 "provide	",0
 "lose	",0
 "power	",0
-"kid	",0
+"kid	",1
 "war	",0
 "understand	",0
 "head	",0
@@ -282,7 +282,7 @@
 "national	",0
 "four	",0
 "line	",1
-"girl	",0
+"girl	",1
 "watch	",0
 "until	",0
 "father	",0
@@ -326,7 +326,7 @@ hat,0
 "able	",-1
 "political	",0
 "almost	",0
-"boy	",0
+"boy	",1
 "university	",0
 "stay	",0
 "add	",0
@@ -1562,7 +1562,7 @@ unaware,0
 "core	",0
 "terrible	",0
 "relatively	",0
-"complex	",0
+"complex	",1
 "slow	",0
 "soft	",0
 "generate	",0
