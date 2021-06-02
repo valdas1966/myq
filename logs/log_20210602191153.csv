@@ -1,0 +1,54 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+4,292,Some HTML Tag Attributes are Case Sensitive,4,4,1111,326,0.33,21,Yes,1,3
+10,195,הורות,5,5,11111,249,0.05,13,parenthood,1,6
+22,605,זה ixxxxx; xxxixxx; xxxaxxx,0,0,,1034,0.07,81,it, this, that,1,12
+30,596,היום,0,0,,1142,0.07,81,today,1,9
+45,381,Tag Attributes *****s should be enclosed in quotation marks ,6,5,101111,238,0.38,22,values,1,15
+50,306,Empty HTML Element is without Content,4,4,1111,742,0.26,41,Yes,1,5
+53,411,תהליך,1,1,1,921,0.07,47,process,1,2
+57,301,Empty HTML Element,5,5,11111,171,0.29,12,1,1,4
+62,621,hierarchy = a system in which objects are ranked one above the other according to their s*****,0,0,,1008,0.02,80,status,1,5
+72,455,Head Tag holds the m***** of the HTML Document,2,2,11,426,0.62,30,metadata,1,10
+84,466,<h1> is the most i***** heading on the page,4,4,1111,301,0.62,24,important,1,12
+86,520,Python Module is t***** file with python statements,4,4,1111,78,0.76,15,text,1,3
+89,367,להגיד,2,2,11,466,0.07,24,to say,1,3
+91,354,Counting Numbers = Natural Numbers,7,7,1111111,434,0.88,34,Yes,1,2
+93,388,<li> = b**** level tag,3,3,111,412,0.26,24,block,1,2
+97,356,Number Type Ordering: Natural (Counting) => ***** => Integer => Rational => Real,6,6,111111,309,0.93,29,whole,1,4
+100,202,להיות,3,3,111,653,0.07,33,to be,1,3
+104,618,מורכב,0,0,,1024,0.05,80,complex,1,4
+118,519,כל *****a,4,3,1011,239,0.07,20,all,1,14
+124,612,מבנה מורכב,0,0,,1026,0.07,81,complex structure,1,6
+129,273,The number N is a Square Number iff one can arrange N points in a *****,7,7,1111111,312,0.86,28,square,1,5
+133,616,ילד,0,0,,1028,0.07,81,boy,1,4
+135,336,הפניה / התייחסות,5,5,11111,363,0.05,18,reference,1,2
+138,276,Square Number can end with digit 1,4,4,1111,759,0.74,49,Yes,1,3
+140,575,בשבילי,1,1,1,130,0.07,7,for me,1,2
+150,304,Empty HTML Element is without Opening Tag,8,8,11111111,307,0.26,19,No,1,10
+152,598,יהודי,0,0,,1165,0.05,80,jewish,1,2
+160,441,Write one-line comment with content "comment",4,3,1101,268,0.52,28,<!--comment-->,1,8
+163,295,HTML Elements consists of HTML Documents,5,5,11111,203,0.12,11,No,1,3
+165,204,ו / וגם,3,3,111,413,0.07,21,and,1,2
+168,244,Composite Number is a p***** integer that can be performed by multiplying two smaller positive integers,8,8,11111111,273,0.83,26,positive,1,3
+171,583,רוב האנשים,1,1,1,413,0.07,21,most people,1,3
+174,410,Block Level occupies 100% of the available w*****,5,4,11011,144,0.31,17,width,1,3
+180,541,t***** = of or belonging to them,1,1,1,533,0.07,27,their,1,6
+184,496,The Interactive Mode automatically prints on the screen the result of the t***** expression,3,3,111,335,0.71,27,typed,1,4
+186,614,ילד/ה *****k,0,0,,1042,0.07,81,kid,1,2
+188,210,אלה **o**,4,3,1101,198,0.07,18,those,1,2
+196,536,"import" load another module and grant a***** to its content,3,3,111,513,0.79,37,access,1,8
+198,513,אם *****i,2,2,11,245,0.07,13,if,1,3
+201,179,to become = to b***** to be,5,5,11111,653,0.07,33,begin,1,2
+203,404,available = ready for immediate u*****,2,2,11,503,0.07,26,use,1,2
+206,465,<h1> is the ***** important heading on the page,2,2,11,630,0.62,40,most,1,2
+208,413,כיכר *****p,2,2,11,74,0.05,4,plaza,1,2
+211,229,בסופו של דבר *****u,3,3,111,600,0.05,30,ultimately,1,3
+212,607,להעניק,0,0,,1076,0.05,80,to grant,1,2
+217,484,לקבל to r,1,1,1,839,0.07,42,to receive,1,5
+221,310,HTML Element Block Level,7,7,1111111,376,0.31,23,1,1,4
+224,541,t***** = of or belonging to them,2,2,11,14,0.07,1,their,1,3
+227,483,לקבל to g,1,1,1,701,0.07,36,to get,1,3
+234,609,structure = the arrangenment of and relations between the elements of something c*****,0,0,,1056,0.07,81,complex,1,7
+248,586,שולחן,1,1,1,389,0.07,20,table,1,15
+250,481,או,2,2,11,195,0.07,10,or,1,1
+256,589,סוגריים (); סוגריים [],1,1,1,131,0.07,7,parentheses, brackets,1,7
