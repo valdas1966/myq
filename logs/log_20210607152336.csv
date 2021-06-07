@@ -1,0 +1,21 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+16,617,ילדה,0,0,,1085,0.07,81,girl,1,15
+19,194,סוגריים [],4,3,1101,326,0.07,24,brackets,1,4
+36,459,Head Tag is empty element,4,4,1111,526,0.62,35,No,1,17
+39,515,שלך r*****,2,1,01,493,0.07,40,your,1,4
+42,356,Number Type Ordering: Natural (Counting) => ***** => Integer => Rational => Real,7,7,1111111,67,0.93,17,whole,1,3
+44,554,כל כך *****s,3,1,001,198,0.07,30,so,1,1
+54,593,סוף סוף נגמר,0,0,,1223,0.07,81,finally over,1,11
+73,442,Write multi-line comment with content "comment 1\\ncomment 2",2,1,10,435,0.55,45,<!--comment 1\\ncomment 2-->,1,19
+81,198,להיות מסוגל,2,2,11,875,0.07,44,to be able,1,7
+91,469,HTML Tag is i***** for the start and the end of HTML document,4,4,1111,197,0.62,19,indication,1,10
+117,528,Executing a module in interactive mode e***** printing the variables' values,2,2,11,300,0.79,26,enables,1,26
+120,473,HTML Closing Tag is located in the ***** of the document,5,5,11111,387,0.62,28,end,1,2
+123,486,שלי y*****,2,2,11,610,0.07,31,my,1,3
+132,547,אתה כל כך יפה,3,2,011,148,0.07,18,you are so beautiful,1,9
+134,219,לעשות,4,4,1111,166,0.07,9,to do,1,2
+137,288,Hyper Text = Text with a ***** to other text,7,5,0110111,224,0.14,21,link,1,3
+139,367,להגיד,3,3,111,82,0.07,5,to say,1,2
+145,603,הפעם; זמן ההוא,0,0,,1127,0.07,81,this time; that time,1,7
+150,606,סתיו aXXXXX; fXXXXX,0,0,,1128,0.07,81,autumn, fall,1,4
+153,570,אני בפנים,2,2,11,324,0.07,17,i am in,1,3
