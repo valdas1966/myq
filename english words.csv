@@ -608,7 +608,7 @@ hat,0
 "forget	",0
 "risk	",0
 "focus	",0
-"short	",0
+"short	",1
 "fire	",0
 "dog	",0
 "red	",0
@@ -2570,7 +2570,7 @@ unaware,0
 "elementary	",0
 "stake	",0
 "precisely	",0
-"bite	",0
+"bite	",1
 "given	",0
 "substantial	",0
 "depending	",0
@@ -2883,7 +2883,7 @@ ketchup,0
 "wooden	",0
 "confuse	",0
 "privilege	",0
-"coal	",0
+"coal	",1
 "fool	",0
 "cow	",0
 "characterize	",0
@@ -4328,7 +4328,7 @@ cannon,0
 "balloon	",0
 "monument	",0
 "cue	",0
-"sleeve	",0
+"sleeve	",1
 "toll	",0
 "reluctant	",0
 "warrant	",0
