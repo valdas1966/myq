@@ -1,0 +1,21 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+7,381,Tag Attributes *****s should be enclosed in quotation marks ,7,6,1011111,224,0.38,21,values,1,7
+27,442,Write multi-line comment with content "comment 1\\ncomment 2",3,2,101,144,0.55,25,<!--comment 1\\ncomment 2>,0,21
+61,530,Executing a module in interactive mode enables printing the variable's v*****,1,1,1,814,0.79,52,values,1,10
+63,485,היא,3,3,111,89,0.07,5,she,1,2
+66,253,Whole Numbers can be negative,7,7,1111111,495,0.93,38,No,1,3
+69,235,A happy man does not c***** all the time and thinks the world owes him,9,9,111111111,77,1.0,18,complain,1,3
+73,613,ילד/ה *****c,0,0,,1241,0.07,81,child,1,4
+76,527,Executing a module in interactive m***** enables printing the variables' values,5,5,11111,169,0.79,20,mode,1,3
+79,625,אישה גבוהה,0,0,,1038,0.07,81,high woman,0,3
+97,256,Natual Numbers can be negative,7,7,1111111,330,0.93,30,No,1,9
+100,186,these = plural form of *****,5,4,01111,635,0.07,38,this,1,3
+102,390,<b> = i**** level tag,2,2,11,789,0.26,43,inline,1,2
+107,397,Tag Attributes values should be enclosed in quotation marks (usually by double q*****),3,3,111,567,0.38,34,quotes,1,5
+110,583,רוב האנשים,3,3,111,92,0.07,5,most people,1,3
+115,591,process = a series of actions taken in order to achieve a particular e*****,1,1,1,324,0.07,17,end,1,5
+129,500,In the Interactive Mode; a m***** statement terminates with a blank line,3,2,101,93,0.71,25,multiline,1,14
+131,217,אתה,4,4,1111,496,0.07,25,you,1,2
+134,325,HTML Tag holds instructions to the b****** about the meaning of the text,8,8,11111111,652,0.45,39,browser,1,3
+137,474,HTML Tag is empty element,6,6,111111,288,0.62,23,No,1,3
+144,203,להתחיל להיות,3,3,111,906,0.07,46,to become,1,7
