@@ -1,0 +1,48 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+4,206,זה *i,3,3,111,615,0.07,31,it,1,3
+8,530,Executing a module in interactive mode enables printing the variable's v*****,1,1,1,1061,0.79,61,values,1,5
+12,401,G***** Tag Attributes can be used in most elements (ex: class; draggable),5,5,11111,607,0.4,36,global,1,4
+18,543,will = used to talk about what is going to h***** in the future,3,3,111,291,0.07,15,happen,1,6
+22,451,Doctype Tag is located in the ***** line of an HTML document,3,3,111,617,0.55,39,first,1,4
+25,295,HTML Elements consists of HTML Documents,6,6,111111,453,0.12,24,No,1,2
+28,563,זמן ההוא,1,1,1,924,0.07,47,that time,1,3
+31,671,אני מחבב אותך,0,0,,1144,0.07,81,i like you,1,3
+32,277,Square Number can end with digit 2,5,5,11111,249,0.74,23,No,1,2
+35,600,ערבי b*****,2,2,11,361,0.05,18,arab,1,2
+73,345,Ten fingers on two h***** is the possible origin of decimal system,7,7,1111111,423,0.69,31,hands,1,38
+100,392,מרכאות,3,3,111,838,0.05,42,quotation marks,1,27
+106,687,מי שחרר את הכלבים,0,0,,1139,0.07,81,who let the dogs out,1,6
+110,272,N^2 usually pronounced as N *****,6,6,111111,188,0.86,22,squared,1,4
+114,538,Importing Module process e***** the imported module (once per session),4,4,1111,421,0.79,32,executes,1,3
+127,635,the = before a noun shows that was is r***** to is already known to the speaker,0,0,,1283,0.07,81,referred,1,13
+133,556,אני אהיה טייס,3,2,101,147,0.07,18,i will be a pilot,1,6
+140,686,ללבוש מכנסיים קצרים,0,0,,1144,0.07,81,to wear shorts,1,7
+147,652,תשיג את זה,1,1,1,138,0.07,7,get it,1,7
+148,360,Recommended HTML Style is lowercase,6,6,111111,46,0.24,5,Yes,1,2
+151,696,על הקו,1,1,1,64,0.07,4,on the line,1,3
+157,731,בזמן קצר,0,0,,1131,0.07,81,in a moment,0,6
+218,700,טבלה מלאה,1,1,1,71,0.07,4,full table,1,56
+220,218,בשביל,4,4,1111,635,0.07,32,for,1,2
+223,683,would = used to refer to the future from the view of the *****,0,0,,1151,0.07,81,past,1,4
+231,265,The first numeral systems w***** created at the same time as agriculture and commerce,6,6,111111,308,0.67,25,were,1,8
+234,492,To run the Interactive Mode type "python" or "*****" in the command prompt,5,5,11111,684,0.71,44,py,1,3
+238,381,Tag Attributes *****s should be enclosed in quotation marks ,7,6,1011111,499,0.38,34,values,1,4
+246,713,על שולחן הכתיבה,0,0,,1152,0.07,81,on the des,0,9
+255,569,אני במשרד,2,2,11,507,0.07,26,i am in the office,1,6
+261,724,זה עם זה,0,0,,1140,0.07,81,each other,0,6
+270,274,N^2 is sum of the first N ***** numbers,9,9,111111111,344,0.83,29,odd,1,3
+273,384,Tag Attributes values should be enclosed in quotation ***** (usually by double quotes),6,6,111111,584,0.38,34,marks,1,3
+281,725,בכל מקרה אחר,0,0,,1143,0.07,81,at any other case,0,9
+332,621,hierarchy = a system in which objects are ranked one above the other according to their s*****,1,1,1,502,0.02,25,status,1,44
+335,408,Block Level o***** 100% of the available width,3,3,111,458,0.31,27,occupies,1,3
+339,526,Executing a module in i***** mode enables printing the variables' values,5,4,10111,115,0.79,23,interactive,1,4
+342,307,<img src="path"> is Empty HTML Element,7,6,1111110,153,0.31,16,Yes,1,3
+362,623,יש לי את היכולת,1,1,1,304,0.07,16,i have the ability,1,20
+366,539,Importing Module process executes the imported m***** (once per session),5,5,11111,102,0.79,16,module,1,4
+375,450,Doctype Tag as indication for HTML5,2,2,11,569,0.55,36,<!DOCTYPE html>,1,9
+379,517,כל; כל אחד h*****,1,1,1,1109,0.07,51,each,1,4
+382,302,Empty HTML Element must be without Tag Attributes,6,6,111111,542,0.26,31,No,1,3
+385,678,זה את זה,1,0,0,154,0.07,38,each other,1,3
+390,632,a/an = before a noun shows that was is referred to is not already k***** to the speaker,1,1,1,209,0.07,11,known,1,5
+397,724,זה עם זה,1,0,0,15,0.07,31,with each other,1,7
+2728,739,module_1 content:\n=====\nprint('start module_1')\nx=2\n\nmodule_2 content:\n=====\nfrom  module_1 import x\nprint(x)\n\nValid code?,0,0,,1056,0.81,92,Yes,1,2330

@@ -27,6 +27,8 @@ class QuestOneAnswer(Quest):
         """
         super().ask(counter, repeated)
         timer = Timer()
+        if '\n' in self.text:
+            print(self.text)
         self.ans = input(self.text + '-> ')
         # True-Answer
         if self.ans == self.ans_true:
