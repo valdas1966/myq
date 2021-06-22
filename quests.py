@@ -4,6 +4,7 @@ from topics import Topics
 from topic import Topic
 from f_logger.tazak import LoggerTazak
 import factory_quest
+from quest_generator import generate
 
 
 class Quests:
@@ -120,6 +121,8 @@ class Quests:
             question = self.__get_question(excel, row)
             ans_true = self.__get_ans_true(excel, row)
             ans_false = self.__get_ans_false(excel, row)
+            if self.__need_generation(question):
+                question, ans_true, ans_false = generate(question)
             qtype = self.__get_qtype(ans_true, ans_false)
             self.qs[qid] = factory_quest.build(qtype, qid, row, priority, topic,
                                                question, ans_true, ans_false,
@@ -127,6 +130,29 @@ class Quests:
             self.priorities.add(priority)
             row += 1
         excel.close()
+
+    @staticmethod
+    def __need_generation(question):
+        """
+        ========================================================================
+         Description: Return True if the Question need Generation.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. question : str (Question Text).
+        ========================================================================
+         Return: bool
+        ========================================================================
+        """
+        assert type(question) == str
+        if not question.startswith('Generate #'):
+            return False
+        elements = question.split(' ')
+        try:
+            x = int(elements[1][1:])
+        except Exception:
+            return False
+        return True
 
     def __load_stat(self, stat):
         """
@@ -225,7 +251,8 @@ class Quests:
         assert type(row) == int
         assert type(excel) == Excel
         assert row >= 1
-        return excel.get_value(row, self.col_question)
+        question = excel.get_value(row, self.col_question)
+        return question.replace('\\n', '\n')
 
     def __get_ans_true(self, excel, row):
         """
@@ -288,3 +315,4 @@ class Quests:
             return 'YESNO'
         if ans_true:
             return 'MULTI'
+
