@@ -101,7 +101,8 @@ def dump_stat(quests):
     file = open(csv_stat, 'w')
     file.write('qid,asked,answered,last_10,last_time,priority_val,grade\n')
     for qid, q in quests.qs.items():
-        file.write(f'{qid},{q.asked},{q.answered},{q.last_10},{q.last_time},'
+        file.write(f'{qid},{q.asked},{q.answered},{q.last_10}'
+                   f',{q.last_time},'
                    f'{q.priority_val},{q.grade}\n')
     file.close()
 

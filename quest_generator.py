@@ -27,8 +27,8 @@ def __generate_1():
     n1 = randint(10, 999)
     n2 = randint(10, 999)
     question = f'{n1} + {n2} = ?'
-    ans_true = n1 + n2
-    ans_false = None
+    ans_true = str(n1 + n2)
+    ans_false = str()
     return question, ans_true, ans_false
 
 
@@ -41,8 +41,8 @@ def __generate_2():
     n1 = randint(10, 999)
     n2 = randint(10, 999)
     question = f'{n1} - {n2} = ?'
-    ans_true = n1 - n2
-    ans_false = None
+    ans_true = str(n1 - n2)
+    ans_false = str()
     return question, ans_true, ans_false
 
 
@@ -55,8 +55,8 @@ def __generate_3():
     n1 = randint(0, 100)
     n2 = randint(0, 100)
     question = f'{n1} * {n2} = ?'
-    ans_true = n1 * n2
-    ans_false = None
+    ans_true = str(n1 * n2)
+    ans_false = str()
     return question, ans_true, ans_false
 
 
@@ -70,8 +70,8 @@ def __generate_4():
     n2 = randint(1, 100)
     mult = n1 * n2
     question = f'{mult} / {n2} = ?'
-    ans_true = n1
-    ans_false = None
+    ans_true = str(n1)
+    ans_false = str()
     return question, ans_true, ans_false
 
 
@@ -83,8 +83,8 @@ def __generate_5():
     """
     n = randint(0, 50)
     question = f'{n}^2 = ?'
-    ans_true = n * n
-    ans_false = None
+    ans_true = str(n * n)
+    ans_false = str()
     return question, ans_true, ans_false
 
 
@@ -96,6 +96,6 @@ def __generate_6():
     """
     n = randint(0, 50)
     question = f'Sqrt({n * n}) = ?'
-    ans_true = n
-    ans_false = None
+    ans_true = str(n)
+    ans_false = str()
     return question, ans_true, ans_false
