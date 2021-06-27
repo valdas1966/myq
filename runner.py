@@ -1,6 +1,7 @@
 import random
 from topics import Topics
 from quests import Quests
+from exam import Exam
 from f_utils import u_file
 from pathlib import Path
 from f_logger.tazak import LoggerTazak
@@ -22,26 +23,28 @@ def run():
                      'last_10', 'last_time', 'priority_val', 'grade', 'ans',
                      'is_true', 'elapsed']
     logger = LoggerTazak(titles_logger, dir_logger)
-    quests = Quests(path_myq, topics, stat, logger)
+    exam = Exam(path_myq)
 
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
 
     counter = 1
-    while True:
-        q = pick_quest(quests)
-        # Get Answer to Question
-        if q.ask(counter):
-            counter += 1
-            # Update Stats for all other Questions
-            for q_other in quests.qs.values():
-                if not q_other == q:
-                    q_other.last_time += 1
-                    q_other.set_grade()
-        # Break-Command
-        else:
-            dump_stat(quests)
-            logger.close()
-            break
+    for topic, size in exam.ordered_topics:
+        quests = Quests(path_myq, topics.tree, topic, stat, logger)
+        for i in range(size):
+            q = pick_quest(quests)
+            # Get Answer to Question
+            if q.ask(counter):
+                counter += 1
+                # Update Stats for all other Questions
+                for q_other in quests.qs.values():
+                    if not q_other == q:
+                        q_other.last_time += 1
+                        q_other.set_grade()
+            # Break-Command
+            else:
+                dump_stat(quests)
+                logger.close()
+                break
 
 
 def pick_quest(quests):

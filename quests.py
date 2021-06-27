@@ -3,6 +3,7 @@ from f_utils import u_file
 from topics import Topics
 from topic import Topic
 from f_logger.tazak import LoggerTazak
+from f_data_structure.tree import Tree
 import factory_quest
 from quest_generator import generate
 
@@ -44,7 +45,7 @@ class Quests:
     # Set of All Priorities
     priorities = set()
 
-    def __init__(self, path_myq, topics, stat, logger):
+    def __init__(self, path_myq, tree_topics, stat, logger):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
@@ -54,24 +55,24 @@ class Quests:
          Arguments:
         ------------------------------------------------------------------------
             1. path_myq : str (Path to Myq-Directory).
-            2. topics : Topics Class
+            2. tree_topics : Tree Class
             3. stat : dict {qid -> tuple of values}
                                     asked, answered, last_10, last_time
             4. logger : TazakLogger
         ========================================================================
         """
         assert type(path_myq) == str
-        assert type(topics) == Topics
+        assert type(tree_topics) == Tree
         assert type(stat) == dict
         assert type(logger) == LoggerTazak
         self.path_myq = path_myq
-        self.topics = topics
+        self.tree_topics = tree_topics
         self.logger = logger
         path_dir = self.path_myq + '\\Questions'
         filepaths = u_file.filepaths(path_dir, extensions='xlsx')
         for xlsx_qs in filepaths:
             name_topic = self.__to_topic_name(xlsx_qs)
-            topic = self.topics.get_topic(name_topic)
+            topic = self.tree_topics.nodes[name_topic].data
             self.__load_qs(xlsx_qs, topic)
         self.__load_stat(stat)
 
@@ -149,7 +150,7 @@ class Quests:
             return False
         elements = question.split(' ')
         try:
-            x = int(elements[1][1:])
+            int(elements[1][1:])
         except Exception:
             return False
         return True
