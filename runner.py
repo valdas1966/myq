@@ -28,8 +28,10 @@ def run():
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
 
     counter = 1
-    for topic, size in exam.ordered_topics:
-        quests = Quests(path_myq, topics.tree, topic, stat, logger)
+    for (name_topic, size) in exam.ordered_topics:
+        node_topic = topics.tree.nodes[name_topic]
+        subtree = topics.tree.subtree(node_topic)
+        quests = Quests(path_myq, subtree, stat, logger)
         for i in range(size):
             q = pick_quest(quests)
             # Get Answer to Question
@@ -44,7 +46,7 @@ def run():
             else:
                 dump_stat(quests)
                 logger.close()
-                break
+                return
 
 
 def pick_quest(quests):

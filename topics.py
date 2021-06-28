@@ -79,8 +79,8 @@ class Topics:
                 priority = parent.data.priority + priority
             topic = Topic(name=name, priority=priority, i_row=i+2)
             node = Node(name=name, data=topic)
-            self.tree.add(node, parent)
-
+            self.tree.add(node, parent)              
+        
     def __check_topics(self):
         """
         ========================================================================
