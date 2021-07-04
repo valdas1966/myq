@@ -64,6 +64,8 @@ def pick_quest(quests):
     """
     bag = list()
     for qid, q in quests.qs.items():
+        if not q.topic:
+            continue
         bag.extend([qid] * q.grade)
     random.shuffle(bag)
     return quests.qs[bag[0]]

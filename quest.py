@@ -58,7 +58,6 @@ class Quest:
         assert type(qid) == int
         assert type(row) == int
         assert type(priority) == str
-        assert type(topic) == Topic
         assert type(question) == str
         assert type(ans_true) == str
         assert type(ans_false) == str

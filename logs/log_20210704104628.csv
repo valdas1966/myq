@@ -1,0 +1,87 @@
+tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
+28,614,ילד/ה *****k,0,0,,1019,0.5,87,kid,1,28
+30,482,על ידי *****,0,0,,1020,0.5,87,by,1,2
+32,394,רוב *****mo,0,0,,1021,0.5,87,most,1,2
+34,214,בתוך *i****,0,0,,1022,0.5,87,within,1,2
+38,486,שלי y*****,0,0,,1023,0.5,87,my,1,4
+41,778,מערכת,0,0,,1024,0.5,87,system,1,3
+45,628,גבוה (לא בן אדם),0,0,,1025,0.5,87,high,1,4
+48,733,רגע,0,0,,1026,0.5,87,moment,1,4
+51,572,קו,1,1,1,21,0.5,8,line,1,2
+55,516,כל; כל אחד y*****,0,0,,1028,0.5,87,every,1,4
+61,209,אלה **e**,0,0,,1019,0.75,91,these,1,5
+64,481,או,0,0,,1020,0.75,91,or,1,3
+68,564,מלך ישראל,0,0,,1021,0.75,91,king of israel,1,4
+69,719,כאן; פה,0,0,,1022,0.75,91,here,1,2
+72,626,יכולת *****a,0,0,,1023,0.75,91,ability,1,2
+74,711,טבלה,0,0,,1024,0.75,91,table,1,2
+79,765,לעבוד ביחד,0,0,,1025,0.75,91,to work together,1,5
+86,549,הסיפור מספר,0,0,,1026,0.75,91,the story tells,1,7
+88,414,ריבוע,0,0,,1027,0.5,87,square,1,2
+93,201,צורת רבים (בלשון),0,0,,1028,0.75,91,plural form,1,5
+100,580,אבל הוא לא נפל,0,0,,1029,0.75,91,but he did not fall,1,7
+104,775,רק דקה ***** ***** *****j,0,0,,1030,0.75,91,just a minute,1,4
+114,630,a/an = before a ***** shows that was is referred to is not already known to the speaker,0,0,,1031,0.75,91,noun,1,10
+118,574,אתה צודק,0,0,,1032,0.75,91,you are right,1,4
+122,647,קצר או ארוך,0,0,,1033,0.75,91,short or long,1,4
+130,718,כאן ועכשיו,0,0,,1034,0.75,91,here and now,1,7
+136,724,זה עם זה,0,0,,1035,0.75,91,with each other,1,7
+139,412,מלבן,0,0,,1036,0.75,91,rectangle,1,2
+140,431,כותרת *****t,0,0,,1037,0.5,87,title,1,1
+149,771,הוא פשוט אידיוט,0,0,,1038,0.75,91,he is just an idiot,1,8
+155,235,A happy man does not c***** all the time and thinks the world owes him,0,0,,1001,0.75,91,complain,1,6
+158,231,If one of the family members is not happy; e***** none of them will be happy,0,0,,1002,0.75,91,eventually,1,3
+161,242,Children with worries have little learning a*****,0,0,,1003,0.5,87,ability,1,3
+163,241,Children w***** succeed in what they love to do,0,0,,1004,0.5,87,will,1,2
+166,234,A happy man does not complain all the time and thinks the world o***** him,0,0,,1005,0.75,91,owes,1,3
+171,331,If we add the number N to its opposite number we get *****,0,0,,1001,0.75,91,zero,1,4
+184,362,Rational Numbers = {p/q : ***** and ***** are *****; q is not zero},0,0,,1001,0.75,91,p and q are integers,1,12
+189,746,Absolute Value of a number is its distance from ***** (on the number line),0,0,,1001,0.75,91,zero,1,5
+192,281,Square Number can end with digit 6,0,0,,1001,0.25,83,Yes,1,3
+198,351,Composite Number is a positive integer that can be performed by m***** two smaller positive integers,0,0,,1001,0.5,87,multiplying,1,5
+202,757,8^2 = ?,0,0,,1001,0.5,87,64,1,3
+204,758,Sqrt(64) = ?,0,0,,1002,0.5,87,8,1,2
+361,755,17 * 72 = ?,0,0,,1003,0.5,87,1224,1,157
+419,756,1314 / 73 = ?,0,0,,1004,0.5,87,18,1,59
+533,754,147 - 592 = ?,0,0,,1005,0.5,87,445,0,114
+545,290,Markup Language = tags that c***** the text,0,0,,1001,0.25,83,characterize,1,8
+549,299,All HTML Elements have Tag Attributes,0,0,,1001,0.33,84,No,1,3
+555,305,Empty HTML Element is without Closing Tag,0,0,,1001,0.25,83,Yes,1,5
+559,388,<li> = b**** level tag,0,0,,1001,0.25,83,block,1,4
+966,322,HTML P***** Element have a Nested Element within it,0,0,,1001,0.25,83,parent,1,406
+969,325,HTML Tag holds instructions to the b****** about the meaning of the text,0,0,,1001,0.5,87,browser,1,3
+975,326,HTML Tags are embedded into each other to indicate the document's o********,0,0,,1002,0.5,87,organization,1,6
+981,440,The goal of the comments is to make the code e***** to understand,0,0,,1001,0.25,83,easier,1,5
+988,441,Write one-line comment with content "comment",0,0,,1002,0.5,87,<!--comment-->,1,6
+1005,450,Doctype Tag as indication for HTML5,0,0,,1001,0.75,91,<!DOCTYPE html>,1,16
+1015,450,Doctype Tag as indication for HTML5,1,1,1,1,0.75,11,<!DOCTYPE html>,1,10
+1021,473,HTML Closing Tag is located in the ***** of the document,0,0,,1001,0.5,87,end,1,6
+1033,474,HTML-Tag is empty element,0,0,,1002,0.5,87,No,1,11
+1038,458,Head Tag is located in the start of the document; after HTML ***** tag,0,0,,1001,0.5,87,opening,1,4
+1040,459,Head Tag is empty element,0,0,,1002,0.5,87,No,1,3
+1053,463,Heading Tag defines the hierarchy and the structure of the web page c*****,0,0,,1001,0.25,83,content,1,12
+1057,465,<h1> is the ***** important heading on the page,0,0,,1002,0.75,91,most,1,4
+1061,790,SQLite uses d***** types,0,0,,1001,0.75,91,dynamic,1,4
+1068,786,The lite in SQLite means lightweight in terms of setup; administration and r*****,0,0,,1002,0.5,87,resources,1,7
+1072,797,SQLite allows joining tables from different d*****,0,0,,1003,0.75,91,databases,1,5
+1075,796,SQLite allows joining tables from d***** databases,0,0,,1004,0.75,91,different,1,3
+1146,789,SQLite must work with a server,0,0,,1005,0.25,83,No,1,71
+1152,495,The Interactive Mode automatically prints on the screen the r***** of the typed expression,0,0,,1001,0.5,87,result,1,5
+1154,491,To run the Interactive Mode type "*****" or "py" in the command prompt,0,0,,1002,0.5,87,python,1,3
+1157,503,In the Interactive Mode; a multiline statement terminates with a blank l*****,0,0,,1003,0.5,87,line,1,2
+1159,492,To run the Interactive Mode type "python" or "*****" in the command prompt,0,0,,1004,0.5,87,py,1,2
+1163,493,To run the Interactive Mode type "python" or "py" in the c***** p*****,0,0,,1005,0.5,87,command prompt,1,5
+1169,520,Python Module is t***** file with python statements,0,0,,1001,0.25,83,text,1,5
+1178,735,module_1 content:
+====================
+x=2
+
+module_2 content:
+====================
+import module_1
+print(x)
+
+Valid code?,0,0,,1002,0.5,87,No,1,10
+1182,537,Import module_py,0,0,,1003,0.75,91,import module,1,4
+1186,530,Executing a module in interactive mode enables printing the variable's v*****,0,0,,1004,0.5,87,values,1,4
+1190,539,Importing Module process executes the imported m***** (once per session),0,0,,1005,0.5,87,module,1,4

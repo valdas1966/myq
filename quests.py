@@ -1,6 +1,5 @@
 from f_excel.c_excel import Excel
 from f_utils import u_file
-from topics import Topics
 from topic import Topic
 from f_logger.tazak import LoggerTazak
 from f_data_structure.tree import Tree
@@ -70,9 +69,9 @@ class Quests:
         filepaths = u_file.filepaths(path_dir, extensions='xlsx')
         for xlsx_qs in filepaths:
             name_topic = self.__to_topic_name(xlsx_qs)
-            if name_topic not in subtree_topics.nodes:
-                continue
-            topic = subtree_topics.nodes[name_topic].data
+            topic = None
+            if name_topic in subtree_topics.nodes:
+                topic = subtree_topics.nodes[name_topic].data
             self.__load_qs(xlsx_qs, topic)
         self.__load_stat(stat)
 
@@ -105,11 +104,10 @@ class Quests:
         ========================================================================
         """
         assert type(xlsx_qs) == str
-        assert type(topic) == Topic
         excel = Excel(xlsx_qs)
         row = self.fr
         while True:
-            qid = self.__get_qid(excel, row, topic)
+            qid = self.__get_qid(excel, row)
             # Break on EOF
             if not qid:
                 break
@@ -118,7 +116,9 @@ class Quests:
             if not is_valid:
                 row += 1
                 continue
-            priority = topic.priority + self.__get_priority(excel, row)
+            priority = '0'
+            if topic:
+                priority = topic.priority + self.__get_priority(excel, row)
             question = self.__get_question(excel, row)
             ans_true = self.__get_ans_true(excel, row)
             ans_false = self.__get_ans_false(excel, row)
@@ -178,7 +178,7 @@ class Quests:
                 last_time = int(vals[3])
             q.load_stat(asked, answered, last_10, last_time, priority_val)
 
-    def __get_qid(self, excel, row, topic):
+    def __get_qid(self, excel, row):
         """
         ========================================================================
          Description: Get Qid (Question-Id) from the Excel Row.
@@ -193,7 +193,6 @@ class Quests:
         """
         assert type(excel) == Excel
         assert type(row) == int
-        assert type(topic) == Topic
         assert row >= 1
         qid = excel.get_value(row, self.col_qid)
         if qid:
