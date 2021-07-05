@@ -2,6 +2,7 @@ import random
 from topics import Topics
 from quests import Quests
 from exam import Exam
+from db import DB
 from f_utils import u_file
 from pathlib import Path
 from f_logger.tazak import LoggerTazak
