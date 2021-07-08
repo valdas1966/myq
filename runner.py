@@ -19,11 +19,14 @@ def run():
     if not topics.is_valid:
         return
 
-    stat = load_stat()
     titles_logger = ['qid', 'question', 'asked', 'answered',
                      'last_10', 'last_time', 'priority_val', 'grade', 'ans',
                      'is_true', 'elapsed']
     logger = LoggerTazak(titles_logger, dir_logger)
+    quests = Quests(path_myq, topics.tree, logger)
+    db = DB()
+    db.init_stat(quests.get_qids())
+    quests.load_stat(db.get_stat())
     exam = Exam(path_myq)
 
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
@@ -32,9 +35,8 @@ def run():
     for (name_topic, size) in exam.ordered_topics:
         node_topic = topics.tree.nodes[name_topic]
         subtree = topics.tree.subtree(node_topic)
-        quests = Quests(path_myq, subtree, stat, logger)
         for i in range(size):
-            q = pick_quest(quests)
+            q = pick_quest(quests, subtree)
             # Get Answer to Question
             if q.ask(counter):
                 counter += 1
@@ -46,11 +48,12 @@ def run():
             # Break-Command
             else:
                 dump_stat(quests)
+                db.close()
                 logger.close()
                 return
 
 
-def pick_quest(quests):
+def pick_quest(quests, tree_topics):
     """
     ============================================================================
      Description: Create a Bag of Questions (number of occurrences depends on
@@ -59,13 +62,14 @@ def pick_quest(quests):
      Arguments:
     ----------------------------------------------------------------------------
         1. quests : Quests-Class (Questions).
+        2. tree_topics : Tree of Topics
     ============================================================================
      Return: Quest-Class (Random Question).
     ============================================================================
     """
     bag = list()
     for qid, q in quests.qs.items():
-        if not q.topic:
+        if q.topic not in tree_topics.nodes:
             continue
         bag.extend([qid] * q.grade)
     random.shuffle(bag)

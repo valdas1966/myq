@@ -8,6 +8,21 @@ class DB:
         path_db = path_myq + '\\myq.db'
         self.sql = Sqlite(path_db)
 
+    def get_stat(self):
+        """
+        ========================================================================
+         Description: Return Dict of Stat-Data.
+        ========================================================================
+         Return: dict {int: Series} (qid -> Series of Stat-Data).
+        ========================================================================
+        """
+        dict_stat = dict()
+        df = self.sql.select('stat')
+        for i_row, values in df.iterrows():
+            qid = values['qid']
+            dict_stat[qid] = values.drop('qid')
+        return dict_stat
+
     def init_stat(self, qids):
         df = pd.DataFrame({'qid': qids})
         # Delete invalid Questions
