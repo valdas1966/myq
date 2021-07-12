@@ -1,4 +1,6 @@
-from f_logger.tazak import LoggerTazak
+import pandas as pd
+from datetime import datetime
+from f_utils import u_datetime
 
 
 class Quest:
@@ -39,7 +41,7 @@ class Quest:
     ans = str()
 
     def __init__(self, qid, row, priority, topic, question,
-                 ans_true, ans_false, logger):
+                 ans_true, ans_false, df_logger):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
@@ -51,7 +53,7 @@ class Quest:
             5. question : str
             6. ans_true : str
             7. ans_false : str
-            8. logger : LoggerTazak
+            8. df_logger : DataFrame
         ========================================================================
         """
         assert type(qid) == int
@@ -60,14 +62,14 @@ class Quest:
         assert type(question) == str
         assert type(ans_true) == str
         assert type(ans_false) == str
-        assert type(logger) == LoggerTazak
+        assert type(df_logger) == pd.DataFrame
         self.qid = qid
         self.row = row
         self.topic = topic
         self.priority = priority
         self.question = question
         self.ans_true = ans_true
-        self.logger = logger
+        self.df_logger = df_logger
 
     def load_stat(self, asked, answered, last_10, last_time, priority_val):
         """
@@ -159,7 +161,7 @@ class Quest:
         print(f'{"=" * self.len_delimiter_line}\nThe right answer is: '
               f'{self.ans_true}')
 
-    def _update_stat(self, answer, elapsed):
+    def _update_stat(self, answer):
         """
         ========================================================================
          Description: Update Question-Statistics after True/False Answer.
@@ -169,7 +171,7 @@ class Quest:
             1. answer : bool (True on True-Answer, False on False-Answer).
         ========================================================================
         """
-        self._log(int(answer), elapsed)
+        self._log(int(answer))
         self.asked += 1
         ch = '0'
         if answer:
@@ -179,27 +181,18 @@ class Quest:
         self.last_time = 1
         self.set_grade()
 
-    def _log(self, is_true, elapsed):
+    def _log(self, is_true):
         """
         ========================================================================
-         Description: Log Question-Meta-Data into LoggerTazak.
+         Description: Log Question-Meta-Data into SQLite DB.
         ========================================================================
          Arguments:
         ------------------------------------------------------------------------
             1. is_true : int (1 if True-Answer, 0 otherwise).
-            2. elapsed : int (Elapsed Seconds to answer the question).
         ========================================================================
         """
-        values = list()
-        values.append(self.qid)
-        values.append(self.question.replace(',', ';'))
-        values.append(self.asked)
-        values.append(self.answered)
-        values.append(self.last_10)
-        values.append(self.last_time)
-        values.append(self.priority_val)
-        values.append(self.grade)
-        values.append(self.ans)
-        values.append(is_true)
-        values.append(elapsed)
-        self.logger.write(values)
+        row_new = len(self.df_logger)
+        values = [row_new+1, u_datetime.now(), self.qid, self.question,
+                  self.asked, self.answered, self.last_10, self.last_time,
+                  self.priority_val, self.grade, self.ans, is_true]
+        self.df_logger.loc[row_new] = values

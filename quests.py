@@ -1,6 +1,6 @@
+import pandas as pd
 from f_excel.c_excel import Excel
 from f_utils import u_file
-from f_logger.tazak import LoggerTazak
 from f_data_structure.tree import Tree
 import factory_quest
 from quest_generator import generate
@@ -38,7 +38,7 @@ class Quests:
     # Date Created
     col_date_created = 7
 
-    def __init__(self, path_myq, subtree_topics, logger):
+    def __init__(self, path_myq, subtree_topics):
         """
         ========================================================================
          Description: Constructor. Init the Dict of Questions.
@@ -49,18 +49,19 @@ class Quests:
         ------------------------------------------------------------------------
             1. path_myq : str (Path to Myq-Directory).
             2. subtree_topics : Tree (SubTree of Relevant Topics).
-            3. logger : TazakLogger
         ========================================================================
         """
         assert type(path_myq) == str
         assert type(subtree_topics) == Tree
-        assert type(logger) == LoggerTazak
         # Dict of Questions {int (Qid) -> Quest (Question)}
         self.qs = dict()
         # Set of All Priorities
         self.priorities = set()
+        columns_logger = ['i', 'tazak', 'qid', 'question', 'asked', 'answered',
+                          'last_10', 'last_time', 'priority_val', 'grade',
+                          'ans', 'is_true']
+        self.df_logger = pd.DataFrame(columns=columns_logger)
         self.path_myq = path_myq
-        self.logger = logger
         path_dir = self.path_myq + '\\Questions'
         filepaths = u_file.filepaths(path_dir, extensions='xlsx')
         for xlsx_qs in filepaths:
@@ -68,7 +69,7 @@ class Quests:
             topic = None
             if name_topic in subtree_topics.nodes:
                 topic = subtree_topics.nodes[name_topic].data
-            self.__load_qs(xlsx_qs, topic)
+            self.__load_qs(xlsx_qs, topic, self.df_logger)
 
     def get_qids(self):
         """
@@ -94,11 +95,37 @@ class Quests:
         d = {p: round((i+1) / len(li), 2) for i, p in enumerate(li)}
         for qid, q in self.qs.items():
             priority_val = d[q.priority]
-            asked = stat[qid]['asked']
-            answered = stat[qid]['answered']
-            last_10 = stat[qid]['last_10']
-            last_time = stat[qid]['last_time']
+            asked = 0
+            answered = 0
+            last_10 = str()
+            last_time = 1000000
+            if qid in stat:
+                asked = stat[qid]['asked']
+                answered = stat[qid]['answered']
+                last_10 = stat[qid]['last_10']
+                last_time = stat[qid]['last_time']
             q.load_stat(asked, answered, last_10, last_time, priority_val)
+
+    def to_df_stat(self):
+        """
+        ============================================================================
+         Description: Return DataFrame with updated statistics values.
+        ============================================================================
+         Arguments:
+        ----------------------------------------------------------------------------
+            1. quests : Quests-Class (Questions).
+        ============================================================================
+        """
+        columns = ['qid', 'asked', 'answered', 'last_10', 'last_time',
+                   'priority_val', 'grade']
+        df = pd.DataFrame(columns=columns)
+        for i, (qid, q) in enumerate(self.qs.items()):
+            df.loc[i] = [qid, q.asked, q.answered, q.last_10, q.last_time,
+                         q.priority_val, q.grade]
+        return df
+    
+    def to_df_logger(self):
+        return self.df_logger
 
     def __to_topic_name(self, xlsx_qs):
         """
@@ -116,7 +143,7 @@ class Quests:
         name = name.replace(f'{self.path_myq}\\Questions\\', '')
         return name.replace('\\', ' -> ')
 
-    def __load_qs(self, xlsx_qs, topic):
+    def __load_qs(self, xlsx_qs, topic, df_logger):
         """
         ========================================================================
          Description: Load Questions from Excel into Dictionary of
@@ -126,6 +153,7 @@ class Quests:
         ------------------------------------------------------------------------
             1. xlsx_qs : str (Path to Excel-Question File)
             2. topic : Topic Class (of the Excel-Question File).
+            3. df_logger : DataFrame
         ========================================================================
         """
         assert type(xlsx_qs) == str
@@ -150,9 +178,9 @@ class Quests:
             if self.__need_generation(question):
                 question, ans_true, ans_false = generate(question)
             qtype = self.__get_qtype(ans_true, ans_false)
-            self.qs[qid] = factory_quest.build(qtype, qid, row, priority, topic,
-                                               question, ans_true, ans_false,
-                                               self.logger)
+            self.qs[qid] = factory_quest.build(qtype, qid, row, priority,
+                                               topic, question, ans_true,
+                                               ans_false, df_logger)
             self.priorities.add(priority)
             row += 1
         excel.close()

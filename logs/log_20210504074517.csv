@@ -1,7 +1,0 @@
-tazak,qid,question,asked,answered,last_10,last_time,priority_val,grade,ans,is_true,elapsed
-10,400,Tag Attribute value with double quotes should be enclosed in single q*****,0,0,,1000,0.54,88,quotes,1,9
-16,366,Empty HTML Element is without Content (<img src="path">),0,0,,1001,0.54,88,Yes,1,6
-21,379,B***** Tag Attribute is without value (ex: checked; required),0,0,,1002,0.54,88,boolean,1,6
-30,378,Tag Attributes usually consists of a key-value p***** (ex: key="value"),0,0,,1003,0.62,89,pairs,1,8
-32,215,בתוך *****i,1,1,1,261,0.12,14,inside,1,2
-39,383,Tag Attributes values should be enclosed in ***** marks (usually by double quotes),0,0,,1005,0.58,88,quotation,1,7

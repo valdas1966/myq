@@ -1,6 +1,5 @@
 import random
 from quest import Quest
-from f_utils.c_timer import Timer
 
 
 class QuestMultiAnswer(Quest):
@@ -44,7 +43,6 @@ class QuestMultiAnswer(Quest):
         for i, answer in enumerate(self.answers):
             # i+1 because zero-based
             self.text += f'{i + 1}. {answer}\n'
-        timer = Timer()
         self.ans = input(self.text + '-> ')
         # Illegal Answer
         if self.ans not in {'0', '1', '2'}:
@@ -57,12 +55,10 @@ class QuestMultiAnswer(Quest):
         # True-Answer (ans-1 because zero-based)
         if self.answers[self.ans - 1] == self.ans_true:
             if not repeated:
-                elapsed = timer.elapsed()
-                self._update_stat(answer=True, elapsed=elapsed)
+                self._update_stat(answer=True)
             return True
         # False-Answer
         self._print_right_answer()
         if not repeated:
-            elapsed = timer.elapsed()
-            self._update_stat(answer=False, elapsed=elapsed)
+            self._update_stat(answer=False)
         return self.ask(counter, repeated=True)
