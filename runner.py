@@ -1,14 +1,12 @@
 import random
-import pandas as pd
 from topics import Topics
 from quests import Quests
 from exam import Exam
 from db import DB
-from pathlib import Path
+import utils.path_myq
 
 
-path = Path(__file__)
-path_myq = f'{str(path.parent)[0]}:\\myq'
+path_myq = utils.path_myq.get()
 dir_logger = f'{path_myq}\\logs'
 csv_stat = f'{path_myq}\\stat.csv'
 
@@ -18,16 +16,16 @@ def run():
     if not topics.is_valid:
         return
     quests = Quests(path_myq, topics.tree)
-    db = DB(path_myq)
-    db.open()
-    quests.load_stat(db.get_stat())
-    db.close()
+    quests.load_stat(DB.get_stat())
     exam = Exam(path_myq)
 
     print(f'\n\n\n{"="*75}\nStart Exam\n{"="*75}\n')
 
+    is_break = False
     counter = 1
     for (name_topic, size) in exam.ordered_topics:
+        if is_break:
+            break
         node_topic = topics.tree.nodes[name_topic]
         subtree = topics.tree.subtree(node_topic)
         for i in range(size):
@@ -42,13 +40,11 @@ def run():
                         q_other.set_grade()
             # Break-Command
             else:
-                df_stat = quests.to_df_stat()
-                df_logger = quests.to_df_logger()
-                db.open()
-                db.update_stat(df_stat)
-                db.update_logger(df_logger)
-                db.close()
-                return
+                is_break = True
+                break
+    df_stat = quests.to_df_stat()
+    df_logger = quests.to_df_logger()
+    DB.update(df_stat, df_logger)
 
 
 def pick_quest(quests, tree_topics):

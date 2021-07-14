@@ -1,8 +1,8 @@
 from datetime import datetime
-import params
 from utils import excel as u_excel
 from f_excel.c_excel import Excel
 from f_utils import u_datetime
+from db import DB
 
 
 def auto_fill():
@@ -18,7 +18,7 @@ def auto_fill():
     col_question = 4
     col_date = 7
     date = u_datetime.to_str(datetime.now(), 'yymmdd')
-    id_last = params.get('id last')
+    id_last = DB.get_max_qid()
     filepaths = u_excel.get_filepaths_questions()
     for xlsx in filepaths:
         changed = False
@@ -47,7 +47,6 @@ def auto_fill():
         excel.close()
         if changed:
             print(xlsx)
-    params.set('id last', id_last)
 
 
 auto_fill()

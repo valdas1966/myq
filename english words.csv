@@ -46,7 +46,7 @@
 "would	",1
 "make	",1
 "just	",1
-"up	",0
+"up	",1
 "think	",0
 "time	",1
 "there	",0
@@ -73,10 +73,10 @@
 "into	",0
 "here	",1
 "then	",0
-"than	",0
+"than	",1
 "look	",0
 "way	",0
-"more	",0
+"more	",1
 "these	",1
 "no	",0
 "thing	",0
@@ -229,7 +229,7 @@
 "under	",0
 "business	",0
 "home	",0
-"kind	",0
+"kind	",1
 "stop	",0
 "pay	",0
 "study	",0
@@ -466,7 +466,7 @@ hat,0
 "movie	",0
 "field	",0
 "raise	",0
-"less	",0
+"less	",1
 "player	",0
 "couple	",0
 "million	",0
@@ -491,7 +491,7 @@ hat,0
 "finally	",1
 "department	",0
 "either	",0
-"toward	",0
+"toward	",1
 "leader	",0
 "photo	",0
 "wear	",0
@@ -502,7 +502,7 @@ hat,0
 "special	",0
 "film	",0
 "major	",0
-"type	",0
+"type	",1
 "town	",0
 "article	",0
 "road	",0
@@ -629,7 +629,7 @@ hat,0
 "land	",0
 "note	",0
 "computer	",0
-"thought	",0
+"thought	",1
 "economy	",0
 "goal	",0
 "bank	",0
@@ -684,7 +684,7 @@ hat,0
 "hot	",0
 "seek	",0
 "amount	",0
-"analysis	",0
+"analysis	",1
 "store	",0
 "defense	",0
 "bill	",0
@@ -700,7 +700,7 @@ hat,0
 "individual	",0
 "recently	",0
 "example	",0
-"represent	",0
+"represent	",1
 "fill	",0
 "animal	",0
 "fail	",0
@@ -755,7 +755,7 @@ hat,0
 "resource	",0
 "claim	",0
 "prove	",0
-"sort	",0
+"sort	",1
 "size	",0
 "somebody	",0
 "knowledge	",0
@@ -2920,7 +2920,7 @@ ketchup,0
 "hunting	",0
 "physically	",0
 "flesh	",0
-"temporary	",0
+"temporary	",1
 "nerve	",0
 "lung	",0
 "steady	",0
