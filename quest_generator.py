@@ -1,5 +1,6 @@
 from random import seed
 from random import randint
+from f_math import u_numbers
 
 
 def generate(question):
@@ -98,5 +99,49 @@ def __generate_6():
     n = randint(0, 50)
     question = f'Sqrt({n * n}) = ?'
     ans_true = str(n)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_7():
+    """
+    ============================================================================
+     Description: Factors of Integer.
+    ============================================================================
+    """
+    n = randint(1, 100)
+    factors = u_numbers.factors(n)
+    question = f'factors({n}) = ?'
+    ans_true = ','.join(factors)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_8():
+    """
+    ============================================================================
+     Description: Common Factors of two Integers.
+    ============================================================================
+    """
+    a = randint(1, 100)
+    b = randint(1, 100)
+    common = u_numbers.common_factors(a, b)
+    question = f'common_factors({a},{b}) = ?'
+    ans_true = ','.join(common)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_9():
+    """
+    ============================================================================
+     Description: Greatest Common Factors of two Integers.
+    ============================================================================
+    """
+    a = randint(1, 100)
+    b = randint(1, 100)
+    gcf = u_numbers.gcf(a, b)
+    question = f'greatest_common_factors({a},{b}) = ?'
+    ans_true = str(gcf)
     ans_false = str()
     return question, ans_true, ans_false
