@@ -112,7 +112,7 @@ def __generate_7():
     n = randint(1, 100)
     factors = u_numbers.factors(n)
     question = f'factors({n}) = ?'
-    ans_true = ','.join(factors)
+    ans_true = ','.join([str(x) for x in factors])
     ans_false = str()
     return question, ans_true, ans_false
 
@@ -127,7 +127,7 @@ def __generate_8():
     b = randint(1, 100)
     common = u_numbers.common_factors(a, b)
     question = f'common_factors({a},{b}) = ?'
-    ans_true = ','.join(common)
+    ans_true = ','.join([str(x) for x in common])
     ans_false = str()
     return question, ans_true, ans_false
 
