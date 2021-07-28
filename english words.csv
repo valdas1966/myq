@@ -47,10 +47,10 @@
 "make	",1
 "just	",1
 "up	",1
-"think	",0
+"think	",1
 "time	",1
-"there	",0
-"see	",0
+"there	",1
+"see	",1
 "her	",0
 "out	",0
 "one	",0
@@ -74,7 +74,7 @@
 "here	",1
 "then	",0
 "than	",1
-"look	",0
+"look	",1
 "way	",0
 "more	",1
 "these	",1
@@ -377,7 +377,7 @@ hat,0
 "TRUE	",0
 "process	",1
 "teacher	",0
-"data	",0
+"data	",1
 "offer	",0
 "death	",0
 "whole	",0
@@ -481,7 +481,7 @@ hat,0
 "role	",0
 "pretty	",0
 "myself	",0
-"view	",0
+"view	",1
 "price	",0
 "effort	",0
 "nice	",0
@@ -541,7 +541,7 @@ hat,0
 "military	",0
 "doctor	",0
 "activity	",0
-"exactly	",0
+"exactly	",1
 "media	",0
 "miss	",0
 "evidence	",0
@@ -2265,7 +2265,7 @@ unaware,0
 "innocent	",0
 "curriculum	",0
 "mail	",0
-"insight	",0
+"insight	",1
 "investigator	",0
 "virus	",0
 "hurricane	",0
@@ -2569,7 +2569,7 @@ unaware,0
 "testimony	",0
 "elementary	",0
 "stake	",0
-"precisely	",0
+"precisely	",1
 "bite	",1
 "given	",0
 "substantial	",0
@@ -4292,7 +4292,7 @@ mushroom,0
 "accounting	",0
 "faithful	",0
 "freely	",0
-"extract	",0
+"extract	",1
 "adaptation	",0
 "ray	",0
 "depressed	",0
