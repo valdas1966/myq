@@ -9,12 +9,12 @@ def precision():
     sql = SQLite(path_db)
     query = """
                 select
-                    substr(tazak, 7, 2) as date,
+                    substr(tazak, 5, 4) as date,
                     round(cast(sum(answered) as real) / sum(asked), 2) as p
                 from
                     logger
                 group by
-                    substr(tazak, 7, 2)
+                    substr(tazak, 5, 4)
                 order by 1 desc
             """
     print(sql.select(query, verbose=False))
