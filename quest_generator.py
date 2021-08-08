@@ -1,6 +1,5 @@
-from random import seed
 from random import randint
-from f_math import u_numbers
+from f_math.numbers import u_factors
 
 
 def generate(question):
@@ -110,9 +109,9 @@ def __generate_7():
     ============================================================================
     """
     n = randint(1, 100)
-    factors = u_numbers.factors(n)
+    factors = u_factors.factors(n)
     question = f'factors({n}) = ?'
-    ans_true = ','.join([str(x) for x in factors])
+    ans_true = ','.join(sorted([str(x) for x in factors]))
     ans_false = str()
     return question, ans_true, ans_false
 
@@ -125,9 +124,9 @@ def __generate_8():
     """
     a = randint(1, 100)
     b = randint(1, 100)
-    common = u_numbers.common_factors(a, b)
+    common = u_factors.common_factors(a, b)
     question = f'common_factors({a},{b}) = ?'
-    ans_true = ','.join([str(x) for x in common])
+    ans_true = ','.join(sorted([str(x) for x in common]))
     ans_false = str()
     return question, ans_true, ans_false
 
@@ -140,7 +139,7 @@ def __generate_9():
     """
     a = randint(1, 100)
     b = randint(1, 100)
-    gcf = u_numbers.gcf(a, b)
+    gcf = u_factors.gcf(a, b)
     question = f'greatest_common_factors({a},{b}) = ?'
     ans_true = str(gcf)
     ans_false = str()
