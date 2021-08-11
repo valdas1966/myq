@@ -1,5 +1,6 @@
 from random import randint
 from f_math.numbers import u_factors
+from f_math.numbers import u_multiples
 
 
 def generate(question):
@@ -144,3 +145,9 @@ def __generate_9():
     ans_true = str(gcf)
     ans_false = str()
     return question, ans_true, ans_false
+
+
+def generate_10():
+    a = randint(1, 20)
+    b = randint(1, 20)
+    
