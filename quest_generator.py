@@ -141,13 +141,22 @@ def __generate_9():
     a = randint(1, 100)
     b = randint(1, 100)
     gcf = u_factors.gcf(a, b)
-    question = f'greatest_common_factors({a},{b}) = ?'
+    question = f'gcf({a},{b}) = ?'
     ans_true = str(gcf)
     ans_false = str()
     return question, ans_true, ans_false
 
 
-def generate_10():
+def __generate_10():
+    """
+    ============================================================================
+     Description: Least Common Multiples of two given numbers.
+    ============================================================================
+    """
     a = randint(1, 20)
     b = randint(1, 20)
-    
+    lcm = u_multiples.lcm(a, b)
+    question = f'lcm({a},{b}) = ?'
+    ans_true = str(lcm)
+    ans_false = str()
+    return question, ans_true, ans_false
