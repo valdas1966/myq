@@ -282,7 +282,7 @@ class Quests:
         assert type(excel) == Excel
         assert row >= 1
         question = excel.get_value(row, self.col_question)
-        return question.replace('\\n', '\n')
+        return question.replace('\\n', '\n').replace('\\t', '\t')
 
     def __get_ans_true(self, excel, row):
         """

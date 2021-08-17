@@ -52,8 +52,8 @@
 "there	",1
 "see	",1
 "her	",1
-"out	",0
-"one	",0
+"out	",1
+"one	",1
 "come	",0
 "people	",0
 "take	",0
@@ -483,7 +483,7 @@ hat,0
 "myself	",0
 "view	",1
 "price	",0
-"effort	",0
+"effort	",1
 "nice	",0
 "quite	",0
 "along	",0
@@ -570,7 +570,7 @@ hat,0
 "uh	",0
 "check	",0
 "page	",1
-"fight	",0
+"fight	",1
 "itself	",0
 "test	",0
 "patient	",0
@@ -797,7 +797,7 @@ hat,0
 "prepare	",0
 "network	",0
 "huge	",0
-"success	",0
+"success	",1
 "district	",0
 "cup	",0
 "physical	",0
@@ -811,7 +811,7 @@ hat,0
 "hurt	",0
 "legal	",0
 "september	",0
-"outside	",0
+"outside	",1
 "et	",0
 "strategy	",0
 "clearly	",0
@@ -1171,7 +1171,7 @@ unaware,0
 "object	",0
 "express	",0
 "huh	",0
-"encourage	",0
+"encourage	",1
 "blog	",0
 "smile	",0
 "belief	",0
@@ -1256,7 +1256,7 @@ unaware,0
 "resident	",0
 "football	",0
 "sweet	",0
-"failure	",0
+"failure	",1
 "reporter	",0
 "commit	",0
 "associate	",0
@@ -3564,7 +3564,7 @@ mushroom,0
 "ridge	",0
 "heal	",0
 "bastard	",0
-"cheer	",0
+"cheer	",1
 "apology	",0
 "tumor	",0
 "architect	",0

@@ -1,6 +1,7 @@
 from random import randint
-from f_math.numbers import u_factors
-from f_math.numbers import u_multiples
+from f_math.number import u_digit
+from f_math.number import u_factor
+from f_math.number import u_multiple
 
 
 def generate(question):
@@ -110,7 +111,7 @@ def __generate_7():
     ============================================================================
     """
     n = randint(1, 100)
-    factors = u_factors.factors(n)
+    factors = u_factor.factors(n)
     question = f'factors({n}) = ?'
     ans_true = ','.join(sorted([str(x) for x in factors]))
     ans_false = str()
@@ -125,7 +126,7 @@ def __generate_8():
     """
     a = randint(1, 100)
     b = randint(1, 100)
-    common = u_factors.common_factors(a, b)
+    common = u_factor.common_factors(a, b)
     question = f'common_factors({a},{b}) = ?'
     ans_true = ','.join(sorted([str(x) for x in common]))
     ans_false = str()
@@ -140,7 +141,7 @@ def __generate_9():
     """
     a = randint(1, 100)
     b = randint(1, 100)
-    gcf = u_factors.gcf(a, b)
+    gcf = u_factor.gcf(a, b)
     question = f'gcf({a},{b}) = ?'
     ans_true = str(gcf)
     ans_false = str()
@@ -155,8 +156,40 @@ def __generate_10():
     """
     a = randint(1, 20)
     b = randint(1, 20)
-    lcm = u_multiples.lcm(a, b)
+    lcm = u_multiple.lcm(a, b)
     question = f'lcm({a},{b}) = ?'
     ans_true = str(lcm)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_11():
+    """
+    ============================================================================
+     Description: Sum of two given digits.
+    ============================================================================
+    """
+    a, b = (randint(0, 9) for _ in range(2))
+    prev = randint(0, 1)
+    remainder, whole = u_digit.sum(a, b, prev)
+    question = f'f_math.u_digit.sum(a={a}, b={b}, prev={prev}) -> remainder, ' \
+               f'whole -> *****,*****'
+    ans_true = f'{remainder},{whole}'
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def _generate_12():
+    """
+    ============================================================================
+     Description: Multiplication of two given digits.
+    ============================================================================
+    """
+    a, b = (randint(0, 9) for _ in range(2))
+    prev = randint(0, 8)
+    remainder, whole = u_digit.mult(a, b, prev)
+    question = f'f_math.u_digit.mult(a={a}, b={b}, prev={prev}) -> ' \
+               'remainder, whole -> *****,*****'
+    ans_true = f'{remainder},{whole}'
     ans_false = str()
     return question, ans_true, ans_false
