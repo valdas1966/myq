@@ -54,8 +54,8 @@
 "her	",1
 "out	",1
 "one	",1
-"come	",0
-"people	",0
+"come	",1
+"people	",1
 "take	",0
 "year	",0
 "him	",0
@@ -202,7 +202,7 @@
 "story	",0
 "today	",1
 "job	",0
-"move	",0
+"move	",1
 "must	",0
 "bad	",0
 "friend	",0
@@ -741,7 +741,7 @@ hat,0
 "mention	",0
 "thus	",0
 "plant	",0
-"movement	",0
+"movement	",1
 "scene	",0
 "section	",0
 "treatment	",0
@@ -1843,7 +1843,7 @@ unaware,0
 "fault	",0
 "barely	",0
 "eliminate	",0
-"motion	",0
+"motion	",1
 "essential	",0
 "apart	",0
 "combination	",0

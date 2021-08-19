@@ -64,3 +64,15 @@ class Topic:
         ========================================================================
         """
         return self.i_row
+
+    def __lt__(self, other):
+        return self.i_row < other.i_row
+
+    def __le__(self, other):
+        return self.i_row <= other.i_row
+
+    def __gt__(self, other):
+        return self.i_row > other.i_row
+
+    def __ge__(self, other):
+        return self.i_row >= other.i_row

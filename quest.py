@@ -195,3 +195,17 @@ class Quest:
                   self.asked, self.answered, self.last_10, self.last_time,
                   self.priority_val, self.grade, self.ans, is_true]
         self.df_logger.loc[row_new] = values
+
+    def __lt__(self, other):
+        if self.topic < other.topic:
+            return True
+        if self.topic == other.topic:
+            return self.row < other.row
+        return False
+    
+    def __gt__(self, other):
+        if self.topic > other.topic:
+            return True
+        if self.topic == other.topic:
+            return self.row > other.row
+        return False

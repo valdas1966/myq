@@ -179,7 +179,7 @@ def __generate_11():
     return question, ans_true, ans_false
 
 
-def _generate_12():
+def __generate_12():
     """
     ============================================================================
      Description: Multiplication of two given digits.
@@ -191,5 +191,47 @@ def _generate_12():
     question = f'f_math.u_digit.mult(a={a}, b={b}, prev={prev}) -> ' \
                'remainder, whole -> *****,*****'
     ans_true = f'{remainder},{whole}'
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_13():
+    """
+    ============================================================================
+     Description: a // b
+    ============================================================================
+    """
+    a = randint(0, 9)
+    b = randint(1, 9)
+    question = f'{a} // {b} = ?'
+    ans_true = str(a // b)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_14():
+    """
+    ============================================================================
+     Description: a % b
+    ============================================================================
+    """
+    a = randint(0, 9)
+    b = randint(1, 9)
+    question = f'{a} % {b} = ?'
+    ans_true = str(a % b)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_15():
+    """
+    ============================================================================
+     Description: Power(a, b)
+    ============================================================================
+    """
+    a = randint(0, 10)
+    b = randint(0, 3)
+    question = f'{a}**{b} = ?'
+    ans_true = str(a**b)
     ans_false = str()
     return question, ans_true, ans_false

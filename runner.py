@@ -28,8 +28,8 @@ def run():
             break
         node_topic = topics.tree.nodes[name_topic]
         subtree = topics.tree.subtree(node_topic)
-        for i in range(size):
-            q = pick_quest(quests, subtree)
+        li_q = pick_quests(quests, subtree, size)
+        for q in li_q:
             # Get Answer to Question
             if q.ask(counter):
                 counter += 1
@@ -47,7 +47,7 @@ def run():
     DB.update(df_stat, df_logger)
 
 
-def pick_quest(quests, tree_topics):
+def old_pick_quest(quests, tree_topics):
     """
     ============================================================================
      Description: Create a Bag of Questions (number of occurrences depends on
@@ -69,6 +69,33 @@ def pick_quest(quests, tree_topics):
         bag.extend([qid] * q.grade)
     random.shuffle(bag)
     return quests.qs[bag[0]]
+
+
+def pick_quests(quests, tree_topics, size):
+    """
+    ============================================================================
+     Description: Create a Bag of Questions (number of occurrences depends on
+                    its grade), and returns random questions from it.
+    ============================================================================
+     Arguments:
+    ----------------------------------------------------------------------------
+        1. quests : Quests-Class (Questions).
+        2. tree_topics : Tree of Topics.
+    ============================================================================
+     Return: list of quest (Quest-Class).
+    ============================================================================
+    """
+    random.seed(random.randint(1, 100))
+    bag = list()
+    for qid, q in quests.qs.items():
+        if q.topic.name not in tree_topics.nodes:
+            continue
+        bag.extend([qid] * q.grade)
+    random.shuffle(bag)
+    set_q = set()
+    while len(set_q) < size:
+        set_q.add(quests.qs[bag.pop()])
+    return sorted(set_q)
 
 
 if __name__ == '__main__':
