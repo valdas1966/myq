@@ -171,8 +171,8 @@ def __generate_11():
     """
     a, b = (randint(0, 9) for _ in range(2))
     prev = randint(0, 1)
-    remainder, whole = u_digit.sum(a, b, prev)
-    question = f'f_math.u_digit.sum(a={a}, b={b}, prev={prev}) -> remainder, ' \
+    remainder, whole = u_digit.plus(a, b, prev)
+    question = f'f_math.u_digit.plus(a={a}, b={b}, prev={prev}) -> remainder, ' \
                f'whole -> *****,*****'
     ans_true = f'{remainder},{whole}'
     ans_false = str()

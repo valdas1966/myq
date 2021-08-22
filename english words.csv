@@ -56,7 +56,7 @@
 "one	",1
 "come	",1
 "people	",1
-"take	",0
+"take	",1
 "year	",0
 "him	",0
 "them	",0
@@ -225,7 +225,7 @@
 "small	",0
 "month	",0
 "program	",0
-"maybe	",0
+"maybe	",1
 "under	",0
 "business	",0
 "home	",0
@@ -459,7 +459,7 @@ hat,0
 "pull	",0
 "church	",0
 "model	",0
-"perhaps	",0
+"perhaps	",1
 "relationship	",0
 "six	",0
 "fine	",0
@@ -831,7 +831,7 @@ hat,0
 "training	",0
 "shit	",0
 "central	",0
-"option	",0
+"option	",1
 "eight	",0
 "particularly	",0
 "completely	",0
@@ -1231,7 +1231,7 @@ unaware,0
 "search	",0
 "nine	",0
 "alive	",0
-"possibility	",0
+"possibility	",1
 "sky	",0
 "otherwise	",0
 "remind	",0
