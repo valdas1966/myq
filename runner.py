@@ -47,30 +47,6 @@ def run():
     DB.update(df_stat, df_logger)
 
 
-def old_pick_quest(quests, tree_topics):
-    """
-    ============================================================================
-     Description: Create a Bag of Questions (number of occurrences depends on
-                    its grade), and return a random question from it.
-    ============================================================================
-     Arguments:
-    ----------------------------------------------------------------------------
-        1. quests : Quests-Class (Questions).
-        2. tree_topics : Tree of Topics
-    ============================================================================
-     Return: Quest-Class (Random Question).
-    ============================================================================
-    """
-    random.seed(random.randint(1, 100))
-    bag = list()
-    for qid, q in quests.qs.items():
-        if q.topic.name not in tree_topics.nodes:
-            continue
-        bag.extend([qid] * q.grade)
-    random.shuffle(bag)
-    return quests.qs[bag[0]]
-
-
 def pick_quests(quests, tree_topics, size):
     """
     ============================================================================
