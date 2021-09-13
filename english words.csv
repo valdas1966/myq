@@ -344,7 +344,7 @@ hat,0
 "buy	",0
 "result	",0
 "morning	",0
-"parent	",0
+"parent	",1
 "office	",0
 "course	",0
 "send	",0
@@ -1471,7 +1471,7 @@ unaware,0
 "obvious	",0
 "thursday	",0
 "exchange	",0
-"explore	",0
+"explore	",1
 "extend	",0
 "bay	",0
 "invite	",0
