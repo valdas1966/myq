@@ -1,4 +1,5 @@
 from random import randint
+from fractions import Fraction
 from f_math.number import u_digit
 from f_math.number import u_factor
 from f_math.number import u_multiple
@@ -233,5 +234,69 @@ def __generate_15():
     b = randint(0, 3)
     question = f'{a}**{b} = ?'
     ans_true = str(a**b)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_16():
+    """
+    ============================================================================
+     Description: Fraction + Fraction
+    ============================================================================
+    """
+    numerator_1, numerator_2 = (randint(0, 9) for _ in range(2))
+    denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
+    f_1 = Fraction(numerator_1, denominator_1)
+    f_2 = Fraction(numerator_2, denominator_2)
+    question = f'{f_1}+{f_2} = ?'
+    ans_true = str(f_1 + f_2)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_17():
+    """
+    ============================================================================
+     Description: Fraction - Fraction
+    ============================================================================
+    """
+    numerator_1, numerator_2 = (randint(0, 9) for _ in range(2))
+    denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
+    f_1 = Fraction(numerator_1, denominator_1)
+    f_2 = Fraction(numerator_2, denominator_2)
+    question = f'{f_1}-{f_2} = ?'
+    ans_true = str(f_1 - f_2)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_18():
+    """
+    ============================================================================
+     Description: Fraction * Fraction
+    ============================================================================
+    """
+    numerator_1, numerator_2 = (randint(0, 9) for _ in range(2))
+    denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
+    f_1 = Fraction(numerator_1, denominator_1)
+    f_2 = Fraction(numerator_2, denominator_2)
+    question = f'{f_1}*{f_2} = ?'
+    ans_true = str(f_1 * f_2)
+    ans_false = str()
+    return question, ans_true, ans_false
+
+
+def __generate_19():
+    """
+    ============================================================================
+     Description: Fraction / Fraction
+    ============================================================================
+    """
+    numerator_1, numerator_2 = (randint(0, 9) for _ in range(2))
+    denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
+    f_1 = Fraction(numerator_1, denominator_1)
+    f_2 = Fraction(numerator_2, denominator_2)
+    question = f'{f_1}/{f_2} = ?'
+    ans_true = str(f_1 / f_2)
     ans_false = str()
     return question, ans_true, ans_false
