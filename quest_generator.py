@@ -296,7 +296,7 @@ def __generate_19():
     denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
     f_1 = Fraction(numerator_1, denominator_1)
     f_2 = Fraction(numerator_2, denominator_2)
-    question = f'{f_1}/{f_2} = ?'
+    question = f'{f_1} / {f_2} = ?'
     ans_true = str(f_1 / f_2)
     ans_false = str()
     return question, ans_true, ans_false
