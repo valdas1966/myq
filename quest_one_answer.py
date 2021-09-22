@@ -26,8 +26,9 @@ class QuestOneAnswer(Quest):
         """
         super().ask(counter, repeated)
         self.ans = input(self.text + '-> ')
-        if self.ans[-1] == ' ':
-            self.ans = self.ans[:-1]
+        if len(self.ans):
+            if self.ans[-1] == ' ':
+                self.ans = self.ans[:-1]
         self.ans = self.ans.replace(', ', ',')
         self.ans_true = self.ans_true.replace(', ', ',')
         # True-Answer
