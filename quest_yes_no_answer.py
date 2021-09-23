@@ -26,7 +26,7 @@ class QuestYesNo(Quest):
         text = f'{self.text}(Yes/No):\n-> '
         self.ans = input(text)
         # Break
-        if self.ans == '0':
+        if self.ans == '!break':
             return False
         if self.ans in {'1', 'Yes', 'YES', 'yes', 'Y', 'y'}:
             self.ans = 'Yes'

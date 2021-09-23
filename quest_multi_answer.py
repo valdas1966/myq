@@ -45,7 +45,7 @@ class QuestMultiAnswer(Quest):
             self.text += f'{i + 1}. {answer}\n'
         self.ans = input(self.text + '-> ')
         # Illegal Answer
-        if self.ans not in {'0', '1', '2'}:
+        if self.ans not in {'!break', '1', '2'}:
             print('Illegal Answer')
             return self.ask(counter, repeated)
         self.ans = int(self.ans)

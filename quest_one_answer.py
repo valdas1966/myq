@@ -37,7 +37,7 @@ class QuestOneAnswer(Quest):
                 self._update_stat(answer=True)
             return True
         # Break
-        if self.ans == '0':
+        if self.ans == '!break':
             return False
         # False-Answer
         self._print_right_answer()
