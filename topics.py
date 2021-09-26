@@ -96,7 +96,8 @@ class Topics:
             for d in dirs:
                 set_topics.add(os.path.join(root, d))
             for f in files:
-                set_topics.add(os.path.join(root, f))
+                if f.endswith('.xlsx'):
+                    set_topics.add(os.path.join(root, f))
         set_topics = {t.replace(f'{dir_questions}\\', '') for t in set_topics}
         set_topics = {t.replace('.xlsx', '') for t in set_topics}
         set_topics = {t.replace('\\', ' -> ') for t in set_topics}
