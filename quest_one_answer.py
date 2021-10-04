@@ -1,4 +1,5 @@
 from quest import Quest
+from PIL import Image
 
 
 class QuestOneAnswer(Quest):
@@ -25,6 +26,9 @@ class QuestOneAnswer(Quest):
         ========================================================================
         """
         super().ask(counter, repeated)
+        if self.img:
+            image = Image.open(self.img)
+            image.show()
         self.ans = input(self.text + '-> ')
         if len(self.ans):
             if self.ans[-1] == ' ':

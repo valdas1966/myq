@@ -292,8 +292,9 @@ def __generate_19():
      Description: Fraction / Fraction
     ============================================================================
     """
-    numerator_1, numerator_2 = (randint(0, 9) for _ in range(2))
-    denominator_1, denominator_2 = (randint(1, 10) for _ in range(2))
+    numerator_1 = randint(0, 9)
+    numerator_2, denominator_1, denominator_2 = (randint(1, 10) for _ in
+                                                 range(3))
     f_1 = Fraction(numerator_1, denominator_1)
     f_2 = Fraction(numerator_2, denominator_2)
     question = f'{f_1} / {f_2} = ?'

@@ -40,7 +40,7 @@ class Quest:
     ans = str()
 
     def __init__(self, qid, row, priority, topic, question,
-                 ans_true, ans_false, df_logger):
+                 ans_true, ans_false, img, df_logger):
         """
         ========================================================================
          Description: Constructor - Init Attributes.
@@ -52,7 +52,8 @@ class Quest:
             5. question : str
             6. ans_true : str
             7. ans_false : str
-            8. df_logger : DataFrame
+            8. img : str (Path to Image).
+            9. df_logger : DataFrame
         ========================================================================
         """
         assert type(qid) == int
@@ -68,6 +69,7 @@ class Quest:
         self.priority = priority
         self.question = question
         self.ans_true = ans_true
+        self.img = img
         self.df_logger = df_logger
 
     def load_stat(self, asked, answered, last_10, last_time, priority_val):

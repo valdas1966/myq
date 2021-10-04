@@ -178,9 +178,15 @@ class Quests:
             if self.__need_generation(question):
                 question, ans_true, ans_false = generate(question)
             qtype = self.__get_qtype(ans_true, ans_false)
+            img = None
+            if self.__need_image(question):
+                img = self.path_myq + '\\Images\\'
+                img += '\\'.join(topic.name.split(' -> ')[:-1])
+                img += '\\' + question[7:] + '.jpg'
+                question = 'See the image'
             self.qs[qid] = factory_quest.build(qtype, qid, row, priority,
                                                topic, question, ans_true,
-                                               ans_false, df_logger)
+                                               ans_false, img, df_logger)
             self.priorities.add(priority)
             row += 1
         excel.close()
@@ -207,6 +213,22 @@ class Quests:
         except Exception:
             return False
         return True
+
+    @staticmethod
+    def __need_image(question):
+        """
+        ========================================================================
+         Description: Return True if the Question need to show Image.
+        ========================================================================
+         Arguments:
+        ------------------------------------------------------------------------
+            1. question : str (Question Text).
+        ========================================================================
+         Return: bool
+        ========================================================================
+        """
+        assert type(question) == str
+        return question.startswith('Image: ')
 
     def __get_qid(self, excel, row):
         """

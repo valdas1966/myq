@@ -4,7 +4,7 @@ from quest_yes_no_answer import QuestYesNo
 
 
 def build(qtype, qid, row, priority, topic, question,
-          ans_true, ans_false, df_logger):
+          ans_true, ans_false, img, df_logger):
     """
     ============================================================================
      Description: Factory - Build a Quest Sub-Class by given QType.
@@ -19,18 +19,19 @@ def build(qtype, qid, row, priority, topic, question,
         6. question : str (Question Content).
         7. ans_true : str (True Answer).
         8. ans_false : str (False Answer).
-        9. df_logger : DataFrame
+        9. img : str (Path to Image).
+        10. df_logger : DataFrame
     ============================================================================
      Return: Quest Sub-Class {QuestOneAnswer, QuestMultiAnswer, QuestYesNoAns).
     ============================================================================
     """
     if qtype == 'ONE':
         return QuestOneAnswer(qid, row, priority, topic, question,
-                              ans_true, ans_false, df_logger)
+                              ans_true, ans_false, img, df_logger)
     if qtype == 'MULTI':
         return QuestMultiAnswer(qid, row, priority, topic, question,
-                                ans_true, ans_false, df_logger)
+                                ans_true, ans_false, img, df_logger)
     if qtype == 'YESNO':
         return QuestYesNo(qid, row, priority, topic, question,
-                          ans_true, ans_false, df_logger)
+                          ans_true, ans_false, img, df_logger)
     return None

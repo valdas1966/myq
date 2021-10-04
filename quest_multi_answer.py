@@ -11,14 +11,14 @@ class QuestMultiAnswer(Quest):
     """
 
     def __init__(self, qid, row, priority, topic, question,
-                 ans_true, ans_false, logger):
+                 ans_true, ans_false, img, logger):
         """
         ========================================================================
          Constructor: Init the Private Attributes.
         ========================================================================
         """
         super().__init__(qid, row, priority, topic, question,
-                         ans_true, ans_false, logger)
+                         ans_true, ans_false, img, logger)
         self.answers = [ans_true]
         if ans_false:
             self.answers.append(ans_false)
