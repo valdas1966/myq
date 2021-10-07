@@ -38,4 +38,5 @@ def asked():
 
 
 precision()
+print()
 asked()
