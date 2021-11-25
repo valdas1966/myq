@@ -173,9 +173,9 @@ def __generate_11():
     a, b = (randint(0, 9) for _ in range(2))
     prev = randint(0, 1)
     remainder, whole = u_digit.plus(a, b, prev)
-    question = f'f_math.u_digit.plus(a={a}, b={b}, prev={prev}) -> remainder, ' \
-               f'whole -> *****,*****'
-    ans_true = f'{remainder},{whole}'
+    question = f'f_math.u_digit.plus(a={a}, b={b}, prev={prev}) -> whole, ' \
+               f'remainder -> *****,*****'
+    ans_true = f'{whole},{remainder}'
     ans_false = str()
     return question, ans_true, ans_false
 
@@ -190,8 +190,8 @@ def __generate_12():
     prev = randint(0, 8)
     remainder, whole = u_digit.mult(a, b, prev)
     question = f'f_math.u_digit.mult(a={a}, b={b}, prev={prev}) -> ' \
-               'remainder, whole -> *****,*****'
-    ans_true = f'{remainder},{whole}'
+               'whole, remainder -> *****,*****'
+    ans_true = f'{whole},{remainder}'
     ans_false = str()
     return question, ans_true, ans_false
 
