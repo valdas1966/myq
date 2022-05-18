@@ -1,0 +1,4 @@
+﻿topic,priority,level,tree
+Success,A,1,Life->Parenthood
+Bad Parents,B,2,Life->Parenthood
+Toddler,A,3,Life->Parenthood

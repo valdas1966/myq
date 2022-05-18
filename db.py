@@ -5,11 +5,8 @@ import utils.path_myq
 class DB:
 
     def __init__(self):
-        path_myq = utils.path_myq.get()
-        self.path_db = path_myq + '\\myq.db'
-        self.sql = None
-
-    def open(self):
+        self.path_myq = utils.path_myq.get()
+        self.path_db = self.path_myq + '\\myq.db'
         self.sql = SQLite(self.path_db)
 
     def _get_max_qid(self):
@@ -78,7 +75,6 @@ class DB:
         ========================================================================
         """
         db = DB()
-        db.open()
         max_qid = db._get_max_qid()
         db.close()
         return max_qid
@@ -93,7 +89,6 @@ class DB:
         ========================================================================
         """
         db = DB()
-        db.open()
         stat = db._get_stat()
         db.close()
         return stat
@@ -111,7 +106,6 @@ class DB:
         ========================================================================
         """
         db = DB()
-        db.open()
         db._update_stat(df_stat)
         db._update_logger(df_logger)
         db.close()
