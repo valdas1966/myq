@@ -88,6 +88,6 @@ class DB:
             priority = row['priority']
             self.insert_topic(topic, tree, level, priority)
 
-    def close(self):
+    def close(self) -> None:
         self.sql.commit()
         self.sql.close()
